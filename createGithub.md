@@ -10,7 +10,7 @@
 
 ### Create GitHub account
 
-1. Goto the GitHub website [](https://github.com/)
+1. Goto the GitHub website (https://github.com/)
 
 2. Sign up for GitHub
 
