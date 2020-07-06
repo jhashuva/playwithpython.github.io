@@ -15,3 +15,5 @@
 ![](./install3.JPG)
 
 If you see the status like above mentioned image, yeah! You succesfully installed python.
+
+[Go back](./index.md)
