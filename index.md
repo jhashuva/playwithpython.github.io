@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to Play with Python
+
+[Install Python](installPython.md)
 
 You can use the [editor on GitHub](https://github.com/jhashuva/playwithpython.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
