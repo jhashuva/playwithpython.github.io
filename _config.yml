@@ -4,3 +4,4 @@ description: A fun way to learn python
 include:
   - index,md
   - installPython.md
+  - pythonfirststeps.md
