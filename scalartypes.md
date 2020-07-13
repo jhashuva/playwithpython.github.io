@@ -252,8 +252,6 @@ break jumps out of the inner-most executing loop the line immediatley after it.
 28
 ```
 
-[Go back](index.md)
-
 #### Int truthiness
 
 ```markdown
@@ -265,3 +263,4 @@ True
 False
 ```
 
+[Go back](index.md)
