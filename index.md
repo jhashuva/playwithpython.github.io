@@ -6,3 +6,5 @@
 
 [Python first steps](pythonfirststeps.md)
 
+[Scalar data types](scalartypes.md)
+

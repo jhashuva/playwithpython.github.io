@@ -5,3 +5,4 @@ include:
   - index,md
   - installPython.md
   - pythonfirststeps.md
+  - scalartypes.md
