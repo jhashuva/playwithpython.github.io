@@ -6,3 +6,4 @@ include:
   - installPython.md
   - pythonfirststeps.md
   - scalartypes.md
+  - collections.md
