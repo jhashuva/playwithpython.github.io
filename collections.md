@@ -526,6 +526,8 @@ To make an f-string:
 - for more details: [python documentation](https://docs.python.org/3/library/stdtypes.html#string-methods)
 - These examples are borrowed from the "Introducing Python" 2nd Edition by Bill Lubanovic, O'Reilly media inc.,2019
 - Think Python, Second Edition, Allen B. Downey, 2016, O'Reilly
+<br>
+<br>
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;[Home](index.md)
 
 <h3 id='lists'> Lists</h3>
