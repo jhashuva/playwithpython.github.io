@@ -1,11 +1,11 @@
 ## Collections
-
+<div id='index'>
 <a href='#strings'>Str</a><br>
 <a href='#lists'> Lists</a><br>
 <a href='#tuples'> Tuples</a><br>
 <a href='#sets'> Sets</a><br>
 <a href='#dicts'>Dictionaries</a>
-
+</div>
 
 
 <h3 id='strings'>Str</h3>
@@ -208,6 +208,325 @@ seperator.join(list)
 >>> print(crypto_string)
 Yeti, Bigfoot, Loch Ness Monster
 ```
+Substitute by Using replace()
+
+You use replace() for simple substring substitution.Give it the old substring, the new one,and how many instances of the old substring to replace.
+It returns the changed string but does notmodify the original string.If you omit this final count argument, it replaces all instances.
+
+Syntax:
+```markdown
+string.replace(old_substring, new_substring, count(optional))
+```
+```markdown
+>>> setup = "a duck goes into a bar..."
+>>> setup.replace('duck', 'marmoset')
+>>> setup.replace('duck', 'marmoset')
+'a marmoset goes into a bar...'
+>>> setup
+'a duck goes into a bar...'
+```
+
+Strip with strip()
+The strip() functions shown here assume that you want to get rid ofwhitespace characters (' ', '\t', '\n')if you don’t give them an argument.strip() str.
+strip() strips both ends, lstrip() only from the left, and rstrip() only from the right.
+
+Syntax :
+```markdown
+string.strip()
+```
+```markdown
+>>> world = "    earth   "
+>>> world.strip()
+'earth'
+>>> world.strip(' ')
+'earth'
+>>> world.lstrip()
+'earth  '
+>>> world.rstrip()
+'   earth'
+```
+If the character were not there, nothing happens:
+
+```markdown
+>>> world.strip('!')
+'   earth   '
+```
+
+Besides no argument (meaning whitespace characters) or a single character, you can also tell strip() to remove any character in a multicharacter string:
+
+```markdown
+>>> blurt = "What the...!!?"
+>>> blurt.strip('.?!')
+'What the'
+```
+Search and Select
+
+```markdown
+>>> poem = '''All that doth flow we cannot liquid name
+... Or else would fire and water be the same;
+... But that is liquid which is moist and wet
+... Fire that property can never get
+.... Then 'tis not cold that doth the fire put out
+... But 'tis the wet that makes it die, no doubt.'''
+>>> poem[:13]
+'All that doth'
+>>> len(poem)
+254
+>>> poem.startswith('All')
+True
+>>> poem.endswith('That\'s all, folks!')
+False
+```
+Let’s find the offset of the first occurrenceof the word the in the poem:
+```markdown
+>>> word='the'
+>>> poem.find(word)
+73
+>>> poem.index(word)
+73
+```
+And the offset of the last the:
+
+```markdown
+>>> word = 'the'
+>>> poem.rfind(word)
+218
+>>> poem.rindex(word)
+218
+```
+
+How many times does the three-letter sequence 'the' occur?
+
+```markdown
+>>> poem.count(word)
+3
+```
+Are all of the characters in the poem either letters or numbers?
+
+```markdown
+>>> poem.isalnum()
+False
+```
+
+Cases:
+
+```markdown
+>>> setup = 'a duck goes into a bar...'
+```
+
+```markdown
+>>> setup.strip('.')
+'a duck goes into a bar'
+```
+Capitalize the first word:
+
+```markdown
+>>> setup.capitalize()
+'A duck goes into a bar...'
+```
+
+Capitalize all the words:
+
+```markdown
+>>> setup.title()
+'A Duck Goes Into A Bar...'
+```
+
+Convert all characters to uppercase:
+
+```markdown
+>>> setup.upper()
+'A DUCK GOES INTO A BAR...'
+```
+
+Convert all characters to lowercase:
+
+```markdown
+>>> setup.lower()
+'a duck goes into a bar...'
+```
+
+Swap uppercase and lowercase:
+
+```markdown
+>>> setup.swapcase()
+'A DUCK GOES INTO A BAR...'
+>>> setup
+'a duck goes into a bar...'
+```
+
+Formatting :
+
+<table border="1" align='left'>
+<tr><td>%s</td><td>string</td></tr>
+<tr><td>%d</td><td>decimal integer</td></tr>
+<tr><td>%x</td><td>hex integer</td></tr>
+<tr><td>%o</td><td>octal integer</td></tr>
+<tr><td>%f</td><td>decimal float</td></tr>
+<tr><td>%e</td><td>exponential float</td></tr>
+<tr><td>%g</td><td>decimal or exponential float</td></tr>
+</table>
+<br><br>
+
+You can use a %s for any data type, and Python will format it as a string with no extra spaces.
+
+```markdown
+>>> '%s' % 42
+'42'
+>>> '%d' % 42
+'42'
+>>> '%x' % 42
+'2a'
+>>> '%o' % 42
+'52'
+```
+
+An integer and a literal %:
+
+```markdown
+>>> '%d%%' % 100
+'100%'
+```
+
+Let's try some string and integer interpolation:
+
+```markdown
+>>> actor = 'Richard Gere'
+>>> cat = 'Chester'
+>>> weight = 28
+>>> "My friend's favorite actor is %s" % actor
+"My friend's favorite actor is Richard Gere"
+>>> "Our cat %s weighs %d pounds" % (cat, weight)
+'Our cat Chester weighs 28 pounds'
+```
+some more examples
+
+```markdown
+>>> thing = 'woodchuck'
+>>> '%s' % thing
+'woodchuck'
+>>> '%12s' % thing
+'   woodchuck'
+>>> '%+12s' % thing
+'   woodchuck'
+>>> '%-12s' % thing
+'woodchuck   '
+>>> '%.3s' % thing
+'woo'
+>>> '%12.3s' % thing
+'         woo'
+>>> '%-12.3s' % thing
+'woo         '
+```
+
+one more with feeling
+
+```markdown
+>>> thing = 98.6
+>>> '%f' % thing
+'98.600000'
+>>> '%12f' % thing
+'   98.600000'
+>>> '%6f' % thing
+'98.600000'
+>>> '%+12f' % thing
+'  +98.600000'
+>>> '%-12f' % thing
+'98.600000   '
+>>> '%.3f' % thing
+'98.600'
+>>> '%12.3f' % thing
+'      98.600'
+>>> '%-12.3f' % thing
+'98.600      '
+```
+New style:{} and format()
+
+“New style” formatting has the form format_string.format(data).
+
+```markdown
+>>> thing = 'woodchuck'
+>>> '{}'.format(thing)
+'woodchuck'
+```
+The arguments to the format() function need to be in the order as the {} placeholders in the format string:
+```markdown
+>>> thing = 'woodchuck'
+>>> place = 'lake'
+>>> 'The {} is in the {}.'.format(thing, place)
+'The woodchuck is in the lake.'
+```
+
+With new-style formatting, you can also specify the arguments by position like this:
+
+```markdown
+>>> 'The {1} is in the {0}.'.format(place, thing)
+'The woodchuck is in the lake.'
+```
+
+The value 0 referred to the first argument, place, and 1 referred to thing.
+
+The arguments to format() can also be named arguments
+
+```markdown
+>>> 'The {thing} is in the {place}'.format(thing='duck', place='bathtub')
+'The duck is in the bathtub'
+```
+or a dictionary:
+```markdown
+>>> d = {'thing': 'duck', 'place': 'bathtub'}
+>>> 'The {0[thing]} is in the {0[place]}.'.format(d)
+'The duck is in the bathtub.'
+```
+
+More Examples:
+```markdown
+>>> thing = 'wraith'
+>>> place = 'window'
+>>> 'The {} is at the {}'.format(thing, place)
+'The wraith is at the window'
+>>> 'The {:10s} is at the {:10s}'.format(thing.upper(), place)
+'The WRAITH     is at the window    '
+>>> 'The {:<10s} is at the {:<10s}'.format(thing, place)
+'The wraith     is at the window    '
+>>> 'The {:^10s} is at the {:^10s}'.format(thing, place)
+'The   wraith   is at the   window  '
+>>> 'The {:>10s} is at the {:>10s}'.format(thing, place)
+'The     wraith is at the     window'
+>>> 'The {:!^10s} is at the {:!^10s}'.format(thing, place)
+'The !!wraith!! is at the !!window!!'
+```
+Newest Style: f-strings
+
+- f-strings appeared in Python 3.6, and are now the recommended way of formatting strings.
+To make an f-string:
+- Type the letter f or F directly before the initial quote.
+- Include variable names or expressions within curly brackets ({}) to get their values into the string.
+
+```markdown
+>>> thing = 'wereduck'
+>>> place = 'werepond'
+>>> f'The {thing} is in the {place}'
+'The wereduck is in the werepond'
+>>> f'The {thing.capitalize()} is in the {place.rjust(20)}'
+'The Wereduck is in the             werepond'
+>>> f'The {thing:>20} is in the {place:.^20}'
+'The             wereduck is in the ......werepond......'
+```
+- Starting in Python 3.8, f-strings gain a new shortcut that’s helpful when you want to print variable names as well as their values.
+
+```markdown
+>>> f'{thing =}, {place =}'
+"thing ='wereduck', place ='werepond'"
+>>> f'{thing[-4:] =}, {place.title() =}'
+"thing[-4:] ='duck', place.title() ='Werepond'"
+>>> f'{thing = :>4.4}'
+'thing = were'
+```
+- for more details: [python documentation](https://docs.python.org/3/library/stdtypes.html#string-methods)
+- These examples are borrowed from the "Introducing Python" 2nd Edition by Bill Lubanovic, O'Reilly media inc.,2019
+- Think Python, Second Edition, Allen B. Downey, 2016, O'Reilly
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;[Home](index.md)
 
 <h3 id='lists'> Lists</h3>
 <br>
