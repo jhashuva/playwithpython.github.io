@@ -8,3 +8,5 @@
 
 [Scalar data types](scalartypes.md)
 
+[collections](collections.md)
+
