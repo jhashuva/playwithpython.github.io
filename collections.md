@@ -1,7 +1,7 @@
 ## Collections
 <div id='index'>
 <a href='#strings'>Str</a><br>
-<a href='#bytes'>Str</a><br>
+<a href='#bytes'>Bytes</a><br>
 <a href='#lists'> Lists</a><br>
 <a href='#tuples'> Tuples</a><br>
 <a href='#sets'> Sets</a><br>
@@ -534,6 +534,7 @@ To make an f-string:
 - Data type for sequence of bytes
 - Raw binary data
 - Fixed width single byte encoding
+
 ```markdown
 >>> b'byte data'
 b'byte data'
@@ -545,6 +546,7 @@ b'byte data'
 ```
 Converting between strings and bytes:
 ![](./collections1.JPG)
+
 ```markdown
 >>> a = b'byte data'
 >>> a.decode()
