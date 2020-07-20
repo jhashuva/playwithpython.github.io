@@ -1,6 +1,7 @@
 ## Collections
 <div id='index'>
 <a href='#strings'>Str</a><br>
+<a href='#bytes'>Str</a><br>
 <a href='#lists'> Lists</a><br>
 <a href='#tuples'> Tuples</a><br>
 <a href='#sets'> Sets</a><br>
@@ -529,9 +530,36 @@ To make an f-string:
 <br>
 <br>
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;[Home](index.md)
+<h3 id='bytes'> bytes</h3>
+- Data type for sequence of bytes
+- Raw binary data
+- Fixed width single byte encoding
+```markdown
+>>> b'byte data'
+b'byte data'
+>>> d= b'some bytes'
+>>> type(d)
+<class 'bytes'>
+>>> d.split()
+[b'some', b'bytes']
+```
+Converting between strings and bytes:
+![](./collections1.JPG)
+```markdown
+>>> a = b'byte data'
+>>> a.decode()
+'byte data'
+>>> b = 'hello python'
+>>> b.encode()
+b'hello python'
+```
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;[Home](index.md)
 
 <h3 id='lists'> Lists</h3>
-<br>
+- sequence of objects
+-  Lists are Mutable
+- Lists are declared with [] or list()
+- Items are seperated with comma(,)
 <br>
 <br>
 <br>
