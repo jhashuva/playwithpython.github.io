@@ -800,7 +800,7 @@ list.clear()
 []
 ```
 
-
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 
 <br>
 <br>
