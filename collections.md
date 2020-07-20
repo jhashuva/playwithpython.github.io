@@ -530,7 +530,7 @@ To make an f-string:
 <br>
 <br>
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;[Home](index.md)
-<h3 id='bytes'> bytes</h3>
+<h3 id='bytes'> Bytes</h3>
 - Data type for sequence of bytes
 - Raw binary data
 - Fixed width single byte encoding
@@ -562,6 +562,246 @@ b'hello python'
 -  Lists are Mutable
 - Lists are declared with [] or list()
 - Items are seperated with comma(,)
+
+Create empty list
+
+```markdown
+>>> myfirst_list = []   # one way of creating empty list
+>>> type(myfirst_list)
+<class 'list'>
+>>> mysecond_list = list() # another way of creating empty list
+>>> type(mysecond_list)
+<class 'list'>
+```
+python list() converts string into list
+
+```markdown
+>>> list('python')
+['p', 'y', 't', 'h', 'o', 'n']
+```
+
+Create a list from string split()
+
+```markdown
+>>> python_day='12/12/2019'
+>>> python_day.split('/')
+['12', '12', '2019']
+```
+list.reverse() : To reverse the elements in the list
+
+```markdown
+>>> lang=['c','c++','java','python']
+>>> lang.reverse()
+>>> lang
+['python', 'java', 'c++', 'c']
+```
+
+Add an Item to the End with append()
+
+```markdown
+>>> lang=['c','c++','java','python']
+>>> lang.append('R')
+>>> lang
+['c', 'c++', 'java', 'python', 'R']
+```
+
+Add an Item by Offset with insert()
+
+syntax:
+
+```markdown
+insert(index, word)
+```
+Examples:
+
+```markdown
+>>> lang=['c', 'c++', 'java', 'python', 'R']
+>>> lang.insert(2,'scala')
+>>> lang
+['c', 'c++', 'scala', 'java', 'python', 'R']
+```
+
+Duplicate All Items with *
+
+syntax:
+
+```markdown
+['string']*value
+```
+
+Examples:
+
+```markdown
+>>> ['python']*3
+['python', 'python', 'python']
+>>> ['python','java']*3
+['python', 'java', 'python', 'java', 'python', 'java']
+```
+Combine Lists by Using extend() or +
+
+```markdown
+>>> lang
+['c', 'c++', 'scala', 'java', 'python', 'R']
+>>> markups=['html','xml']
+>>> lang.extend(markups)
+>>> lang
+['c', 'c++', 'scala', 'java', 'python', 'R', 'html', 'xml']
+>>> server_scripting=['PHP','ASP','JSP']
+>>> lang=lang+server_scripting
+>>> lang
+['c',
+ 'c++',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP']
+>>> lang+=server_scripting
+>>> lang
+['c',
+ 'c++',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ 'PHP',
+ 'ASP',
+ 'JSP']
+ >>> client_scripting=['javascript','actionscript']
+ >>> lang.append(client_scripting)
+ >>> lang
+ ['c',
+ 'c++',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ ['javascript', 'actionscript']]
+```
+Change an Item by [offset]
+
+```markdown
+>>> lang
+['c',
+ 'c++',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ ['javascript', 'actionscript']]
+ >>> lang[1]='c#'
+ >>> lang
+ ['c',
+ 'c#',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ ['javascript', 'actionscript']]
+ ```
+
+ Change an item with slice
+
+```markdown
+>>> numbers=[1,2,3,4]
+>>> numbers[1:3]=[8,9]
+>>> numbers
+[1, 8, 9, 4]
+```
+Delete an Item by Offset with del
+
+syntax:
+
+```markdown
+ del list[offset]
+```
+
+Examples:
+
+```markdown
+>>> languages=['C','C#','Java','Python']
+>>> del languages[-1]
+>>> languages
+['C', 'C#', 'Java']
+>>> del languages[0:2]
+>>> languages
+['Java']
+```
+Delete an Item by Value with remove()
+
+syntax:
+```markdown
+list.remove('element')
+```
+Examples:
+
+```markdown
+>>> languages=['C','C#','Java','Python']
+>>> languages.remove('C#')
+```
+
+Get an Item Offset and Delete It with pop()
+
+syntax:
+```markdown
+list.pop(offset)
+```
+```markdown
+>>> languages=['C','C#','Java','Python']
+>>> languages.pop()
+'Python'
+>>> languages.pop(1)
+'C#'
+>>> languages
+['C', 'Java']
+```
+Delete All Items with clear()
+syntax:
+```markdown
+list.clear()
+```
+```markdown
+>>> languages=['C','C#','Java','Python']
+>>> languages.clear()
+>>> languages
+[]
+```
+
+
+
 <br>
 <br>
 <br>
