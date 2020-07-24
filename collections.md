@@ -799,7 +799,12 @@ list.clear()
 >>> languages
 []
 ```
+Find an Item's Offset by Value with index()
 
+Syntax:
+```markdown
+list.index('element')
+```
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 
 <br>

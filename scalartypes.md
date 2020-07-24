@@ -33,7 +33,7 @@ int: unlimited precision signed integer
 >>> int("496")
 496
 >>> int("1000",3)
-81
+27
 ```
 ### float data type
 - floating points are supported by float type.
