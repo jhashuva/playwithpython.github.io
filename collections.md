@@ -805,22 +805,207 @@ Syntax:
 ```markdown
 list.index('element')
 ```
+
+```markdown
+>>> languages=['C','C#','Java','Python']
+>>> languages.index('C')
+0
+```
+Test for Value with in
+Syntax:
+```markdown
+'element' in list
+```
+
+```markdown
+>>> languages=['C','C#','Java','Python']
+>>> 'Python' in languages
+True
+>>> 'C++' in languages
+False
+```
+Count Occurrences of Value with count()
+
+Syntax:
+```markdown
+list.count('element')
+```
+
+```markdown
+>>> languages.count('C')
+1
+```
+How to convert list to string ?
+
+Syntax:
+```markdown
+'seperator'.join(list)
+```
+
+```markdown
+>>> languages=['C','C#','Java','Python']
+>>> ','.join(languages)
+'C,C#,Java,Python'
+```
+Reorder Items of the list
+
+Using python function:
+
+```markdown
+>>> languages=['Python','C#','Java','C']
+>>> sorted(languages)
+['C', 'C#', 'Java', 'Python']
+>>> languages #original order will never changed
+['Python','C#','Java','C']
+```
+
+Using list method:
+```markdown
+>>> languages=['Python','C#','Java','C']
+>>> languages.sort()
+>>> languages
+['C', 'C#', 'Java', 'Python']
+>>> languages=['Python','C#','Java','C']
+>>> languages.sort(reverse=True) # sort reverse order
+>>> languages
+['Python', 'Java', 'C#', 'C']
+```
+
+Get Length with len()
+
+Syntax:
+
+```markdown
+len(list)
+```
+```markdown
+>>> len(languages)
+4
+```
+Assign with =
+
+ When you assign one list to more than one variable, changing the list in one place also changes it in the other.
+
+```markdown
+ >>> a=[1,2,3,4]
+ >>> id(a)
+ 2109612147720
+ >>> b=a
+ >>> id(b)
+ 2109612147720
+ >>> a[0]='hello'
+ >>> a
+ ['hello', 2, 3, 4]
+ >>> b
+ ['hello', 2, 3, 4]
+ >>> b[1]='hi'
+ >>> a
+ ['hello', 'hi', 3, 4]
+```
+
+Compare lists:
+
+```markdown
+>>> a = [1,2,3]
+>>> b = [7,8,9]
+>>> a == b
+False
+>>> b>a
+True
+```
+
+Iterate with for and in
+
+```markdown
+>>> languages=['C','C#','JAVA','PYTHON']
+>>> for i in languages:
+...     print(i)
+c
+c#
+Java
+Python
+```
+break ends the for loop and continue steps to next iteration
+
+```markdown
+>>> languages=['C','C#','JAVA','PYTHON','HTML','GO']
+>>> for i in languages:
+...    if i.lower()=='html':
+...        print('HTML is not a programming language like others')
+...        break
+...    else:
+...        print(i)
+C
+C#
+JAVA
+PYTHON
+HTML is not a programming language like others
+```
+We can use the optional else if the for Completed without a break
+
+```markdown
+>>> languages=['C','C#','JAVA','PYTHON','GO']
+>>> for language in languages:
+...    if language.lower()=='html':
+...        print('HTML is not a programming language like others')
+...        break
+...    else:
+...        print(language)
+... else:
+...    print('There are no non-programming languages')
+C
+C#
+JAVA
+PYTHON
+GO
+There are no non-programming languages
+```
+If the initial for never ran, control goes to the else also:
+
+```markdown
+>>> cheeses=[]
+... for cheese in cheeses:
+...     print(cheese)
+...     break
+... else:
+...     print('There is no cheese')
+There is no cheese
+```
+cheeses list was empty in this example, for cheese in cheeses never completed a single loop and its break statement was never executed.
+
+```markdown
+>>> days=['Monday','Tuesday','Wednesday']
+>>> fruits=['banana','orange','peach']
+>>> drinks=['coffee','tea','ice tea']
+>>> desserts=['double ka meeta','ice cream','jamoon','pudding']
+>>> for day, fruit, drink, dessert in zip(days, fruits, drinks, desserts):
+...     print(day, ": drink", drink, "- eat",fruit, "- enjoy", dessert)
+Monday : drink coffee - eat banana - enjoy double ka meeta
+Tuesday : drink tea - eat orange - enjoy ice cream
+Wednesday : drink ice tea - eat peach - enjoy jamoon
+```
+zip() stops when the shortest sequence is done.
+
+List of lists
+
+```markdown
+>>> small_birds=['hamming_bird','finch']
+>>> extinct_birds=['dodo','passenger pigeon','Norwegian Blue']
+>>> carol_birds=[3,'French hens',2,'turtledoves']
+>>> all_birds=[small_birds,extinct_birds,carol_birds]
+>>> all_birds
+[['hamming_bird', 'finch'],
+ ['dodo', 'passenger pigeon', 'Norwegian Blue'],
+ [3, 'French hens', 2, 'turtledoves']]
+ >>> all_birds[0]
+ ['hamming_bird', 'finch']
+ >>> all_birds[1]
+ ['dodo', 'passenger pigeon', 'Norwegian Blue']
+ >>> all_birds[1][0]
+ 'dodo'
+
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <h3 id='tuples'> Tuples</h3>
 <br>
