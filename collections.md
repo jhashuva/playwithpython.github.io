@@ -1161,6 +1161,120 @@ A &cup; B = {1,2,3,4,5,6,7,8}
 A &cap; B = {1,2}
 
 A - B = {3,4,5}
+
+- A set is like a dictionarywith its values thrown away,leaving only the keys.As with a dictionary, each key must be unique.
+- create with set()
+
+```markdown
+>>> empty_set = set()
+>>> empty_set
+set()
+```
+
+Convert with set()
+
+- You can create a set from a list, string, tuple, or dictionary, discarding any duplicate values.
+
+```markdown
+>>> set('letters')
+{'s', 'e', 'l', 't', 'r'}
+>>> set( ['Java', 'C', 'C#', 'Python'] )
+{'C', 'C#', 'Java', 'Python'}
+>>> set(('a','b','c','d'))
+{'a', 'b', 'c', 'd'}
+>>> set( {'apple': 'red', 'orange': 'orange', 'cherry': 'red'} )
+{'apple', 'cherry', 'orange'}
+```
+
+Get Length with len()
+
+```markdown
+>>> lang=set(['c','c++','Java','Python'])
+>>> len(lang)
+4
+```
+
+Add an item with add()
+
+```markdown
+>>> s = set((1,2,3,4))
+>>> s.add(4)
+>>> s
+{1, 2, 3, 4}
+```
+
+Delete an item with remove()
+
+```markdown
+>>> s
+{1, 2, 3, 4}
+>>> s.remove(2)
+{1,3,4}
+```
+Iterate with for and in
+
+```markdown
+>>> furniture = set(('sofa', 'ottoman', 'table'))
+>>> for comp in furniture:
+...     print(comp)
+...
+table
+sofa
+ottoman
+```
+Combinations and operators
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A.union(B)
+{1, 2, 3, 4, 5, 6, 7, 8}
+>>> A|B
+{1, 2, 3, 4, 5, 6, 7, 8}
+```
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A.intersection(B)
+{1,2}
+>>> A&B
+{1,2}
+```
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A-B
+{3,4,5}
+```
+![](./Sets2.png)
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A.symmetric_difference(B)
+{3, 4, 5, 6, 7, 8}
+>>> A^B
+{3, 4, 5, 6, 7, 8}
+```
+
+
+A &sub; B
+
+![](./Sets3.png)
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A.issubset(B)
+False
+>>> A<=B
+False
+```
+
+
+
 <h3 id='dicts'> Dictionaries</h3>
 <br>
 <br>
