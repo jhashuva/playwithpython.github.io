@@ -1008,22 +1008,146 @@ List of lists
 
 
 <h3 id='tuples'> Tuples</h3>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+- Tuple is non mutable type
+- Tuple will be represented with ().
 
+```markdown
+>>> empty_tuple = ()
+>>> empty_tuple
+()
+>>> type(empty_tuple)
+tuple
+```
+- To make a tuple with one or more elements, follow each element with a comma. This works for one-element tuples
+
+```markdown
+>>> one_color = 'Green',
+>>> one_color
+('Green',)
+>>> one_color=('Green',)
+>>> one_color
+('Green',)
+>>> multi_color='Green','Red','White'
+>>> multi_color
+('Green', 'Red', 'White')
+```
+
+- Tuple let you assign multiple variables at once:
+
+```markdown
+>>> a = list(multi_color)
+>>> tuple(a)
+('Green', 'Red', 'White')
+>>> a,b,c = multi_color
+>>> a
+Green
+>>> b
+Red
+>>> c
+White
+```
+
+- This is called tuple unpacking
+- You can use tuples to exchange values in one statement without using a temporary variables.
+
+```markdown
+>>> password = 'confidential'
+>>> icecream = 'choclate'
+>>> password, icecream = icecream, password
+>>> password
+choclate
+>>> icecream
+confidential
+>>> a = password,icecream
+>>> a
+('choclate', 'confidential')
+```
+- Create tuple with the tuple()
+
+```markdown
+>>> numbers=[1,3,5,7]
+>>> tuple(numbers)
+(1, 3, 5, 7)
+```
+
+Combine Tuples by Using +
+
+- This is similar to combining strings
+
+```markdown
+>>> ('Groucho',)+('Chico','harpo')
+('Groucho', 'Chico', 'harpo')
+```
+Duplicate items with *
+
+- This is like repeated use of +:
+
+```markdown
+>>> ('yada',)*3
+('yada','yada','yada')
+```
+Compare tuples
+
+- This works much like list comparisions
+
+```markdown
+>>> a=(7,2)
+>>> b=(7,2,9)
+>>> a==b
+False
+>>> a<=b
+True
+```
+
+Iterate with for and in
+
+```markdown
+>>> items = ('good','bad','ugly')
+>>> for word in items:
+...     print(word)
+...
+good
+bad
+ugly
+```
+Modify tuple
+
+```markdown
+>>> t1=('Fee','Fie','Foe')
+>>> id(t1)
+2109612850296
+>>> t2='top',
+>>> t1+=t2
+>>> t1
+('Fee', 'Fie', 'Foe', 'top')
+>>> id(t1)
+2109616422168
+>>> id(t2)
+2109612420936
+```
+
+count the elements in touple
+
+```markdown
+>>> t1 = ('Fee', 'Fie', 'Foe', 'top')
+>>> t1.count('Fee')
+1
+>>> t1.count('Free')
+0
+```
+
+Get the index of particular value in the tuple.
+
+```markdown
+>>> t1 = ('Fee', 'Fie', 'Foe', 'top')
+>>> t1.index('top')
+3
+>>> t1.index('Free') # exception will araise
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: tuple.index(x): x not in tuple
+```
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 <h3 id='sets'> Sets</h3>
 <br>
 <br>
