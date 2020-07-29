@@ -1149,7 +1149,7 @@ ValueError: tuple.index(x): x not in tuple
 ```
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 <h3 id='sets'> Sets</h3>
-![](./sets1.png)
+![](./Sets1.png)
 
 <h3 id='dicts'> Dictionaries</h3>
 <br>
