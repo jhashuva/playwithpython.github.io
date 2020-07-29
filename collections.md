@@ -1150,7 +1150,12 @@ ValueError: tuple.index(x): x not in tuple
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 <h3 id='sets'> Sets</h3>
 ![](./Sets1.png)
-
+Here is the above picture:
+A = {1,2,3,4,5}
+B = {1,2,6,7,8}
+A &cup; B = {1,2,3,4,5,6,7,8}
+A &cap; B = {1,2}
+A - B = {3,4,5}
 <h3 id='dicts'> Dictionaries</h3>
 <br>
 <br>
