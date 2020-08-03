@@ -1206,11 +1206,19 @@ Add an item with add()
 Delete an item with remove()
 
 ```markdown
->>> s
-{1, 2, 3, 4}
->>> s.remove(2)
-{1,3,4}
+>>> A = {1,2,3,4,5}
+>>> A.remove(1)
+>>> A
+{2,3,4,5}
+>>> A.remove(5)
+>>> A
+{2,3,4}
+>>> A.remove(99)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 99
 ```
+
 Iterate with for and in
 
 ```markdown
@@ -1241,11 +1249,31 @@ Combinations and operators
 >>> A&B
 {1,2}
 ```
+intersection_update() will update the A with the result
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A.intersection_update(B)
+>>> A
+{1,2}
+```
 
 ```markdown
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A-B
+{3,4,5}
+>>> A.difference(B)
+{3,4,5}
+```
+difference_update() will update the set A with the results.
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A.difference_update(B)
+>>> A
 {3,4,5}
 ```
 ![](./Sets2.png)
@@ -1258,23 +1286,135 @@ Combinations and operators
 >>> A^B
 {3, 4, 5, 6, 7, 8}
 ```
+- symmetric_difference_update() will update the set with the result.
 
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A.symmetric_difference_update(B)
+>>> A
+{3, 4, 5, 6, 7, 8}
+```
 
 A &sub; B
 
 ![](./Sets3.png)
 
 ```markdown
->>> A = {1,2,3,4,5}
->>> B = {1,2,6,7,8}
+>>> A = {1,2,4}
+>>> B = {1,2,3,4,5}
 >>> A.issubset(B)
-False
+True
 >>> A<=B
-False
+True
+```
+A &sup; B
+
+![](./Sets3.png)
+
+```markdown
+>>> A = {1,2,4}
+>>> B = {1,2,3,4,5}
+>>> B.issuperset(A)
+True
+>>> B>=A
+True
 ```
 
+Disjoint set:
+
+![](./Sets4.png)
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> C = {9,10}
+>>> A.isdisjoint(B)
+False
+>>> A.isdisjoint(C)
+True
+```
+
+Delete all elements in the set using clear()
+
+Syntax:
+
+```markdown
+set.clear()
+```
+
+```markdown
+>>> s = {'C'.'C++','JAVA'}
+>>> s.clear()
+>>> s
+set()
+```
+Copy a set using copy method:
+
+syntax:
+
+```markdown
+another_set = set.copy()
+```
+
+```markdown
+>>> s= {'C'.'C++','JAVA'}
+>>> ss = s.copy()
+>>> ss
+{'Java', 'C++', 'C'}
+```
+Remove the member of a set using discard()
+
+syntax:
+
+```markdown
+set.discard(member)
+```
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> A.discard(4)
+>>> A
+{1,2,3,5}
+>>> A.discard(99) #remove member which is not in the set
+>>> A # will not get any exception
+{1,3,5}
+```
+Delete an element using pop()
+
+- pop() by default delete first element in the set.
+
+```markdown
+>>> A = {1,2,3,4,5}
+>>> A.pop()
+1
+>>> A.pop()
+2
+>>> A
+{3,4,5}
+>>> A.pop(2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: pop() takes no arguments (1 given)
+```
+
+Update:
+
+- combine two sets into one using update()
+
+syntax:
+
+```markdown
+set1.update(set2)
+```
+```markdown
+>>> A = {1,2,3,4,5}
+>>> B = {1,2,6,7,8}
+>>> A.update(B)
+{1, 2, 3, 4, 5, 6, 7, 8}
 
 
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 <h3 id='dicts'> Dictionaries</h3>
 <br>
 <br>
