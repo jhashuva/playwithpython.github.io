@@ -1452,9 +1452,7 @@ KeyError: 'Orange'
 ```
 
 ```markdown
->>> days={'MON':'Monday','TUE':'Tuesday','WED':'Wednesday','THU':'Thuresday',
-      'FRI':'Friday','SAT':'Saturday',
-     'SUN':'Sunday'}
+>>> days={'MON':'Monday','TUE':'Tuesday','WED':'Wednesday','THU':'Thuresday','FRI':'Friday','SAT':'Saturday','SUN':'Sunday'}
 >>> days
 {'MON': 'Monday', 'TUE': 'Tuesday', 'WED': 'Wednesday', 'THU': 'Thuresday', 'FRI': 'Friday', 'SAT': 'Saturday', 'SUN': 'Sunday'}
 ```
@@ -1529,9 +1527,7 @@ Add or Change an Item by [key]:
 
 ```markdown
 >>> movies={'action':'star wars','comedy':'friends',
-        'sci-fi':'The Mandalorian',
-        'thriller':'Joker',
-       }
+'sci-fi':'The Mandalorian','thriller':'Joker'}
 >>> movies['anim']='frozen-II'
 >>> movies
 {'action': 'star wars',
