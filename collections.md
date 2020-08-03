@@ -1415,19 +1415,367 @@ set1.update(set2)
 ```
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 <h3 id='dicts'> Dictionaries</h3>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
+- A dictionary is similar to a list,but the order of items doesn’t matter, and they aren’t selected by an offset such as 0 or 1. Instead,you specify a unique key to associate with each value.
+- This key is often a string,but it can actually be any of Python’s immutable types
+- In other languages, dictionaries might be called associative arrays, hashes, or hashmaps.
+- Dictionaries are mutable,so you can add, delete, and change their key-value elements.
+
+Create dictionary:
+
+- To create a dictionary, you place curly brackets({}) around comma-separated key : value pairs.The simplest dictionary is an empty one,containing no keys or values at all:
+
+```markdown
+>>> empty_dict = {}
+>>> empty_dict
+{}
+>>> type(empty_dict)
+dict
+```
+```markdown
+>>> colors={'Black':'#000000',
+         'White':'#FFFFFF',
+         'Red':'#FF0000',
+         'Green':'#00FF00',
+        'Blue':'#0000FF',
+        'Yellow':'#FFFF00',
+        'Magenta':'#FF00FF',
+        'Cyan':'#00FFFF'}
+>>> colors['Yellow']
+'#FFFF00'
+>>> colors['Orange']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'Orange'
+>>> colors['Green']
+'#00FF00'
+```
+
+```markdown
+>>> days={'MON':'Monday','TUE':'Tuesday','WED':'Wednesday','THU':'Thuresday',
+      'FRI':'Friday','SAT':'Saturday',
+     'SUN':'Sunday'}
+>>> days
+{'MON': 'Monday', 'TUE': 'Tuesday', 'WED': 'Wednesday', 'THU': 'Thuresday', 'FRI': 'Friday', 'SAT': 'Saturday', 'SUN': 'Sunday'}
+```
+
+- Create dictionary using dict()
+
+```markdown
+>>> details=dict(Department='CSE',Year='IInd',BatchYear=2018)
+>>> details[Department]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Department' is not defined
+>>> details['Department']
+'CSE'
+>>> type(details)
+<class 'dict'>
+```
+- One limitation of the second way is that the argument namesneed to be legal variable names (no spaces, no reserved words)
+
+```markdown
+>>> details=dict(Department='CSE',Year='IInd',BatchYear=2018, def='Computers')
+File "<stdin>", line 1
+    details=dict(Department='CSE',Year='IInd',BatchYear=2018, def='Computers')
+                                                              ^
+SyntaxError: invalid syntax
+```
+Converting with dict()
+
+- You can also use the dict() function to convert two-valuesequences into a dictionary.
+
+```markdown
+>>> lol=[['a','b'],['c','d'],['e','f']]
+>>> dict(lol)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+```
+- A List of two-item tuples:
+
+```markdown
+>>> lot = [ ('a', 'b'), ('c', 'd'), ('e', 'f') ]
+>>> dict(lot)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+```
+
+- A tuple of two-item lists:
+
+```markdown
+>>> tol = ( ['a', 'b'], ['c', 'd'], ['e', 'f'] )
+>>> dict(tol)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+```
+
+```markdown
+>>> los = [ 'ab', 'cd', 'ef' ]
+>>> dict(los)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+>>> tos = ( 'ab', 'cd', 'ef' )
+>>> dict(tos)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+```
+- A tuple of two-character strings:
+
+```markdown
+>>> tos = ( 'ab', 'cd', 'ef' )
+>>> dict(tos)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+```
+Add or Change an Item by [key]:
+
+- Adding an item in the dictionary is by assigning value to the key.
+- If the key was already present in the dictionary,the existing value is replaced by the new one.
+- If the key is new,it’s added to the dictionary with its value.
+
+```markdown
+>>> movies={'action':'star wars','comedy':'friends',
+        'sci-fi':'The Mandalorian',
+        'thriller':'Joker',
+       }
+>>> movies['anim']='frozen-II'
+>>> movies
+{'action': 'star wars',
+ 'comedy': 'friends',
+ 'sci-fi': 'The Mandalorian',
+ 'thriller': 'Joker',
+ 'anim': 'frozen-II'}
+ ```
+- Change value by using key
+
+```markdown
+>>> movies['anim']='toy story4'
+>>> movies
+{'action': 'star wars',
+ 'comedy': 'friends',
+ 'sci-fi': 'The Mandalorian',
+ 'thriller': 'Joker',
+ 'anim': 'toy story4'}
+ ```
+ Get an item with [key] or get()
+
+```markdown
+>>> movies['action']
+'star wars'
+```
+- If the key is not present in dictionary. It will throw an exception
+
+```markdown
+>>> movies['horror']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'horror'
+```
+- Alternative way to check whether key is in the dictionary or not.
+
+```markdown
+>>> 'horror' in movies
+False
+>>> movies.get('horror')
+>>> movies.get('action')
+'star wars'
+>>> movies.get('horror','not yet added')
+'not yet added'
+```
+Get all keys with keys()
+
+```markdown
+>>> movies.keys()
+dict_keys(['action', 'comedy', 'sci-fi', 'thriller', 'anim'])
+```
+
+Get all values with values()
+
+```markdown
+>>> movies.values()
+dict_values(['star wars', 'friends', 'The Mandalorian', 'Joker', 'ricky and morty'])
+```
+Get all key-value pairs with items()
+
+```markdown
+>>> movies.items()
+dict_items([('action', 'star wars'), ('comedy', 'friends'), ('sci-fi', 'The Mandalorian'), ('thriller', 'Joker'), ('anim', 'ricky and morty')])
+```
+
+Get Length with len()
+
+```markdown
+>>> len(movies)
+5
+```
+Combine dictionaries with {**a, **b}
+
+```markdown
+>>> first = {'a': 'agony', 'b': 'bliss'}
+>>> second = {'b': 'bagels', 'c': 'candy'}
+>>> {**first, **second}
+{'a': 'agony', 'b': 'bagels', 'c': 'candy'}
+>>> third = {'d': 'donuts'}
+>>> {**first, **third, **second}
+{'a': 'agony', 'b': 'bagels', 'd': 'donuts', 'c': 'candy'}
+```
+
+Combine Dictionaries with update()
+
+- You can use the update() function tocopy the keys and values of one dictionary into another
+
+```markdown
+>>> first = {'a': 'agony', 'b': 'bliss'}
+>>> second = {'b': 'bagels', 'c': 'candy'}
+>>> first.update(second)
+>>> first
+{'a': 'agony', 'b': 'bagels', 'c': 'candy'}
+```
+
+```markdown
+>>> first = {'a': 1, 'b': 2,'c':3,'d':4,'e':5}
+>>> second = {'b': 'platypus'}
+>>> first.update(second)
+>>> first
+{'a': 1, 'b': 'platypus', 'c': 3, 'd': 4, 'e': 5}
+```
+Delete an Item by key with del
+
+```markdown
+>>> first = {'a': 'agony', 'b': 'bliss'}
+>>> del first['a']
+>>> first
+{'b': 'bliss'}
+>>> del first['a']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'a'
+```
+
+Get an Item by key and Delete It with pop()
+
+- This combines get() and del.If you give pop() a key and it exists in the dictionary,it returns the matching value and deletes the key-value pair. If it doesn’t exist, it raises an exception
+
+```markdown
+>>> first = {'a': 'agony', 'b': 'bliss'}
+>>> first.pop('a')
+'agony'
+>>> first.pop('a')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'a'
+>>> first.pop('a','nothing')
+'nothing'
+```
+
+Delete All Items with clear()
+
+- To delete all keys and values from a dictionary,use clear() or just reassign an empty dictionary({}) to the name
+
+```markdown
+>>> A={'a': 1, 'b': 'platypus', 'c': 3, 'd': 4, 'e': 5}
+>>> A.clear()
+>>> A
+{}
+```
+Test for a key with in
+
+```markdown
+>>> first = {'a': 1, 'b': 2,'c':3,'d':4,'e':5}
+>>> 'a' in first
+True
+>>> 'f' in first
+False
+```
+Compare dictionaries
+
+- Dictionaries can be compared with the simple comparison operators == and !=
+
+```markdown
+>>> a = {1:1, 2:2, 3:3}
+>>> b = {3:3, 1:1, 2:2}
+>>> a == b
+True
+>>> a<b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'dict' and 'dict'
+```
+- Python compares the keys and values one by one. The order in which they were originally created doesn’t matter
+
+```markdown
+>>> a = {1: [1, 2], 2: [1], 3:[1]}
+>>> b = {1: [1, 1], 2: [1], 3:[1]}
+>>> a!=b
+True
+```
+
+Iterate with for and in
+
+```markdown
+>>> signals = {'green': 'go',
+           'yellow': 'go faster',
+           'red': 'smile for the camera'}
+>>> for i in signals:
+...     print(i)
+...
+green
+yellow
+red
+>>> for i in signals.keys():
+...     print(i)
+...
+green
+yellow
+red
+>>> for i in signals.values():
+...     print(i)
+...
+go
+go faster
+smile for the camera
+>>> for item in signals.items():
+...     print(item)
+...
+('green', 'go')
+('yellow', 'go faster')
+('red', 'smile for the camera')
+>>> for key, value in signals.items():
+...     print(key,'-',value)
+...
+green - go
+yellow - go faster
+red - smile for the camera
+```
+Create a dictionary from any iterable data type.
+
+```markdown
+>>> a = ['one','two','three','four']
+>>> dict.fromkeys(a)
+{'one': None, 'two': None, 'three': None, 'four': None}
+```
+
+popitem() :
+
+- Remove and return a (key, value) pair as a 2-touple.
+- Pairs are returned in LIFO (last-in, first-out) order.
+- Raises KeyError if the dict is empty.
+
+```markdown
+>>> a = {1: [1, 1], 2: [1], 3: [1]}
+>>> a.popitem()
+(3, [1])
+>>> a.popitem(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: popitem() takes no arguments (1 given)
+```
+
+setdefault():
+
+-  Insert key with a value of default if key is not in the dictionary.
+- Return the value for key if key is in the dictionary, else default.
+
+```markdown
+>>> a = {1: [1, 1], 2: [1], 3: [1]}
+>>> a.setdefault(4)
+>>> a
+a = {1: [1, 1], 2: [1], 3: [1], 4: None}
+>>> a.setdefault(1)
+[1,1]
+```
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
