@@ -1412,8 +1412,7 @@ set1.update(set2)
 >>> B = {1,2,6,7,8}
 >>> A.update(B)
 {1, 2, 3, 4, 5, 6, 7, 8}
-
-
+```
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 <h3 id='dicts'> Dictionaries</h3>
 <br>
