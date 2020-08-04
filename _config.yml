@@ -7,3 +7,5 @@ include:
   - pythonfirststeps.md
   - scalartypes.md
   - collections.md
+  - copying.md
+  - comprehensions.md

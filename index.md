@@ -10,3 +10,7 @@
 
 [collections](collections.md)
 
+[Comprehensions](comprehensions.md)
+
+[Shallow copy and Deep copy](copying.md)
+
