@@ -14,7 +14,7 @@
 - Str data type is immutable i.e once you declare it, you cannot able to modify it.
 
 Syntax:
-```markdown
+```python
 >>>"this is string"
 'this is string'
 >>>'this is also a string'
@@ -31,7 +31,7 @@ SyntaxError: EOL while scanning string literal
 SyntaxError: EOL while scanning string literal
 ```
 You can check the data type of the string
-```markdown
+```python
 >>>a = "paly with python"
 >>>type(a)
 <class 'str'>
@@ -39,7 +39,7 @@ You can check the data type of the string
 String with new lines:
 
 - Multi line strings: spread the literal across multipule lines.
-```markdown
+```python
 >>>""" This is
 ... multi line string
 ... this is end"""
@@ -60,7 +60,7 @@ Still I'll raise.
 
 Python lets you escape the meaning of some characters with in strings to achieve effects that would otherwise be difficult to express.By preceding a character with a backslash (\),
 you give it a special meaning.The most common escape sequence is \n,which means to begin a new line.
-```markdown
+```python
 >>> 'This is\nmulti line string\nthis is end'
 'This is\nmulti line string\nthis is end'
 >>> a = 'You are not your parents\nYou are not your class\nYou are not the clothes you wear\nYou are not the size of your friend circle\nYour sum of your words. choices and actions.'
@@ -74,7 +74,7 @@ You are not the size of your friend circle
 Your sum of your words. choices and actions.
 ```
 More escape sequences:
-```markdown
+```python
 >>> palindrome = 'A man,\nA plan,\nA canal:\nPanama.'
 >>> print(palindrome)
 A man,
@@ -101,7 +101,7 @@ Combining by using +
 
  we can combine literal strings or string variables using the + operator.
 
-```markdown
+```python
 >>> "good "+"morning"
 'good morning'
 >>> name = "Joe"
@@ -118,7 +118,7 @@ Duplicate with *
 
 We use the * operator to duplicate a string.
 
-```markdown
+```python
 >>> "hi"*3
 'hihihi'
 >>> "hello "*3
@@ -139,7 +139,7 @@ Get characters with []
 - To get a single character from a string, specify its offset inside square brackets after the string’s name.
 - The first (leftmost) offset is 0, the next is 1, and so on.
 
-```markdown
+```python
 >>> letters = 'abcdefghijklmnopqrstuvwxyz'
 >>> letters[0]
 a
@@ -150,10 +150,10 @@ z
 Get a substring with a slice
 
 syntax:
-```markdown
+```python
 [start_offset:end_offset:step(optional)]
 ```
-```markdown
+```python
 >>> letters[1:11]
 'bcdefghijk'
 >>> letters[1:20:2]
@@ -169,11 +169,11 @@ The len() function counts characters in a string:
 
 Syntax:
 
-```markdown
+```python
 len(string)
 ```
 
-```markdown
+```python
 >>> letters = 'abcdefghijklmnopqrstuvwxyz'
 >>> len(letters)
 26
@@ -186,10 +186,10 @@ spilt with split()
 You can use the built-in string split() function to break a string into a list of smaller strings based on some separator.
 
 syntax:
-```markdown
+```python
 string.split('seperator')
 ```
-```markdown
+```python
 >>> tasks = 'get gloves,get mask,give cat vitamins,call ambulance'
 >>> tasks.split(',')
 ['get gloves', 'get mask', 'give cat vitamins', 'call ambulance']
@@ -199,11 +199,11 @@ string.split('seperator')
 combine by using join()
 
 syntax:
-```markdown
+```python
 seperator.join(list)
 ```
 
-```markdown
+```python
 >>> crypto_list = ['Yeti', 'Bigfoot', 'Loch Ness Monster']
 >>> crypto_string = ', '.join(crypto_list)
 >>> print(crypto_string)
@@ -215,10 +215,10 @@ You use replace() for simple substring substitution.Give it the old substring, t
 It returns the changed string but does notmodify the original string.If you omit this final count argument, it replaces all instances.
 
 Syntax:
-```markdown
+```python
 string.replace(old_substring, new_substring, count(optional))
 ```
-```markdown
+```python
 >>> setup = "a duck goes into a bar..."
 >>> setup.replace('duck', 'marmoset')
 >>> setup.replace('duck', 'marmoset')
@@ -232,10 +232,10 @@ The strip() functions shown here assume that you want to get rid ofwhitespace ch
 strip() strips both ends, lstrip() only from the left, and rstrip() only from the right.
 
 Syntax :
-```markdown
+```python
 string.strip()
 ```
-```markdown
+```python
 >>> world = "    earth   "
 >>> world.strip()
 'earth'
@@ -248,21 +248,21 @@ string.strip()
 ```
 If the character were not there, nothing happens:
 
-```markdown
+```python
 >>> world.strip('!')
 '   earth   '
 ```
 
 Besides no argument (meaning whitespace characters) or a single character, you can also tell strip() to remove any character in a multicharacter string:
 
-```markdown
+```python
 >>> blurt = "What the...!!?"
 >>> blurt.strip('.?!')
 'What the'
 ```
 Search and Select
 
-```markdown
+```python
 >>> poem = '''All that doth flow we cannot liquid name
 ... Or else would fire and water be the same;
 ... But that is liquid which is moist and wet
@@ -279,7 +279,7 @@ True
 False
 ```
 Let’s find the offset of the first occurrenceof the word the in the poem:
-```markdown
+```python
 >>> word='the'
 >>> poem.find(word)
 73
@@ -288,7 +288,7 @@ Let’s find the offset of the first occurrenceof the word the in the poem:
 ```
 And the offset of the last the:
 
-```markdown
+```python
 >>> word = 'the'
 >>> poem.rfind(word)
 218
@@ -298,58 +298,58 @@ And the offset of the last the:
 
 How many times does the three-letter sequence 'the' occur?
 
-```markdown
+```python
 >>> poem.count(word)
 3
 ```
 Are all of the characters in the poem either letters or numbers?
 
-```markdown
+```python
 >>> poem.isalnum()
 False
 ```
 
 Cases:
 
-```markdown
+```python
 >>> setup = 'a duck goes into a bar...'
 ```
 
-```markdown
+```python
 >>> setup.strip('.')
 'a duck goes into a bar'
 ```
 Capitalize the first word:
 
-```markdown
+```python
 >>> setup.capitalize()
 'A duck goes into a bar...'
 ```
 
 Capitalize all the words:
 
-```markdown
+```python
 >>> setup.title()
 'A Duck Goes Into A Bar...'
 ```
 
 Convert all characters to uppercase:
 
-```markdown
+```python
 >>> setup.upper()
 'A DUCK GOES INTO A BAR...'
 ```
 
 Convert all characters to lowercase:
 
-```markdown
+```python
 >>> setup.lower()
 'a duck goes into a bar...'
 ```
 
 Swap uppercase and lowercase:
 
-```markdown
+```python
 >>> setup.swapcase()
 'A DUCK GOES INTO A BAR...'
 >>> setup
@@ -371,7 +371,7 @@ Formatting :
 
 You can use a %s for any data type, and Python will format it as a string with no extra spaces.
 
-```markdown
+```python
 >>> '%s' % 42
 '42'
 >>> '%d' % 42
@@ -384,14 +384,14 @@ You can use a %s for any data type, and Python will format it as a string with n
 
 An integer and a literal %:
 
-```markdown
+```python
 >>> '%d%%' % 100
 '100%'
 ```
 
 Let's try some string and integer interpolation:
 
-```markdown
+```python
 >>> actor = 'Richard Gere'
 >>> cat = 'Chester'
 >>> weight = 28
@@ -402,7 +402,7 @@ Let's try some string and integer interpolation:
 ```
 some more examples
 
-```markdown
+```python
 >>> thing = 'woodchuck'
 >>> '%s' % thing
 'woodchuck'
@@ -422,7 +422,7 @@ some more examples
 
 one more with feeling
 
-```markdown
+```python
 >>> thing = 98.6
 >>> '%f' % thing
 '98.600000'
@@ -445,13 +445,13 @@ New style:{} and format()
 
 “New style” formatting has the form format_string.format(data).
 
-```markdown
+```python
 >>> thing = 'woodchuck'
 >>> '{}'.format(thing)
 'woodchuck'
 ```
 The arguments to the format() function need to be in the order as the {} placeholders in the format string:
-```markdown
+```python
 >>> thing = 'woodchuck'
 >>> place = 'lake'
 >>> 'The {} is in the {}.'.format(thing, place)
@@ -460,7 +460,7 @@ The arguments to the format() function need to be in the order as the {} placeho
 
 With new-style formatting, you can also specify the arguments by position like this:
 
-```markdown
+```python
 >>> 'The {1} is in the {0}.'.format(place, thing)
 'The woodchuck is in the lake.'
 ```
@@ -469,19 +469,19 @@ The value 0 referred to the first argument, place, and 1 referred to thing.
 
 The arguments to format() can also be named arguments
 
-```markdown
+```python
 >>> 'The {thing} is in the {place}'.format(thing='duck', place='bathtub')
 'The duck is in the bathtub'
 ```
 or a dictionary:
-```markdown
+```python
 >>> d = {'thing': 'duck', 'place': 'bathtub'}
 >>> 'The {0[thing]} is in the {0[place]}.'.format(d)
 'The duck is in the bathtub.'
 ```
 
 More Examples:
-```markdown
+```python
 >>> thing = 'wraith'
 >>> place = 'window'
 >>> 'The {} is at the {}'.format(thing, place)
@@ -504,7 +504,7 @@ To make an f-string:
 - Type the letter f or F directly before the initial quote.
 - Include variable names or expressions within curly brackets ({}) to get their values into the string.
 
-```markdown
+```python
 >>> thing = 'wereduck'
 >>> place = 'werepond'
 >>> f'The {thing} is in the {place}'
@@ -516,7 +516,7 @@ To make an f-string:
 ```
 - Starting in Python 3.8, f-strings gain a new shortcut that’s helpful when you want to print variable names as well as their values.
 
-```markdown
+```python
 >>> f'{thing =}, {place =}'
 "thing ='wereduck', place ='werepond'"
 >>> f'{thing[-4:] =}, {place.title() =}'
@@ -535,7 +535,7 @@ To make an f-string:
 - Raw binary data
 - Fixed width single byte encoding
 
-```markdown
+```python
 >>> b'byte data'
 b'byte data'
 >>> d= b'some bytes'
@@ -547,7 +547,7 @@ b'byte data'
 Converting between strings and bytes:
 ![](./collections1.JPG)
 
-```markdown
+```python
 >>> a = b'byte data'
 >>> a.decode()
 'byte data'
@@ -565,7 +565,7 @@ b'hello python'
 
 Create empty list
 
-```markdown
+```python
 >>> myfirst_list = []   # one way of creating empty list
 >>> type(myfirst_list)
 <class 'list'>
@@ -575,21 +575,21 @@ Create empty list
 ```
 python list() converts string into list
 
-```markdown
+```python
 >>> list('python')
 ['p', 'y', 't', 'h', 'o', 'n']
 ```
 
 Create a list from string split()
 
-```markdown
+```python
 >>> python_day='12/12/2019'
 >>> python_day.split('/')
 ['12', '12', '2019']
 ```
 list.reverse() : To reverse the elements in the list
 
-```markdown
+```python
 >>> lang=['c','c++','java','python']
 >>> lang.reverse()
 >>> lang
@@ -598,7 +598,7 @@ list.reverse() : To reverse the elements in the list
 
 Add an Item to the End with append()
 
-```markdown
+```python
 >>> lang=['c','c++','java','python']
 >>> lang.append('R')
 >>> lang
@@ -609,12 +609,12 @@ Add an Item by Offset with insert()
 
 syntax:
 
-```markdown
+```python
 insert(index, word)
 ```
 Examples:
 
-```markdown
+```python
 >>> lang=['c', 'c++', 'java', 'python', 'R']
 >>> lang.insert(2,'scala')
 >>> lang
@@ -625,13 +625,13 @@ Duplicate All Items with *
 
 syntax:
 
-```markdown
+```python
 ['string']*value
 ```
 
 Examples:
 
-```markdown
+```python
 >>> ['python']*3
 ['python', 'python', 'python']
 >>> ['python','java']*3
@@ -639,7 +639,7 @@ Examples:
 ```
 Combine Lists by Using extend() or +
 
-```markdown
+```python
 >>> lang
 ['c', 'c++', 'scala', 'java', 'python', 'R']
 >>> markups=['html','xml']
@@ -697,7 +697,7 @@ Combine Lists by Using extend() or +
 ```
 Change an Item by [offset]
 
-```markdown
+```python
 >>> lang
 ['c',
  'c++',
@@ -735,7 +735,7 @@ Change an Item by [offset]
 
  Change an item with slice
 
-```markdown
+```python
 >>> numbers=[1,2,3,4]
 >>> numbers[1:3]=[8,9]
 >>> numbers
@@ -745,13 +745,13 @@ Delete an Item by Offset with del
 
 syntax:
 
-```markdown
+```python
  del list[offset]
 ```
 
 Examples:
 
-```markdown
+```python
 >>> languages=['C','C#','Java','Python']
 >>> del languages[-1]
 >>> languages
@@ -763,12 +763,12 @@ Examples:
 Delete an Item by Value with remove()
 
 syntax:
-```markdown
+```python
 list.remove('element')
 ```
 Examples:
 
-```markdown
+```python
 >>> languages=['C','C#','Java','Python']
 >>> languages.remove('C#')
 ```
@@ -776,10 +776,10 @@ Examples:
 Get an Item Offset and Delete It with pop()
 
 syntax:
-```markdown
+```python
 list.pop(offset)
 ```
-```markdown
+```python
 >>> languages=['C','C#','Java','Python']
 >>> languages.pop()
 'Python'
@@ -790,10 +790,10 @@ list.pop(offset)
 ```
 Delete All Items with clear()
 syntax:
-```markdown
+```python
 list.clear()
 ```
-```markdown
+```python
 >>> languages=['C','C#','Java','Python']
 >>> languages.clear()
 >>> languages
@@ -802,22 +802,22 @@ list.clear()
 Find an Item's Offset by Value with index()
 
 Syntax:
-```markdown
+```python
 list.index('element')
 ```
 
-```markdown
+```python
 >>> languages=['C','C#','Java','Python']
 >>> languages.index('C')
 0
 ```
 Test for Value with in
 Syntax:
-```markdown
+```python
 'element' in list
 ```
 
-```markdown
+```python
 >>> languages=['C','C#','Java','Python']
 >>> 'Python' in languages
 True
@@ -827,22 +827,22 @@ False
 Count Occurrences of Value with count()
 
 Syntax:
-```markdown
+```python
 list.count('element')
 ```
 
-```markdown
+```python
 >>> languages.count('C')
 1
 ```
 How to convert list to string ?
 
 Syntax:
-```markdown
+```python
 'seperator'.join(list)
 ```
 
-```markdown
+```python
 >>> languages=['C','C#','Java','Python']
 >>> ','.join(languages)
 'C,C#,Java,Python'
@@ -851,7 +851,7 @@ Reorder Items of the list
 
 Using python function:
 
-```markdown
+```python
 >>> languages=['Python','C#','Java','C']
 >>> sorted(languages)
 ['C', 'C#', 'Java', 'Python']
@@ -860,7 +860,7 @@ Using python function:
 ```
 
 Using list method:
-```markdown
+```python
 >>> languages=['Python','C#','Java','C']
 >>> languages.sort()
 >>> languages
@@ -875,10 +875,10 @@ Get Length with len()
 
 Syntax:
 
-```markdown
+```python
 len(list)
 ```
-```markdown
+```python
 >>> len(languages)
 4
 ```
@@ -886,7 +886,7 @@ Assign with =
 
  When you assign one list to more than one variable, changing the list in one place also changes it in the other.
 
-```markdown
+```python
  >>> a=[1,2,3,4]
  >>> id(a)
  2109612147720
@@ -905,7 +905,7 @@ Assign with =
 
 Compare lists:
 
-```markdown
+```python
 >>> a = [1,2,3]
 >>> b = [7,8,9]
 >>> a == b
@@ -916,7 +916,7 @@ True
 
 Iterate with for and in
 
-```markdown
+```python
 >>> languages=['C','C#','JAVA','PYTHON']
 >>> for i in languages:
 ...     print(i)
@@ -927,7 +927,7 @@ Python
 ```
 break ends the for loop and continue steps to next iteration
 
-```markdown
+```python
 >>> languages=['C','C#','JAVA','PYTHON','HTML','GO']
 >>> for i in languages:
 ...    if i.lower()=='html':
@@ -943,7 +943,7 @@ HTML is not a programming language like others
 ```
 We can use the optional else if the for Completed without a break
 
-```markdown
+```python
 >>> languages=['C','C#','JAVA','PYTHON','GO']
 >>> for language in languages:
 ...    if language.lower()=='html':
@@ -962,7 +962,7 @@ There are no non-programming languages
 ```
 If the initial for never ran, control goes to the else also:
 
-```markdown
+```python
 >>> cheeses=[]
 ... for cheese in cheeses:
 ...     print(cheese)
@@ -973,7 +973,7 @@ There is no cheese
 ```
 cheeses list was empty in this example, for cheese in cheeses never completed a single loop and its break statement was never executed.
 
-```markdown
+```python
 >>> days=['Monday','Tuesday','Wednesday']
 >>> fruits=['banana','orange','peach']
 >>> drinks=['coffee','tea','ice tea']
@@ -988,7 +988,7 @@ zip() stops when the shortest sequence is done.
 
 List of lists
 
-```markdown
+```python
 >>> small_birds=['hamming_bird','finch']
 >>> extinct_birds=['dodo','passenger pigeon','Norwegian Blue']
 >>> carol_birds=[3,'French hens',2,'turtledoves']
@@ -1011,7 +1011,7 @@ List of lists
 - Tuple is non mutable type
 - Tuple will be represented with ().
 
-```markdown
+```python
 >>> empty_tuple = ()
 >>> empty_tuple
 ()
@@ -1020,7 +1020,7 @@ tuple
 ```
 - To make a tuple with one or more elements, follow each element with a comma. This works for one-element tuples
 
-```markdown
+```python
 >>> one_color = 'Green',
 >>> one_color
 ('Green',)
@@ -1034,7 +1034,7 @@ tuple
 
 - Tuple let you assign multiple variables at once:
 
-```markdown
+```python
 >>> a = list(multi_color)
 >>> tuple(a)
 ('Green', 'Red', 'White')
@@ -1050,7 +1050,7 @@ White
 - This is called tuple unpacking
 - You can use tuples to exchange values in one statement without using a temporary variables.
 
-```markdown
+```python
 >>> password = 'confidential'
 >>> icecream = 'choclate'
 >>> password, icecream = icecream, password
@@ -1064,7 +1064,7 @@ confidential
 ```
 - Create tuple with the tuple()
 
-```markdown
+```python
 >>> numbers=[1,3,5,7]
 >>> tuple(numbers)
 (1, 3, 5, 7)
@@ -1074,7 +1074,7 @@ Combine Tuples by Using +
 
 - This is similar to combining strings
 
-```markdown
+```python
 >>> ('Groucho',)+('Chico','harpo')
 ('Groucho', 'Chico', 'harpo')
 ```
@@ -1082,7 +1082,7 @@ Duplicate items with *
 
 - This is like repeated use of +:
 
-```markdown
+```python
 >>> ('yada',)*3
 ('yada','yada','yada')
 ```
@@ -1090,7 +1090,7 @@ Compare tuples
 
 - This works much like list comparisions
 
-```markdown
+```python
 >>> a=(7,2)
 >>> b=(7,2,9)
 >>> a==b
@@ -1101,7 +1101,7 @@ True
 
 Iterate with for and in
 
-```markdown
+```python
 >>> items = ('good','bad','ugly')
 >>> for word in items:
 ...     print(word)
@@ -1112,7 +1112,7 @@ ugly
 ```
 Modify tuple
 
-```markdown
+```python
 >>> t1=('Fee','Fie','Foe')
 >>> id(t1)
 2109612850296
@@ -1128,7 +1128,7 @@ Modify tuple
 
 count the elements in touple
 
-```markdown
+```python
 >>> t1 = ('Fee', 'Fie', 'Foe', 'top')
 >>> t1.count('Fee')
 1
@@ -1138,7 +1138,7 @@ count the elements in touple
 
 Get the index of particular value in the tuple.
 
-```markdown
+```python
 >>> t1 = ('Fee', 'Fie', 'Foe', 'top')
 >>> t1.index('top')
 3
@@ -1165,7 +1165,7 @@ A - B = {3,4,5}
 - A set is like a dictionarywith its values thrown away,leaving only the keys.As with a dictionary, each key must be unique.
 - create with set()
 
-```markdown
+```python
 >>> empty_set = set()
 >>> empty_set
 set()
@@ -1175,7 +1175,7 @@ Convert with set()
 
 - You can create a set from a list, string, tuple, or dictionary, discarding any duplicate values.
 
-```markdown
+```python
 >>> set('letters')
 {'s', 'e', 'l', 't', 'r'}
 >>> set( ['Java', 'C', 'C#', 'Python'] )
@@ -1188,7 +1188,7 @@ Convert with set()
 
 Get Length with len()
 
-```markdown
+```python
 >>> lang=set(['c','c++','Java','Python'])
 >>> len(lang)
 4
@@ -1196,7 +1196,7 @@ Get Length with len()
 
 Add an item with add()
 
-```markdown
+```python
 >>> s = set((1,2,3,4))
 >>> s.add(4)
 >>> s
@@ -1205,7 +1205,7 @@ Add an item with add()
 
 Delete an item with remove()
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> A.remove(1)
 >>> A
@@ -1221,7 +1221,7 @@ KeyError: 99
 
 Iterate with for and in
 
-```markdown
+```python
 >>> furniture = set(('sofa', 'ottoman', 'table'))
 >>> for comp in furniture:
 ...     print(comp)
@@ -1232,7 +1232,7 @@ ottoman
 ```
 Combinations and operators
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A.union(B)
@@ -1241,7 +1241,7 @@ Combinations and operators
 {1, 2, 3, 4, 5, 6, 7, 8}
 ```
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A.intersection(B)
@@ -1251,7 +1251,7 @@ Combinations and operators
 ```
 intersection_update() will update the A with the result
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A.intersection_update(B)
@@ -1259,7 +1259,7 @@ intersection_update() will update the A with the result
 {1,2}
 ```
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A-B
@@ -1269,7 +1269,7 @@ intersection_update() will update the A with the result
 ```
 difference_update() will update the set A with the results.
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A.difference_update(B)
@@ -1278,7 +1278,7 @@ difference_update() will update the set A with the results.
 ```
 ![](./Sets2.png)
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A.symmetric_difference(B)
@@ -1288,7 +1288,7 @@ difference_update() will update the set A with the results.
 ```
 - symmetric_difference_update() will update the set with the result.
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A.symmetric_difference_update(B)
@@ -1300,7 +1300,7 @@ A &sub; B
 
 ![](./Sets3.png)
 
-```markdown
+```python
 >>> A = {1,2,4}
 >>> B = {1,2,3,4,5}
 >>> A.issubset(B)
@@ -1312,7 +1312,7 @@ A &sup; B
 
 ![](./Sets3.png)
 
-```markdown
+```python
 >>> A = {1,2,4}
 >>> B = {1,2,3,4,5}
 >>> B.issuperset(A)
@@ -1325,7 +1325,7 @@ Disjoint set:
 
 ![](./Sets4.png)
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> C = {9,10}
@@ -1339,11 +1339,11 @@ Delete all elements in the set using clear()
 
 Syntax:
 
-```markdown
+```python
 set.clear()
 ```
 
-```markdown
+```python
 >>> s = {'C'.'C++','JAVA'}
 >>> s.clear()
 >>> s
@@ -1353,11 +1353,11 @@ Copy a set using copy method:
 
 syntax:
 
-```markdown
+```python
 another_set = set.copy()
 ```
 
-```markdown
+```python
 >>> s= {'C'.'C++','JAVA'}
 >>> ss = s.copy()
 >>> ss
@@ -1367,11 +1367,11 @@ Remove the member of a set using discard()
 
 syntax:
 
-```markdown
+```python
 set.discard(member)
 ```
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> A.discard(4)
 >>> A
@@ -1384,7 +1384,7 @@ Delete an element using pop()
 
 - pop() by default delete first element in the set.
 
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> A.pop()
 1
@@ -1404,10 +1404,10 @@ Update:
 
 syntax:
 
-```markdown
+```python
 set1.update(set2)
 ```
-```markdown
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {1,2,6,7,8}
 >>> A.update(B)
@@ -1425,14 +1425,14 @@ Create dictionary:
 
 - To create a dictionary, you place curly brackets({}) around comma-separated key : value pairs.The simplest dictionary is an empty one,containing no keys or values at all:
 
-```markdown
+```python
 >>> empty_dict = {}
 >>> empty_dict
 {}
 >>> type(empty_dict)
 dict
 ```
-```markdown
+```python
 >>> colors={'Black':'#000000',
          'White':'#FFFFFF',
          'Red':'#FF0000',
@@ -1451,7 +1451,7 @@ KeyError: 'Orange'
 '#00FF00'
 ```
 
-```markdown
+```python
 >>> days={'MON':'Monday','TUE':'Tuesday','WED':'Wednesday','THU':'Thuresday','FRI':'Friday','SAT':'Saturday','SUN':'Sunday'}
 >>> days
 {'MON': 'Monday', 'TUE': 'Tuesday', 'WED': 'Wednesday', 'THU': 'Thuresday', 'FRI': 'Friday', 'SAT': 'Saturday', 'SUN': 'Sunday'}
@@ -1459,7 +1459,7 @@ KeyError: 'Orange'
 
 - Create dictionary using dict()
 
-```markdown
+```python
 >>> details=dict(Department='CSE',Year='IInd',BatchYear=2018)
 >>> details[Department]
 Traceback (most recent call last):
@@ -1472,7 +1472,7 @@ NameError: name 'Department' is not defined
 ```
 - One limitation of the second way is that the argument namesneed to be legal variable names (no spaces, no reserved words)
 
-```markdown
+```python
 >>> details=dict(Department='CSE',Year='IInd',BatchYear=2018, def='Computers')
 File "<stdin>", line 1
     details=dict(Department='CSE',Year='IInd',BatchYear=2018, def='Computers')
@@ -1483,14 +1483,14 @@ Converting with dict()
 
 - You can also use the dict() function to convert two-valuesequences into a dictionary.
 
-```markdown
+```python
 >>> lol=[['a','b'],['c','d'],['e','f']]
 >>> dict(lol)
 {'a': 'b', 'c': 'd', 'e': 'f'}
 ```
 - A List of two-item tuples:
 
-```markdown
+```python
 >>> lot = [ ('a', 'b'), ('c', 'd'), ('e', 'f') ]
 >>> dict(lot)
 {'a': 'b', 'c': 'd', 'e': 'f'}
@@ -1498,13 +1498,13 @@ Converting with dict()
 
 - A tuple of two-item lists:
 
-```markdown
+```python
 >>> tol = ( ['a', 'b'], ['c', 'd'], ['e', 'f'] )
 >>> dict(tol)
 {'a': 'b', 'c': 'd', 'e': 'f'}
 ```
 
-```markdown
+```python
 >>> los = [ 'ab', 'cd', 'ef' ]
 >>> dict(los)
 {'a': 'b', 'c': 'd', 'e': 'f'}
@@ -1514,7 +1514,7 @@ Converting with dict()
 ```
 - A tuple of two-character strings:
 
-```markdown
+```python
 >>> tos = ( 'ab', 'cd', 'ef' )
 >>> dict(tos)
 {'a': 'b', 'c': 'd', 'e': 'f'}
@@ -1525,7 +1525,7 @@ Add or Change an Item by [key]:
 - If the key was already present in the dictionary,the existing value is replaced by the new one.
 - If the key is new,it’s added to the dictionary with its value.
 
-```markdown
+```python
 >>> movies={'action':'star wars','comedy':'friends',
 'sci-fi':'The Mandalorian','thriller':'Joker'}
 >>> movies['anim']='frozen-II'
@@ -1538,7 +1538,7 @@ Add or Change an Item by [key]:
  ```
 - Change value by using key
 
-```markdown
+```python
 >>> movies['anim']='toy story4'
 >>> movies
 {'action': 'star wars',
@@ -1549,13 +1549,13 @@ Add or Change an Item by [key]:
  ```
  Get an item with [key] or get()
 
-```markdown
+```python
 >>> movies['action']
 'star wars'
 ```
 - If the key is not present in dictionary. It will throw an exception
 
-```markdown
+```python
 >>> movies['horror']
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -1563,7 +1563,7 @@ KeyError: 'horror'
 ```
 - Alternative way to check whether key is in the dictionary or not.
 
-```markdown
+```python
 >>> 'horror' in movies
 False
 >>> movies.get('horror')
@@ -1574,33 +1574,33 @@ False
 ```
 Get all keys with keys()
 
-```markdown
+```python
 >>> movies.keys()
 dict_keys(['action', 'comedy', 'sci-fi', 'thriller', 'anim'])
 ```
 
 Get all values with values()
 
-```markdown
+```python
 >>> movies.values()
 dict_values(['star wars', 'friends', 'The Mandalorian', 'Joker', 'ricky and morty'])
 ```
 Get all key-value pairs with items()
 
-```markdown
+```python
 >>> movies.items()
 dict_items([('action', 'star wars'), ('comedy', 'friends'), ('sci-fi', 'The Mandalorian'), ('thriller', 'Joker'), ('anim', 'ricky and morty')])
 ```
 
 Get Length with len()
 
-```markdown
+```python
 >>> len(movies)
 5
 ```
 Combine dictionaries with {**a, **b}
 
-```markdown
+```python
 >>> first = {'a': 'agony', 'b': 'bliss'}
 >>> second = {'b': 'bagels', 'c': 'candy'}
 >>> {**first, **second}
@@ -1614,7 +1614,7 @@ Combine Dictionaries with update()
 
 - You can use the update() function tocopy the keys and values of one dictionary into another
 
-```markdown
+```python
 >>> first = {'a': 'agony', 'b': 'bliss'}
 >>> second = {'b': 'bagels', 'c': 'candy'}
 >>> first.update(second)
@@ -1622,7 +1622,7 @@ Combine Dictionaries with update()
 {'a': 'agony', 'b': 'bagels', 'c': 'candy'}
 ```
 
-```markdown
+```python
 >>> first = {'a': 1, 'b': 2,'c':3,'d':4,'e':5}
 >>> second = {'b': 'platypus'}
 >>> first.update(second)
@@ -1631,7 +1631,7 @@ Combine Dictionaries with update()
 ```
 Delete an Item by key with del
 
-```markdown
+```python
 >>> first = {'a': 'agony', 'b': 'bliss'}
 >>> del first['a']
 >>> first
@@ -1646,7 +1646,7 @@ Get an Item by key and Delete It with pop()
 
 - This combines get() and del.If you give pop() a key and it exists in the dictionary,it returns the matching value and deletes the key-value pair. If it doesn’t exist, it raises an exception
 
-```markdown
+```python
 >>> first = {'a': 'agony', 'b': 'bliss'}
 >>> first.pop('a')
 'agony'
@@ -1662,7 +1662,7 @@ Delete All Items with clear()
 
 - To delete all keys and values from a dictionary,use clear() or just reassign an empty dictionary({}) to the name
 
-```markdown
+```python
 >>> A={'a': 1, 'b': 'platypus', 'c': 3, 'd': 4, 'e': 5}
 >>> A.clear()
 >>> A
@@ -1670,7 +1670,7 @@ Delete All Items with clear()
 ```
 Test for a key with in
 
-```markdown
+```python
 >>> first = {'a': 1, 'b': 2,'c':3,'d':4,'e':5}
 >>> 'a' in first
 True
@@ -1681,7 +1681,7 @@ Compare dictionaries
 
 - Dictionaries can be compared with the simple comparison operators == and !=
 
-```markdown
+```python
 >>> a = {1:1, 2:2, 3:3}
 >>> b = {3:3, 1:1, 2:2}
 >>> a == b
@@ -1693,7 +1693,7 @@ TypeError: '<' not supported between instances of 'dict' and 'dict'
 ```
 - Python compares the keys and values one by one. The order in which they were originally created doesn’t matter
 
-```markdown
+```python
 >>> a = {1: [1, 2], 2: [1], 3:[1]}
 >>> b = {1: [1, 1], 2: [1], 3:[1]}
 >>> a!=b
@@ -1702,7 +1702,7 @@ True
 
 Iterate with for and in
 
-```markdown
+```python
 >>> signals = {'green': 'go',
            'yellow': 'go faster',
            'red': 'smile for the camera'}
@@ -1739,7 +1739,7 @@ red - smile for the camera
 ```
 Create a dictionary from any iterable data type.
 
-```markdown
+```python
 >>> a = ['one','two','three','four']
 >>> dict.fromkeys(a)
 {'one': None, 'two': None, 'three': None, 'four': None}
@@ -1751,7 +1751,7 @@ popitem() :
 - Pairs are returned in LIFO (last-in, first-out) order.
 - Raises KeyError if the dict is empty.
 
-```markdown
+```python
 >>> a = {1: [1, 1], 2: [1], 3: [1]}
 >>> a.popitem()
 (3, [1])
@@ -1766,7 +1766,7 @@ setdefault():
 -  Insert key with a value of default if key is not in the dictionary.
 - Return the value for key if key is in the dictionary, else default.
 
-```markdown
+```python
 >>> a = {1: [1, 1], 2: [1], 3: [1]}
 >>> a.setdefault(4)
 >>> a
