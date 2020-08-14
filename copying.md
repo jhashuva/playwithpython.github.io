@@ -2,7 +2,7 @@
 
 Before we see about shallow copy and deep copy. We see how to assign any collection data type variable to another.
 
-```markdown
+```python
 >>> a = [1,2,3]
 >>> id(a)
 1958952968712
@@ -14,7 +14,7 @@ Before we see about shallow copy and deep copy. We see how to assign any collect
 ```
 - If you try to add an element to the b. It reflects in a also
 
-```markdown
+```python
 >>> b
 [1,2,3]
 >>> a
@@ -28,7 +28,7 @@ Before we see about shallow copy and deep copy. We see how to assign any collect
 
 Same way in sets
 
-```markdown
+```python
 >>> s1 = {1,2,3,4}
 >>> id(s1)
 2110019791776
@@ -45,7 +45,7 @@ Same way in sets
 ```
 - Dictionary also have the same issue
 
-```markdown
+```python
 >>> d1 = {'a':1,'b':2,'c':3}
 >>> id(d1)
 2110019840000
@@ -65,7 +65,7 @@ A shallow copy constructs a new compound object and then (to the extent possible
 
 - with the copy() function we do shallow copying.
 
-```markdown
+```python
 >>> list1 = [['a','b'],['c','d']]
 >>> id(list1)
 2110019822592
@@ -82,7 +82,7 @@ A shallow copy constructs a new compound object and then (to the extent possible
 ```
 Same happens to dictionary
 
-```markdown
+```python
 >>> d1 = {1:['a','b'],2:['c','d']}
 >>> id(d1)
 2110017714496
@@ -107,7 +107,7 @@ A deep copy constructs a new compound object and then, recursively, inserts copi
 
 For this purpose we need to import module called copy
 
-```markdown
+```python
 >>> import copy
 >>> list1 = [['a','b'],['c','d']]
 >>> list2 = copy.deepcopy(list1)
