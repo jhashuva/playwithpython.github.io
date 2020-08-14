@@ -9,3 +9,6 @@ include:
   - collections.md
   - copying.md
   - comprehensions.md
+
+plugins:
+  - jemoji
