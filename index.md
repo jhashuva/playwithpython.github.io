@@ -15,4 +15,4 @@
 [Shallow copy and Deep copy](copying.md)
 
 
-Created and crafted with :love: by Joshua
+Created and crafted with :heart: by Joshua
