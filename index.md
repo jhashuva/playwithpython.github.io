@@ -14,6 +14,8 @@
 
 [Shallow copy and Deep copy](copying.md)
 
+[Functions](funcs.md)
+
 
 
 

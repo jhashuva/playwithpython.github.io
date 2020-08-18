@@ -9,6 +9,7 @@ include:
   - collections.md
   - copying.md
   - comprehensions.md
+  - funcs.md
 
 plugins:
   - jemoji
