@@ -1,3 +1,5 @@
 ## Functions
 
-FUnctions are first class objects in python.
+Functions are first class objects in python.
+
+[Home](index.md)
