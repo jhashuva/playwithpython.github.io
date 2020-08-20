@@ -16,6 +16,7 @@
 
 [Functions](funcs.md)
 
+[List Quiz](list_quiz.md)
 
 
 
