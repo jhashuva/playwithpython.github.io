@@ -1004,7 +1004,7 @@ List of lists
  >>> all_birds[1][0]
  'dodo'
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 
 
 <h3 id='tuples'> Tuples</h3>
