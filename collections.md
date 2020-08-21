@@ -529,7 +529,8 @@ To make an f-string:
 - Think Python, Second Edition, Allen B. Downey, 2016, O'Reilly
 <br>
 <br>
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;[Home](index.md)
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 <h3 id='bytes'> Bytes</h3>
 - Data type for sequence of bytes
 - Raw binary data
@@ -555,7 +556,7 @@ Converting between strings and bytes:
 >>> b.encode()
 b'hello python'
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
 
 <h3 id='lists'> Lists</h3>
 - sequence of objects
