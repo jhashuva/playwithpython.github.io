@@ -60,7 +60,7 @@ If you want to know what really function does. You can check using <code>functio
 For example you want to know what <code>print</code> does.
 
 ```python
-print(print.__doc__)
+print(greeting.__doc__)
 ```
 The above statement will print the following:
 
