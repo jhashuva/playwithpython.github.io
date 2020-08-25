@@ -170,7 +170,11 @@ Case 6: Passing different data types as a arguments to <code>add</code>
 Number and String:
 
 ```python
-add()
+print(add('Hello ',6))
+```
+It gives exception like this:
+
+
 
 
 
