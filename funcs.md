@@ -101,7 +101,7 @@ That will return float value 12.3 since we know <code>float+int = float</code> i
 case-2: Pass two string values as an arguments.
 
 ```python
-print(add("Hello "+"Python"))
+print(add("Hello ","Python"))
 ```
 That will give us the output:
 
