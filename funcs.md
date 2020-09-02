@@ -130,6 +130,7 @@ It will return 130
 
 
 <strong id='pa'>Parameters vs Arguments</strong>
+
 - Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
 
