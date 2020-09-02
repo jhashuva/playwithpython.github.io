@@ -1,7 +1,7 @@
 ## Functions
-<a href='#types'>Types of functions</a>
-<a href='#udfs'>User Defined Functions(UDFs)</a>
-<a href='#pa'>Parameters vs Arguments</a>
+<a href='#types'>Types of functions</a><br>
+<a href='#udfs'>User Defined Functions(UDFs)</a><br>
+<a href='#pa'>Parameters vs Arguments</a><br>
 
 Functions are first class objects in python. Function is a piece of code or set of instructions to carry out specific task.
 
