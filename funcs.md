@@ -1,10 +1,14 @@
 ## Functions
+<a href='#types'>Types of functions</a>
+<a href='#udfs'>User Defined Functions(UDFs)</a>
+<a href='#pa'>Parameters vs Arguments</a>
 
 Functions are first class objects in python. Function is a piece of code or set of instructions to carry out specific task.
 
 - Functions may take single or multipule inputs to carry out the the task and sometimes they may not take input.
 - After carried out specific task, functions may return single or multipule values or may not return any values.
 
+<div id='types'>
 There are three types of functions available in python:
 
 - Built-in functions
@@ -12,7 +16,9 @@ There are three types of functions available in python:
 - Anonymus functions
 
 You can find about Built-in functions [here](https://docs.python.org/3/library/functions.html)
+</div>
 
+<div id='udfs'>
 ### User Defined Functions(UDF)
 
 - The keyword def introduces a function definition.
@@ -58,7 +64,7 @@ Docstrings are very useful for the programmers to know what really the function 
 
 Example 2:
 
-Creating a function with argument(s):
+Creating a function with parameters(s):
 
 ```python
 def greeting(a):
@@ -92,7 +98,7 @@ TypeError: greeting() missing 1 required positional argument: 'a'
 ```
 There are different types of arguments available in python functions.
 
-If you pass other than string argument to <code>greeting</code>, It will throw exception to overcome this we need to mdify function defination like this:
+If you pass other than string argument to <code>greeting</code>, It will throw exception.To overcome this we need to mdify function definition like this:
 ```python
 def greeting(a):
     """greeting requires 1 argument to greet you"""
@@ -109,138 +115,24 @@ That will give us the output:
 
 Example 3:
 
-Lets take one more function called <code>add</code> and pass two arguments to it and the <code>add</code> will return sum of two arguments as shown below:
+Lets take one more function called <code>add</code> with two parameters
 
 ```python
 def add(a,b):
     """Add two variables and return sum of it"""
     return a+b
 ```
-case-1: Lets call the function by passing two numbers.
-
+You need to pass the two arguments to call the <code>add</code>.
 ```python
-print(add(2,5))
+add(10,120)
 ```
-This will return us 7 as an output
-
-Try to pass two floating point numbers.
-
-```python
-print(add(3.14,1.6))
-```
-The above function call will return 4.74
-
-Now try to pass one float and int values to the function.
-
-```python
-print(add(5.3+7))
-```
-That will return float value 12.3 since we know <code>float+int = float</code> in python.
-
-
-case-2: Pass two string values as an arguments.
-
-```python
-print(add("Hello ","Python"))
-```
-That will give us the output:
-
-```markdown
-Hello Python
-```
-Another way of doing this is passing two variables
-
-```python
-one = "Hello "
-two = "Python"
-print(add(one, two))
-```
-That too will return same output.
-
-One more example:
-
-```python
-one = "Hello "
-print(add(one,"Python"))
-```
-It gives same output
-
-Case 3: Passing bools to the <code>add</code>
-
-```python
-print(add(True,False))
-```
-It will print 1
-
-```python
-print(add(True,True))
-```
-It will print 2
-
-Now you try the function <code>print(add(False, False))</code>
-
-Case 4: Passing bytes to the <code>add</code>
-
-```python
-p = b'Python '
-q = b'Functions'
-print(add(p,q))
-```
-It gives output
-
-```markdown
-b'Python Functions'
-```
-Case 5: Passing <code>None</code> to the <code>add</code>
-
-```python
-print(add(None, None))
-```
-It will give us exception.
-
-```markdown
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 2, in add
-TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
-```
-
-Case 6: Passing different data types as a arguments to <code>add</code>
-
-Number and String:
-
-```python
-print(add('Hello ',6))
-```
-It gives us exception like this:
-
-```markdown
-TypeError: can only concatenate str (not "int") to str
-```
-
-String and bool:
-
-```python
-print(add('Hello',True))
-```
-
-It will also gives us the exception like this:
-
-```markdown
-TypeError: can only concatenate str (not "bool") to str
-```
-
-str and byte
-
-```python
-print(add('Hello',b' world'))
-```
-That would gives us the exception like this:
-
-```markdown
-TypeError: can only concatenate str (not "bytes") to str
-```
-
+It will return 130
+</div>
+<div id='pa'>
+**Parameters vs Arguments**
+- Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
+- In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
+</div>
 
 
 
