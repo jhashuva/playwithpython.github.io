@@ -18,7 +18,7 @@ There are three types of functions available in python:
 - Anonymus functions
 
 You can find about Built-in functions [here](https://docs.python.org/3/library/functions.html)
-<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='/index.md'>Go to Home</a>
+<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Go Home](index.md)
 
 
 <h3 id='udfs'> User Defined Functions(UDF)</h3>
@@ -130,13 +130,13 @@ add(10,120)
 ```
 It will return 130
 
-<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='/index.md'>Go to Home</a>
+<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [GO Home](index.md)
 
 <strong id='pa'>Parameters vs Arguments</strong>
 
 - Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
-<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='/index.md'>Go to Home</a>
+<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Go Home](index.md)
 <p id='args'>
 <a href='#positional'>Positional arguments</a><br>
 <a href='#keyword'>
@@ -262,4 +262,4 @@ The output would be like this:
 SyntaxError: positional argument follows keyword argument
 ```
 
-<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='/index.md'>Go to Home</a>
+<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Home](index.md)
