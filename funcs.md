@@ -36,38 +36,78 @@ Syntax for calling the function
 functionName(<parametervalues>)
 ```
 Example 1:
+simple function
+
+```python
+def greeting():
+    """greeting will greet you"""
+    return "Welcome to python functions"
+```
+We can call the above declared function <code>greeting</code> like this:
+
+```python
+greeting() #return 'Welcome to python functions'
+```
+The above function call will return <code>Welcome to python functions</code>
+If you try the <code>greeting.__doc__</code>. It will print :
+
+```markdown
+greeting will greet you
+```
+Docstrings are very useful for the programmers to know what really the function does.
+
+Example 2:
+
+Creating a function with argument(s):
 
 ```python
 def greeting(a):
-    """Hi this is print statement. It will print the input given to this function"""
-    return a
-
-greeting(a="Hello World")
+    """greeting requires 1 argument to greet you"""
+    return a+' Welcome to python functions'
 ```
-- Above example will return the string Hello World
+You need to call <code>greeting</code> function with the argument.
+
+```python
+greeting('Joshua') #str given as an argument
+```
+This will return us the output:
+
+```markdown
+Joshua Welcome to python functions
+```
 
 - You can store the function call in another variable like this
 
 ```python
-b = greeting(a="Hello Python")
+b = greeting("Blake")
 print(b)
 ```
 output:
 ```markdown
-Hello Python
+Blake Welcome to python functions
 ```
-If you want to know what really function does. You can check using <code>function.__doc__</code>
-For example you want to know what <code>print</code> does.
-
-```python
-print(greeting.__doc__)
-```
-The above statement will print the following:
-
+If you call the function <code>greeting</code> without passing argument, it will throw  exception like this:
 ```markdown
-'Hi this is print statement. It will print the input given to this function'
+TypeError: greeting() missing 1 required positional argument: 'a'
 ```
-Example 2:
+There are different types of arguments available in python functions.
+
+If you pass other than string argument to <code>greeting</code>, It will throw exception to overcome this we need to mdify function defination like this:
+```python
+def greeting(a):
+    """greeting requires 1 argument to greet you"""
+    return f'{a} Welcome to python functions'
+```
+Now you can call the function by passing any data type argument.
+```python
+greeting(b'Bob')
+```
+That will give us the output:
+```markdown
+"b'Bob' Welcome to python functions"
+```
+
+Example 3:
 
 Lets take one more function called <code>add</code> and pass two arguments to it and the <code>add</code> will return sum of two arguments as shown below:
 
@@ -172,7 +212,34 @@ Number and String:
 ```python
 print(add('Hello ',6))
 ```
-It gives exception like this:
+It gives us exception like this:
+
+```markdown
+TypeError: can only concatenate str (not "int") to str
+```
+
+String and bool:
+
+```python
+print(add('Hello',True))
+```
+
+It will also gives us the exception like this:
+
+```markdown
+TypeError: can only concatenate str (not "bool") to str
+```
+
+str and byte
+
+```python
+print(add('Hello',b' world'))
+```
+That would gives us the exception like this:
+
+```markdown
+TypeError: can only concatenate str (not "bytes") to str
+```
 
 
 
