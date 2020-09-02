@@ -135,9 +135,9 @@ It will return 130
 - Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
 <p id='args'>
-<a href='#positional'>Positional arguments</a>
+<a href='#positional'>Positional arguments</a><br>
 <a href='#key'>
-Keyword arguments</a>
+Keyword arguments</a><br>
 <a href='#default'>
 Default arguments or Optional arguments
 </a>
