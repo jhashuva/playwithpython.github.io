@@ -136,7 +136,7 @@ It will return 130
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
 <p id='args'>
 <a href='#positional'>Positional arguments</a><br>
-<a href='#key'>
+<a href='#keyword'>
 Keyword arguments</a><br>
 <a href='#default'>
 Default arguments or Optional arguments
