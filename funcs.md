@@ -2,6 +2,7 @@
 <a href='#types'>Types of functions</a><br>
 <a href='#udfs'>User Defined Functions(UDFs)</a><br>
 <a href='#pa'>Parameters vs Arguments</a><br>
+<a href='#args'>Different types of arguments</a>
 
 Functions are first class objects in python. Function is a piece of code or set of instructions to carry out specific task.
 
@@ -133,11 +134,14 @@ It will return 130
 
 - Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
-
-Positional arguments
-Keyword arguments
-Default arguments
-
+<p id='args'>
+<a href='#positional'>Positional arguments</a>
+<a href='#key'>
+Keyword arguments</a>
+<a href='#default'>
+Default arguments or Optional arguments
+</a>
+</p>
 <h3 id='positional'>Positional arguments</h3>
 Positional arguments are arguments that can be called by their position in the function definition.
 
@@ -147,7 +151,7 @@ def posfunc(a,b,c):
     """Demo about positional arguments"""
     return f'a={a}\nb={b}\nc={c}'
 ```
-You required to pass the three arguments to the function <code>posfunc</code>
+You required to pass the three arguments to the function <code>posfunc</code> in same order.
 ```python
 posfunc(1, 2, 3)
 ```
@@ -157,6 +161,102 @@ a=1
 b=2
 c=3
 ```
+<h3 id='keyword'>Keyword arguments</h3>
+Keyword arguments are arguments that must call by their name.
 
+Example 4:
+```python
+def keyfunc(a,b,c):
+    """Demo about keyword arguments"""
+    return f'a={a}\nb={b}\nc={c}'
+```
+You need to call the function <code>keyfunc</code> arguments by their name:
+```python
+keyfunc(a=1,b=2,c=3)
+```
+Above function will return
+```markdown
+a=1
+b=2
+c=3
+```
+You can change the position of arguments if you want to call arguments by their name.
+```python
+keyfunc(b=2,a=1,c=3)
+```
+Above function call will result the output.
+
+```markdown
+a=1
+b=2
+c=3
+```
+<h3 id='default'>Default arguments or Optional arguments</h3>
+
+Optional arguments or Default arguments are arguments that may not be passed to the function. Because they contains default value.
+
+Example 5:
+
+```python
+def defunc(a=1,b=2,c=3):
+    """default arguments demonstration"""
+    return f'a={a}/t b={b} /t c={c}'
+```
+
+You could call this function without passing arguments like this:
+
+```python
+defunc()
+```
+That will return the output like this:
+```markdown
+a=1     b=2     c=3
+```
+If you want to overwrite default values in the function you could do that by passing argument as a positional or keyword to the function call
+
+```python
+defunc(2) #positional argument
+```
+The above call will overwrites first argument value, in this case <code>a</code>
+```markdown
+a=2     b=2     c=3
+```
+You could also overwrite default value by using keyword argument.
+
+```python
+defunc(c=99)
+```
+The above function call will return us.
+```markdown
+a=1     b=2     c=99
+```
+Caution: You should not pass positional and keyword arguments for the same parmeter.
+
+For example if you pass positional argument then try to pass keyword argument to the same parameter it will throw us exception.
+
+```python
+defunc(5,a=555)
+```
+This call will throw an exception like this:
+```markdown
+TypeError: defunc() got multiple values for argument 'a'
+```
+**Note:** You need to pass positional arguments followed by keyword arguments.
+
+```python
+defunc(2,b=3)
+```
+That will return us the output:
+```markdown
+a=2     b=3     c=3
+```
+But if you try to pass other way you will get exception:
+```python
+defunc(a=5,777)
+```
+The output would be like this:
+```markdown
+SyntaxError: positional argument follows keyword argument
+```
 
 [Home](index.md)
