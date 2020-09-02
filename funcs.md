@@ -8,7 +8,7 @@ Functions are first class objects in python. Function is a piece of code or set 
 - Functions may take single or multipule inputs to carry out the the task and sometimes they may not take input.
 - After carried out specific task, functions may return single or multipule values or may not return any values.
 
-<div id='types'>
+<p id='types'></p>
 There are three types of functions available in python:
 
 - Built-in functions
@@ -16,9 +16,9 @@ There are three types of functions available in python:
 - Anonymus functions
 
 You can find about Built-in functions [here](https://docs.python.org/3/library/functions.html)
-</div>
 
-<div id='udfs'>
+
+<p id='udfs'> </p>
 ### User Defined Functions(UDF)
 
 - The keyword def introduces a function definition.
@@ -132,7 +132,7 @@ It will return 130
 **Parameters vs Arguments**
 - Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
-</div>
+
 
 
 
