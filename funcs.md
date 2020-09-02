@@ -18,8 +18,8 @@ There are three types of functions available in python:
 You can find about Built-in functions [here](https://docs.python.org/3/library/functions.html)
 
 
-<p id='udfs'> </p>
-### User Defined Functions(UDF)
+
+<h3 id='udfs'> User Defined Functions(UDF)</h3>
 
 - The keyword def introduces a function definition.
 - It must be followed by the function name and the parenthesized list of formal parameters.
@@ -127,9 +127,9 @@ You need to pass the two arguments to call the <code>add</code>.
 add(10,120)
 ```
 It will return 130
-</div>
-<div id='pa'>
-**Parameters vs Arguments**
+
+
+<strong id='pa'>Parameters vs Arguments</strong>
 - Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
 
