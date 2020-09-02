@@ -134,9 +134,29 @@ It will return 130
 - Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
 
+Positional arguments
+Keyword arguments
+Default arguments
 
+<h3 id='positional'>Positional arguments</h3>
+Positional arguments are arguments that can be called by their position in the function definition.
 
-
+Example 3:
+```python
+def posfunc(a,b,c):
+    """Demo about positional arguments"""
+    return f'a={a}\nb={b}\nc={c}'
+```
+You required to pass the three arguments to the function <code>posfunc</code>
+```python
+posfunc(1, 2, 3)
+```
+<code>posfunc</code> will return the output:
+```markdown
+a=1
+b=2
+c=3
+```
 
 
 [Home](index.md)
