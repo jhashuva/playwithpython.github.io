@@ -24,7 +24,7 @@ You can find about Built-in functions [here](https://docs.python.org/3/library/f
 
 <h3 id='udfs'> User Defined Functions(UDF)</h3>
 
-- The keyword def introduces a function definition.
+- The keyword <code>def</code> introduces a function definition.
 - It must be followed by the function name and the parenthesized list of formal parameters.
 - The statements that form the body of the function start at the next line, and must be indented.
 - The first statement of the function body can optionally be a string literal; this string literal is the function’s documentation string, or docstring.
@@ -101,7 +101,7 @@ TypeError: greeting() missing 1 required positional argument: 'a'
 ```
 There are different types of arguments available in python functions.
 
-If you pass other than string argument to <code>greeting</code>, It will throw exception.To overcome this we need to mdify function definition like this:
+If you pass other than string argument to <code>greeting</code>, It will throw exception.To overcome this we need to modify function definition like this:
 ```python
 def greeting(a):
     """greeting requires 1 argument to greet you"""
@@ -168,26 +168,38 @@ a=1
 b=2
 c=3
 ```
+Another way of passing positional arguments is like this:
+```python
+posfunc(*(5,6,7))
+```
+That will return the output:
+```markdown
+5   6   7
+```
 <h3 id='keyword'>Keyword arguments</h3>
 Keyword arguments are arguments that must call by their name.
 
 Example 4:
+
 ```python
 def keyfunc(a,b,c):
     """Demo about keyword arguments"""
     return f'a={a}\nb={b}\nc={c}'
 ```
 You need to call the function <code>keyfunc</code> arguments by their name:
+
 ```python
 keyfunc(a=1,b=2,c=3)
 ```
 Above function will return
+
 ```markdown
 a=1
 b=2
 c=3
 ```
-You can change the position of arguments if you want to call arguments by their name.
+You can change the position of arguments if you want to call arguments by keyword.
+
 ```python
 keyfunc(b=2,a=1,c=3)
 ```
@@ -198,9 +210,40 @@ a=1
 b=2
 c=3
 ```
+Another way of calling function with keyword arguments is:
+
+```python
+keyfunc(**{'a':7,'b':8,'c':9})
+```
+That will return the output:
+
+```markdown
+a=7     b=8     c=9
+```
+<h3 id='pop'>Position-only Parameters</h3>
+- If positional-only, the parameters’ order matters, and the parameters cannot be passed by keyword.
+- Positional-only parameters are placed before a / (forward-slash).
+- The / is used to logically separate the positional-only parameters from the rest of the parameters.
+- If there is no / in the function definition, there are no positional-only parameters.
+
+```python
+def pos_only_arg(arg, /):
+    """demo on position only arguments"""
+    print(arg)
+```
+
+<code>pos_only_arg(1)</code> will return 1. But if you try to call the function like this <code>pos_only_arg(arg=1)</code>. It gives you exception.
+
+```markdown
+TypeError: pos_only_arg() got some positional-only arguments passed as key
+word arguments: 'arg'
+```
+
 <h3 id='default'>Default arguments or Optional arguments</h3>
 
 Optional arguments or Default arguments are arguments that may not be passed to the function. Because they contains default value.
+
+Default parameter values are evaluated from left to right when the function definition is executed.
 
 Example 5:
 
@@ -265,5 +308,155 @@ The output would be like this:
 ```markdown
 SyntaxError: positional argument follows keyword argument
 ```
+<h3 id='koa'> Keyword-Only Arguments</h3>
+
+To mark parameters as keyword-only, indicating the parameters must be passed by keyword argument, place
+an * in the arguments list just before the first keyword-only parameter.
+
+```python
+def kwd_only_arg(*, arg):
+    """Demo on Keyword-only arguments"""
+    print(arg)
+```
+If you call the above function like this <code>kwd_only_arg(3)</code>. It will throw you exception.
+
+```markdown
+TypeError: kwd_only_arg() takes 0 positional arguments but 1 was given
+```
+
+<code>kwd_only_arg(arg=3)</code> will print 3.
+
+<h3 id='sp'>Special parameters</h3>
+
+- By default, arguments may be passed to a Python function either by position or explicitly by keyword.
+- For readability and performance, it makes sense to restrict the way arguments can be passed so that a
+developer need only look at the function definition to determine if items are passed by position, by
+position or keyword, or by keyword.
+
+Syntax:
+
+<pre>
+def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+      -----------    ----------     ----------
+            |            |              |
+            |    Positional or keyword  |
+            |                           - Keyword only
+            -- Positional only
+</pre>
+
+- where / and * are optional
+- If used, these symbols indicate the kind of parameter by how the arguments may be passed to the function: positional-only, positional-or-keyword, and keyword-only.
+- Keyword parameters are also referred to as named parameters.
+
+
+In some scenarios arguments size varies for the same function in different scenarios.
+You could pass as many arguments as you want to function with the help of <code>*</code>.
+
+Example:
+
+```python
+def demo(*arg):
+    """Dealing with multipule arguments"""
+    return arg
+```
+You could pass as many arguments you can. Above function return all the passed arguments in the form of tuples.
+
+```python
+demo(1,2,'a',True,13.6)
+```
+Above function call return us this output:
+
+```markdown
+(1,2,'a',True,13.6)
+```
+But if you try to call the function with keyword arguments. You will get exception.
+```python
+demo(a=1,b=2,c=3)
+```
+The above function call gives you exception.
+```markdown
+TypeError: demo() got an unexpected keyword argument 'a'
+```
+
+If you want to call the function with keyword arguments . You could do by mentioning <code>**</code>before to the parameter.
+
+```python
+def demofunc(**kwargs):
+    """Demo on variable names and their values"""
+    return kwargs
+```
+You have to call the function with variable names and their values:
+
+```python
+demofunc(a=1,b=2,c=3)
+```
+Above called function will return parameter name which is passed during the function call and its value as a form of dictionary.
+
+```markdown
+{'a': 1, 'b': 2, 'c': 3}
+```
+But if you try calling the function with positional arguments, you will get exception.
+
+```python
+demofunc(1,2,3)
+```
+Above function call gives you exception.
+
+```markdown
+TypeError: demofunc() takes 0 positional arguments but 3 were given
+```
+
+If you want to pass both positional and keyword arguments. First you need to pass positional arguments and then keyword arguments.
+
+Function definition would looks like this.
+
+```python
+def combo(*arg, **kwargs):
+    return arg, kwargs
+```
+Above function will return in the form of tuple.
+
+```python
+combo('a','b','c',a=1,b=2,c=3)
+```
+Above function call returns
+
+```markdown
+(('a','b','c'),{a:1,b:2,c:3})
+```
+
+You could decare like this:
+
+```python
+def f(par, *arg, **kwarg)
+    print(par, *arg, **kwarg)
+```
+
+Call the above function like this <code>f(1,2,34,5,a='x',b='y',c='z')</code> will print:
+
+```markdown
+1 (2,34,5) {'a':'x','b':'y','c':'z'}
+```
+
+But if you try call like this <code>f(par=1,2,34,5,a='x',b='y',c='z')</code> you will get exception like this:
+
+```markdown
+SyntaxError: positional argument follows keyword argument
+```
+To resolve this exception you have to define like this:
+
+```python
+def f(*arg,par, **kwarg):
+    print(arg, par, kwarg)
+```
+
+So you could call the function like this <code>f(1,2,34,par=5,a='x',b='y',c='z')</code>
+
+that will print the result without giving any exception.
+
+
+
+
+
 
 <a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Home](index.md)
