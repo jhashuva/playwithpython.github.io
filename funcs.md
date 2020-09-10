@@ -4,6 +4,9 @@
 <a href='#udfs'>User Defined Functions(UDFs)</a><br>
 <a href='#pa'>Parameters vs Arguments</a><br>
 <a href='#args'>Different types of arguments</a>
+<a href='#sp'>Special Parameters</a>
+<a href='#pop'>Position-only Parameters</a>
+<a href='#koa'>Keyword-only Parameters</a>
 </p>
 Functions are first class objects in python. Function is a piece of code or set of instructions to carry out specific task.
 
