@@ -459,8 +459,7 @@ So you could call the function like this <code>f(1,2,34,par=5,a='x',b='y',c='z')
 
 that will print the result without giving any exception.
 
-<a href='#top'>Go to Top</a>    <a href="index.md" class='right'>Home</a>
-<hr>
+<a href='#top'>Go to Top</a>    <a href="index.md" class='right'>Home</a><hr>
 <h3 id='anonymus'>Anonymus Function</h3>
 
 Anonymus function is a function that could be declared without name, anonymus function  can be declared using <code>lambda</code>.
@@ -496,8 +495,4 @@ That will produce the output 3.
 
 
 
-
-
-
-
-<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Home](index.md)
+<a href='#top'>Go to Top</a>    <a href="index.md" class='right'>Home</a><hr>
