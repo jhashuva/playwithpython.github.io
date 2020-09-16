@@ -2,11 +2,8 @@
 <p id='top'>
 <a href='#types'>Types of functions</a><br>
 <a href='#udfs'>User Defined Functions(UDFs)</a><br>
-<a href='#pa'>Parameters vs Arguments</a><br>
-<a href='#args'>Different types of arguments</a>
-<a href='#sp'>Special Parameters</a>
-<a href='#pop'>Position-only Parameters</a>
-<a href='#koa'>Keyword-only Parameters</a>
+
+
 </p>
 Functions are first class objects in python. Function is a piece of code or set of instructions to carry out specific task.
 
@@ -20,6 +17,8 @@ There are three types of functions available in python:
 - User Defined Functions(UDFs)
 - Anonymus functions
 
+<a href='#bfs'>Built-in Functions</a><br>
+Built-in functions comes up with python. There are different built-in functions are avialble.
 You can find about Built-in functions [here](https://docs.python.org/3/library/functions.html)
 
 <a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Go Home](index.md)
@@ -32,6 +31,15 @@ You can find about Built-in functions [here](https://docs.python.org/3/library/f
 - The statements that form the body of the function start at the next line, and must be indented.
 - The first statement of the function body can optionally be a string literal; this string literal is the function’s documentation string, or docstring.
 - End your function with a return statement if the function should output something. Without the return statement, your function will return an object None.
+
+<a href='#pa'>Parameters vs Arguments</a><br>
+<a href='#positional'>Positional arguments</a><br>
+<a href='#keyword'>Keyword arguments</a><br>
+<a href='#default'>Default arguments or Optional arguments</a><br>
+<a href='#args'>Different types of arguments</a><br>
+<a href='#pop'>Position-only Parameters</a><br>
+<a href='#koa'>Keyword-only Parameters</a><br>
+<a href='#sp'>Special Parameters</a><br>
 
 Syntax:
 
@@ -145,12 +153,6 @@ It will return 130
 <a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Go Home](index.md)
 
 <p id='args'>
-<a href='#positional'>Positional arguments</a><br>
-<a href='#keyword'>
-Keyword arguments</a><br>
-<a href='#default'>
-Default arguments or Optional arguments
-</a>
 </p>
 <h3 id='positional'>Positional arguments</h3>
 Positional arguments are arguments that can be called by their position in the function definition.
@@ -456,6 +458,42 @@ def f(*arg,par, **kwarg):
 So you could call the function like this <code>f(1,2,34,par=5,a='x',b='y',c='z')</code>
 
 that will print the result without giving any exception.
+
+<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Home](index.md)
+<hr>
+<h3 id='anonymus'>Anonymus Function</h3>
+
+Anonymus function is a function that could be declared without name, anonymus function  can be declared using <code>lambda</code>.
+
+- Lambda functions can be used wherever function objects are required.
+- They are syntactically restricted to a single expression.
+- Like nested function definitions, lambda functions can reference variables from the containing scope.
+
+```python
+lambda x: x
+```
+In the above example <code>lambda</code> is keyword, <code>x</code> is a bound variable and the body is <code>x</code>.
+Above lambda expression is equivalent to the following function.
+
+```python
+def f(x):
+    return x
+```
+You could call the above declared lambda function like this.
+
+```python
+(lambda x: x)(2)
+```
+That will return 2.
+
+One more example:
+```python
+(lambda x: x+1)(2)
+```
+That will produce the output 3.
+
+
+
 
 
 
