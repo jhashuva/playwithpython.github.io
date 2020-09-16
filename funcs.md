@@ -1,8 +1,5 @@
 ## Functions
 <p id='top'>
-<a href='#types'>Types of functions</a><br>
-
-
 
 </p>
 Functions are first class objects in python. Function is a piece of code or set of instructions to carry out specific task.
@@ -488,7 +485,30 @@ One more example:
 ```
 That will produce the output 3.
 
+Another way of calling anonymous function is
 
+```python
+a = lambda x: x
+```
+Now variable <code>a</code> will be act as a function.
+
+```python
+a(1)
+```
+Above call will return 1.
+
+Few more examples on the function is
+
+```python
+full_name = lambda first, last: f'{first.title()} {last.title()}'
+```
+You could call this function
+
+```python
+full_name('paul','walker')
+```
+
+That will give us the output Paul Walker
 
 
 
