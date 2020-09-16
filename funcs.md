@@ -1,7 +1,7 @@
 ## Functions
 <p id='top'>
 <a href='#types'>Types of functions</a><br>
-<a href='#udfs'>User Defined Functions(UDFs)</a><br>
+
 
 
 </p>
@@ -13,15 +13,16 @@ Functions are first class objects in python. Function is a piece of code or set 
 <p id='types'></p>
 There are three types of functions available in python:
 
-- Built-in functions
-- User Defined Functions(UDFs)
-- Anonymus functions
+- <a href='#bfs'>Built-in Functions</a><br>
+- <a href='#udfs'>User Defined Functions(UDFs)</a><br>
+- <a href='#anonymus'>Anonymus Functions</a>
 
-<a href='#bfs'>Built-in Functions</a><br>
+<h3 id='bfs'>Built-in Functions</a><br>
 Built-in functions comes up with python. There are different built-in functions are avialble.
 You can find about Built-in functions [here](https://docs.python.org/3/library/functions.html)
 
-<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Go Home](index.md)
+<a href='#top'>Go to Top</a>    <a href="index.md" class='right'>Home</a>
+<hr>
 
 
 <h3 id='udfs'> User Defined Functions(UDF)</h3>
@@ -142,15 +143,10 @@ add(10,120)
 ```
 It will return 130
 
-<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [GO Home](index.md)
-
 <strong id='pa'>Parameters vs Arguments</strong>
 
 - Parameters are the names used when defining a function or a method, and into which arguments will be mapped.
 - In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.
-
-
-<a href='#top'>Go to Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Go Home](index.md)
 
 <p id='args'>
 </p>
