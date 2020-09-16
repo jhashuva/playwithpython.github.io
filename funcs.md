@@ -17,7 +17,7 @@ There are three types of functions available in python:
 - <a href='#udfs'>User Defined Functions(UDFs)</a><br>
 - <a href='#anonymus'>Anonymus Functions</a>
 
-<h3 id='bfs'>Built-in Functions</a><br>
+<h3 id='bfs'>Built-in Functions</h3><br>
 Built-in functions comes up with python. There are different built-in functions are avialble.
 You can find about Built-in functions [here](https://docs.python.org/3/library/functions.html)
 
