@@ -530,8 +530,10 @@ To make an f-string:
 <br>
 <br>
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
+[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.md" class='right'>Home</a>
+<hr>
 <h3 id='bytes'> Bytes</h3>
+
 - Data type for sequence of bytes
 - Raw binary data
 - Fixed width single byte encoding
@@ -556,7 +558,8 @@ Converting between strings and bytes:
 >>> b.encode()
 b'hello python'
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
+<a href='#index'>Go to Top</a>    <a href="index.md" class='right'>Home</a>
+<hr>
 
 <h3 id='lists'> Lists</h3>
 - sequence of objects
@@ -1005,8 +1008,8 @@ List of lists
  >>> all_birds[1][0]
  'dodo'
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
-
+<a href='#index'>Go to Top</a> <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u'>Learning Check</a>   <a href="index.md" class='right'>Home</a>
+<hr>
 
 <h3 id='tuples'> Tuples</h3>
 - Tuple is non mutable type
@@ -1148,7 +1151,8 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: tuple.index(x): x not in tuple
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUQUEwS0lSV0kzN1BQR1VOOVJNVDVNMUZXNS4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUQUEwS0lSV0kzN1BQR1VOOVJNVDVNMUZXNS4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='index.md' class='right'>Home</a>
+<hr>
 <h3 id='sets'> Sets</h3>
 ![](./Sets1.png)
 Here is the above picture:
@@ -1414,7 +1418,8 @@ set1.update(set2)
 >>> A.update(B)
 {1, 2, 3, 4, 5, 6, 7, 8}
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='index.md' class='right'>Home</a>
+<hr>
 <h3 id='dicts'> Dictionaries</h3>
 
 - A dictionary is similar to a list,but the order of items doesn’t matter, and they aren’t selected by an offset such as 0 or 1. Instead,you specify a unique key to associate with each value.
@@ -1775,4 +1780,4 @@ a = {1: [1, 1], 2: [1], 3: [1], 4: None}
 >>> a.setdefault(1)
 [1,1]
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Home](index.md)
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.md" class='right'>Home</a>
