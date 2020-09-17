@@ -529,8 +529,8 @@ To make an f-string:
 - Think Python, Second Edition, Allen B. Downey, 2016, O'Reilly
 <br>
 <br>
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./" class='right'>Home</a>
+<a href='#index'>Go to top</a>
+<a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u' class='center'>Learning check</a><a href="./" class='right'>Home</a>
 <hr>
 <h3 id='bytes'> Bytes</h3>
 
@@ -1008,7 +1008,7 @@ List of lists
  >>> all_birds[1][0]
  'dodo'
 ```
-<a href='#index'>Go to Top</a> <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u'>Learning Check</a>   <a href="./" class='right'>Home</a>
+<a href='#index'>Go to Top</a> <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u' class='center'>Learning Check</a>   <a href="./" class='right'>Home</a>
 <hr>
 
 <h3 id='tuples'> Tuples</h3>
@@ -1151,7 +1151,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: tuple.index(x): x not in tuple
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUQUEwS0lSV0kzN1BQR1VOOVJNVDVNMUZXNS4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='./' class='right'>Home</a>
+<a href='#index'>Got to top</a> <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUQUEwS0lSV0kzN1BQR1VOOVJNVDVNMUZXNS4u' class='center'><a href='./' class='right'>Home</a>
 <hr>
 <h3 id='sets'> Sets</h3>
 ![](./Sets1.png)
@@ -1418,7 +1418,7 @@ set1.update(set2)
 >>> A.update(B)
 {1, 2, 3, 4, 5, 6, 7, 8}
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='./' class='right'>Home</a>
+<a href='#index'>Got to top</a> <a href='./' class='right'>Home</a>
 <hr>
 <h3 id='dicts'> Dictionaries</h3>
 
