@@ -1151,7 +1151,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: tuple.index(x): x not in tuple
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUQUEwS0lSV0kzN1BQR1VOOVJNVDVNMUZXNS4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='index.md' class='right'>Home</a>
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUQUEwS0lSV0kzN1BQR1VOOVJNVDVNMUZXNS4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='index' class='right'>Home</a>
 <hr>
 <h3 id='sets'> Sets</h3>
 ![](./Sets1.png)
