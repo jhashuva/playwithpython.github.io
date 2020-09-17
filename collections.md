@@ -530,7 +530,7 @@ To make an f-string:
 <br>
 <br>
 <a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.md" class='right'>Home</a>
+[Learning Check](https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="playwithpython.xyz" class='right'>Home</a>
 <hr>
 <h3 id='bytes'> Bytes</h3>
 
@@ -558,7 +558,7 @@ Converting between strings and bytes:
 >>> b.encode()
 b'hello python'
 ```
-<a href='#index'>Go to Top</a>    <a href="index.md" class='right'>Home</a>
+<a href='#index'>Go to Top</a>    <a href="playwithpython.xyz" class='right'>Home</a>
 <hr>
 
 <h3 id='lists'> Lists</h3>
@@ -1008,7 +1008,7 @@ List of lists
  >>> all_birds[1][0]
  'dodo'
 ```
-<a href='#index'>Go to Top</a> <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u'>Learning Check</a>   <a href="index.md" class='right'>Home</a>
+<a href='#index'>Go to Top</a> <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u'>Learning Check</a>   <a href="playwithpython.xyz" class='right'>Home</a>
 <hr>
 
 <h3 id='tuples'> Tuples</h3>
@@ -1418,7 +1418,7 @@ set1.update(set2)
 >>> A.update(B)
 {1, 2, 3, 4, 5, 6, 7, 8}
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='index.md' class='right'>Home</a>
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='playwithpython.xyz' class='right'>Home</a>
 <hr>
 <h3 id='dicts'> Dictionaries</h3>
 
@@ -1780,4 +1780,4 @@ a = {1: [1, 1], 2: [1], 3: [1], 4: None}
 >>> a.setdefault(1)
 [1,1]
 ```
-<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.md" class='right'>Home</a>
+<a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="playwithpython.xyz" class='right'>Home</a>

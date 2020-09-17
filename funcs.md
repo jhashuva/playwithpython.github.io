@@ -18,7 +18,7 @@ There are three types of functions available in python:
 Built-in functions comes up with python. There are different built-in functions are avialble.
 You can find about Built-in functions [here](https://docs.python.org/3/library/functions.html)
 
-<a href='#top'>Go to Top</a>    <a href="index.md" class='right'>Home</a>
+<a href='#top'>Go to Top</a>    <a href="playwithpython.xyz" class='right'>Home</a>
 <hr>
 
 
@@ -452,7 +452,7 @@ So you could call the function like this <code>f(1,2,34,par=5,a='x',b='y',c='z')
 
 that will print the result without giving any exception.
 
-<a href='#top'>Go to Top</a>    <a href="index.md" class='right'>Home</a>
+<a href='#top'>Go to Top</a>    <a href="playwithpython.xyz" class='right'>Home</a>
 <hr>
 <h3 id='anonymus'>Anonymus Function</h3>
 
@@ -512,5 +512,5 @@ That will give us the output Paul Walker
 
 
 
-<a href='#top'>Go to Top</a>    <a href="index.md" class='right'>Home</a>
+<a href='#top'>Go to Top</a>    <a href="playwithpython.xyz" class='right'>Home</a>
 <hr>
