@@ -12,5 +12,4 @@ include:
   - funcs.md
   - list_quiz.md
 
-plugins:
-  - jemoji
+
