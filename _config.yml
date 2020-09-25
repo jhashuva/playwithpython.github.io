@@ -1,8 +1,8 @@
-theme: jekyll-theme-cayman
+theme:hello-friend-ng
 title: Play with Python
 description: A fun way to learn python
 include:
-  - index,md
+  - index.md
   - installPython.md
   - pythonfirststeps.md
   - scalartypes.md

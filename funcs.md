@@ -510,7 +510,8 @@ full_name('paul','walker')
 
 That will give us the output Paul Walker
 
-
+<h3 id='nested'>Nested Functions</h3>
+- Nested functions
 
 <a href='#top'>Go to Top</a>    <a href="./" class='right'>Home</a>
 <hr>
