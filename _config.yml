@@ -15,3 +15,5 @@ include:
 
 plugins:
   - jemoji
+
+theme: jekyll-theme-cayman
