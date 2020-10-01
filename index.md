@@ -16,6 +16,8 @@
 
 [Functions](funcs.md)
 
+[Variable scopes](scopes.md)
+
 
 
 
