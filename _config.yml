@@ -11,5 +11,7 @@ include:
   - comprehensions.md
   - funcs.md
   - list_quiz.md
+  - scopes.md
 
-
+plugins:
+  - jemoji
