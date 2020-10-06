@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Scalar Data Types - Play with python</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Scalar Data Types";
+    var mkdocs_page_input_path = "scalartypes.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Play with python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installPython/">Python Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../createGithub/">Github account</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../pythonfirststeps/">Python First steps</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Scalar Data Types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#integer-data-type">integer data type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#float-data-type">float data type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#none-data-type">None data type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bool-data-type">bool data type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#control-flow">control flow :</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#conditional-statement">conditional statement :</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#int-truthiness">Int truthiness</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../collections/">Collections</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../copying/">Shallow Copy and Deep Copy</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../comprehensions/">Comprehensions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../funcs/">Functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../scopes/">Variable Scopes</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Play with python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Scalar Data Types</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="scalar-data-types">Scalar data types</h2>
+<h3 id="integer-data-type">integer data type</h3>
+<p>int: unlimited precision signed integer</p>
+<pre><code class="markdown">&gt;&gt;&gt; 10
+10
+&gt;&gt;&gt; type(10)
+&lt;class 'int'&gt;
+&gt;&gt;&gt; x = 15
+&gt;&gt;&gt;x
+15
+&gt;&gt;&gt; type(x)
+&lt;class 'int'&gt;
+&gt;&gt;&gt; 0b1010
+10
+&gt;&gt;&gt; bin(10)
+'0b1010'
+&gt;&gt;&gt; 0o10
+8
+&gt;&gt;&gt; oct(8)
+'0o10'
+&gt;&gt;&gt; 0x145
+325
+&gt;&gt;&gt; hex(325)
+'0x145'
+&gt;&gt;&gt; int(3.5)
+3
+&gt;&gt;&gt; int(-3.5)
+-3
+&gt;&gt;&gt; int(&quot;496&quot;)
+496
+&gt;&gt;&gt; int(&quot;1000&quot;,3)
+27
+</code></pre>
+
+<h3 id="float-data-type">float data type</h3>
+<ul>
+<li>floating points are supported by float type.</li>
+<li>python floats are implemented IEEE-754 double-precision with 53-bits of binary precision.</li>
+<li>This is equivalent to 15-16 significant digits in decimal.</li>
+</ul>
+<pre><code class="markdown">&gt;&gt;&gt; 3.125
+3.125
+&gt;&gt;&gt; 3e8
+300000000.0
+&gt;&gt;&gt; 1.616e-35
+1.616e-35
+&gt;&gt;&gt; x = 3.14
+&gt;&gt;&gt; x
+3.14
+&gt;&gt;&gt; type(x)
+&lt;class 'float'&gt;
+&gt;&gt;&gt; float(7)
+7.0
+&gt;&gt;&gt; float(&quot;1.618&quot;)
+1.618
+&gt;&gt;&gt; float(&quot;nan&quot;)
+nan
+&gt;&gt;&gt; float(&quot;inf&quot;)
+inf
+&gt;&gt;&gt; float(&quot;-inf&quot;)
+-inf
+&gt;&gt;&gt; 3.0+1
+4.0
+</code></pre>
+
+<h3 id="none-data-type">None data type</h3>
+<ul>
+<li>python has special null value called "None".</li>
+<li>None is frequently reprsent the absent of value.</li>
+</ul>
+<pre><code class="markdown">&gt;&gt;&gt; None
+&gt;&gt;&gt; a=None
+&gt;&gt;&gt; a is None
+True
+&gt;&gt;&gt; type(None)
+&lt;class 'NoneType'&gt;
+</code></pre>
+
+<h3 id="bool-data-type">bool data type</h3>
+<ul>
+<li>Boolean logical values used in control structures</li>
+</ul>
+<pre><code class="markdown">&gt;&gt;&gt; True
+True
+&gt;&gt;&gt; False
+False
+&gt;&gt;&gt; bool(0)
+False
+&gt;&gt;&gt; bool(42)
+True
+&gt;&gt;&gt; bool(-1)
+True
+&gt;&gt;&gt; bool(0.0)
+False
+&gt;&gt;&gt; bool(0.207)
+True
+&gt;&gt;&gt; bool(-1.117)
+True
+&gt;&gt;&gt; bool([])
+False
+&gt;&gt;&gt; bool([1,5,9])
+True
+&gt;&gt;&gt; bool(&quot;&quot;)
+False
+&gt;&gt;&gt; bool(&quot;spam&quot;)
+True
+&gt;&gt;&gt; bool(&quot;False&quot;)
+True
+&gt;&gt;&gt; bool(&quot;True&quot;)
+True
+</code></pre>
+
+<ul>
+<li>Bool values commonly produces by python relational operators.</li>
+<li>Relational operators are used to comparing the objects.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>operator</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>value equality / equivalence</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>inequality / inequivalence</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less-than</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>greater-than</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less-than or equal to</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>greater-than or equal to</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="markdown">&gt;&gt;&gt; g=20
+&gt;&gt;&gt; g == 20
+True
+&gt;&gt;&gt; g == 13
+False
+&gt;&gt;&gt; g!= 20
+False
+&gt;&gt;&gt; g &lt; 30
+True
+&gt;&gt;&gt; g &lt;= 20
+True
+&gt;&gt;&gt; g&gt;30
+False
+&gt;&gt;&gt; g &gt;= 20
+True
+</code></pre>
+
+<h3 id="control-flow">control flow :</h3>
+<h4 id="conditional-statement">conditional statement :</h4>
+<p>Branch execution based on the value of an expression.
+if :</p>
+<p>Syntax:</p>
+<pre><code class="markdown">   if expression:
+       block
+</code></pre>
+
+<pre><code class="markdown">&gt;&gt;&gt; if True:
+...     print(&quot;It's true!&quot;)
+...
+It's true!
+&gt;&gt;&gt; if False:
+...     print('It's false!')
+...
+&gt;&gt;&gt; if bool('eggs'):
+...     print('Yes please!')
+...
+Yes please!
+&gt;&gt;&gt; if &quot;eggs&quot;:
+...     print(&quot;Yes please!&quot;)
+...
+Yes please!
+</code></pre>
+
+<p>else clause:</p>
+<pre><code class="markdown">&gt;&gt;&gt; h=42
+&gt;&gt;&gt; if h&gt;50:
+...     print('Greater than 50')
+... else:
+...     print('50 or smaller')
+50 or smaller
+&gt;&gt;&gt; if h &gt; 50 :
+...     print('Greater than 50')
+... else:
+...     if h&lt;20:
+...         print('Lessthan 20')
+...     else:
+...         print('Between 20 and 50')
+Between 20 and 50
+&gt;&gt;&gt; if h&gt;50:
+...     print('Greater than 50')
+... elif h&lt;20:
+...     print('less than 50')
+... else:
+...     print('Between 20 and 50')
+Between 20 and 50
+</code></pre>
+
+<p>while loops:</p>
+<p>syntax:</p>
+<pre><code class="markdown">while expression:
+    &lt;body&gt;
+</code></pre>
+
+<pre><code class="markdown">&gt;&gt;&gt; c = 5
+&gt;&gt;&gt; while c!=0:
+...     print(c)
+...     c-=1
+...
+5
+4
+3
+2
+1
+&gt;&gt;&gt; c=5
+&gt;&gt;&gt; while c:
+...     print(c)
+...     c-=1
+...
+5
+4
+3
+2
+1
+</code></pre>
+
+<ul>
+<li>while loop often used as infinite loops in python.</li>
+</ul>
+<pre><code class="markdown">&gt;&gt;&gt; while True:
+...     pass
+...
+press ctrl+c
+KeyboardInterrupt
+</code></pre>
+
+<p>break: Many programming languages support a loop ending in predicate test.</p>
+<p>python rerquires to use while True and break</p>
+<p>break jumps out of the inner-most executing loop the line immediatley after it.</p>
+<pre><code class="markdown">&gt;&gt;&gt; while True:
+...     response = input()
+...     if int(response)%7 == 0 :
+...         break
+...
+12
+24
+67
+34
+28
+</code></pre>
+
+<h4 id="int-truthiness">Int truthiness</h4>
+<pre><code class="markdown">&gt;&gt;&gt; bool(5) == True
+True
+&gt;&gt;&gt; bool(4) == True
+True
+&gt;&gt;&gt; bool(0) == False
+False
+</code></pre>
+
+<p><a href="..">Go back</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../collections/" class="btn btn-neutral float-right" title="Collections">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../pythonfirststeps/" class="btn btn-neutral" title="Python First steps"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+  Created and crafted with &#x1F496; <br><br>
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../pythonfirststeps/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../collections/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

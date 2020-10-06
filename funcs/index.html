@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Functions - Play with python</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Functions";
+    var mkdocs_page_input_path = "funcs.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Play with python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installPython/">Python Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../createGithub/">Github account</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../pythonfirststeps/">Python First steps</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../scalartypes/">Scalar Data Types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../collections/">Collections</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../copying/">Shallow Copy and Deep Copy</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../comprehensions/">Comprehensions</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Functions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#built-in-functions">Built-in Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#user-defined-functionsudf">User Defined Functions(UDF)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters-vs-arguments">Parameters vs Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#positional-arguments">Positional arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keyword-arguments">Keyword arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#position-only-parameters">Position-only Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#default-arguments-or-optional-arguments">Default arguments or Optional arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keyword-only-arguments">Keyword-Only Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#special-parameters">Special parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#anonymus-functions">Anonymus Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#legb-rule">LEGB Rule</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../scopes/">Variable Scopes</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Play with python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="functions">Functions</h2>
+<p id='top'>
+
+<p></p>
+Functions are first class objects in python. Function is a piece of code or set of instructions to carry out specific task.</p>
+<ul>
+<li>Functions may take single or multipule inputs to carry out the the task and sometimes they may not take input.</li>
+<li>After carried out specific task, functions may return single or multipule values or may not return any values.</li>
+</ul>
+<p>There are three types of functions available in python:</p>
+<h3 id="built-in-functions">Built-in Functions</h3>
+<p>Built-in functions comes up with python. There are different built-in functions are avialble.
+You can find about Built-in functions <a href="https://docs.python.org/3/library/functions.html">here</a></p>
+<hr>
+
+<h3 id="user-defined-functionsudf">User Defined Functions(UDF)</h3>
+<ul>
+<li>The keyword <code>def</code> introduces a function definition.</li>
+<li>It must be followed by the function name and the parenthesized list of formal parameters.</li>
+<li>The statements that form the body of the function start at the next line, and must be indented.</li>
+<li>The first statement of the function body can optionally be a string literal; this string literal is the function’s documentation string, or docstring.</li>
+<li>End your function with a return statement if the function should output something. Without the return statement, your function will return an object None.</li>
+</ul>
+<p>Syntax:</p>
+<pre><code class="markdown">def functionName(&lt;parsmeters&gt;):
+    &quot;&quot;&quot;function documentation goes here&quot;&quot;&quot;&quot;
+    code goes here
+    return something or nothing
+</code></pre>
+
+<p>Syntax for calling the function</p>
+<pre><code class="markdown">functionName(&lt;parametervalues&gt;)
+</code></pre>
+
+<p>Example 1:
+simple function</p>
+<pre><code class="python">def greeting():
+    &quot;&quot;&quot;greeting will greet you&quot;&quot;&quot;
+    return &quot;Welcome to python functions&quot;
+</code></pre>
+
+<p>We can call the above declared function <code>greeting</code> like this:</p>
+<pre><code class="python">greeting() #return 'Welcome to python functions'
+</code></pre>
+
+<p>The above function call will return <code>Welcome to python functions</code>
+If you try the <code>greeting.<strong>doc</strong></code>. It will print :</p>
+<pre><code class="markdown">greeting will greet you
+</code></pre>
+
+<p>Docstrings are very useful for the programmers to know what really the function does.</p>
+<p>Example 2:</p>
+<p>Creating a function with parameters(s):</p>
+<pre><code class="python">def greeting(a):
+    &quot;&quot;&quot;greeting requires 1 argument to greet you&quot;&quot;&quot;
+    return a+' Welcome to python functions'
+</code></pre>
+
+<p>You need to call <code>greeting</code> function with the argument.</p>
+<pre><code class="python">greeting('Joshua') #str given as an argument
+</code></pre>
+
+<p>This will return us the output:</p>
+<pre><code class="markdown">Joshua Welcome to python functions
+</code></pre>
+
+<ul>
+<li>You can store the function call in another variable like this</li>
+</ul>
+<pre><code class="python">b = greeting(&quot;Blake&quot;)
+print(b)
+</code></pre>
+
+<p>output:</p>
+<pre><code class="markdown">Blake Welcome to python functions
+</code></pre>
+
+<p>If you call the function <code>greeting</code> without passing argument, it will throw  exception like this:</p>
+<pre><code class="markdown">TypeError: greeting() missing 1 required positional argument: 'a'
+</code></pre>
+
+<p>There are different types of arguments available in python functions.</p>
+<p>If you pass other than string argument to <code>greeting</code>, It will throw exception.To overcome this we need to modify function definition like this:</p>
+<pre><code class="python">def greeting(a):
+    &quot;&quot;&quot;greeting requires 1 argument to greet you&quot;&quot;&quot;
+    return f'{a} Welcome to python functions'
+</code></pre>
+
+<p>Now you can call the function by passing any data type argument.</p>
+<pre><code class="python">greeting(b'Bob')
+</code></pre>
+
+<p>That will give us the output:</p>
+<pre><code class="markdown">&quot;b'Bob' Welcome to python functions&quot;
+</code></pre>
+
+<p>Example 3:</p>
+<p>Lets take one more function called <code>add</code> with two parameters</p>
+<pre><code class="python">def add(a,b):
+    &quot;&quot;&quot;Add two variables and return sum of it&quot;&quot;&quot;
+    return a+b
+</code></pre>
+
+<p>You need to pass the two arguments to call the <code>add</code>.</p>
+<pre><code class="python">add(10,120)
+</code></pre>
+
+<p>It will return 130</p>
+<h4 id="parameters-vs-arguments">Parameters vs Arguments</h4>
+<ul>
+<li>Parameters are the names used when defining a function or a method, and into which arguments will be mapped.</li>
+<li>In other words, arguments are the things which are supplied to any function or method call, while the function or method code refers to the arguments by their parameter names.</li>
+</ul>
+<h4 id="positional-arguments">Positional arguments</h4>
+<p>Positional arguments are arguments that can be called by their position in the function definition.</p>
+<p>Example 3:</p>
+<pre><code class="python">def posfunc(a,b,c):
+    &quot;&quot;&quot;Demo about positional arguments&quot;&quot;&quot;
+    return f'a={a}\nb={b}\nc={c}'
+</code></pre>
+
+<p>You required to pass the three arguments to the function <code>posfunc</code> in same order.</p>
+<pre><code class="python">posfunc(1, 2, 3)
+</code></pre>
+
+<p><code>posfunc</code> will return the output:</p>
+<pre><code class="markdown">a=1
+b=2
+c=3
+</code></pre>
+
+<p>Another way of passing positional arguments is like this:</p>
+<pre><code class="python">posfunc(*(5,6,7))
+</code></pre>
+
+<p>That will return the output:</p>
+<pre><code class="markdown">5   6   7
+</code></pre>
+
+<h4 id="keyword-arguments">Keyword arguments</h4>
+<p>Keyword arguments are arguments that must call by their name.</p>
+<p>Example 4:</p>
+<pre><code class="python">def keyfunc(a,b,c):
+    &quot;&quot;&quot;Demo about keyword arguments&quot;&quot;&quot;
+    return f'a={a}\nb={b}\nc={c}'
+</code></pre>
+
+<p>You need to call the function <code>keyfunc</code> arguments by their name:</p>
+<pre><code class="python">keyfunc(a=1,b=2,c=3)
+</code></pre>
+
+<p>Above function will return</p>
+<pre><code class="markdown">a=1
+b=2
+c=3
+</code></pre>
+
+<p>You can change the position of arguments if you want to call arguments by keyword.</p>
+<pre><code class="python">keyfunc(b=2,a=1,c=3)
+</code></pre>
+
+<p>Above function call will result the output.</p>
+<pre><code class="markdown">a=1
+b=2
+c=3
+</code></pre>
+
+<p>Another way of calling function with keyword arguments is:</p>
+<pre><code class="python">keyfunc(**{'a':7,'b':8,'c':9})
+</code></pre>
+
+<p>That will return the output:</p>
+<pre><code class="markdown">a=7     b=8     c=9
+</code></pre>
+
+<h4 id="position-only-parameters">Position-only Parameters</h4>
+<ul>
+<li>If positional-only, the parameters’ order matters, and the parameters cannot be passed by keyword.</li>
+<li>Positional-only parameters are placed before a / (forward-slash).</li>
+<li>The / is used to logically separate the positional-only parameters from the rest of the parameters.</li>
+<li>If there is no / in the function definition, there are no positional-only parameters.</li>
+</ul>
+<pre><code class="python">def pos_only_arg(arg, /):
+    &quot;&quot;&quot;demo on position only arguments&quot;&quot;&quot;
+    print(arg)
+</code></pre>
+
+<p><code>pos_only_arg(1)</code> will return 1. But if you try to call the function like this <code>pos_only_arg(arg=1)</code>. It gives you exception.</p>
+<pre><code class="markdown">TypeError: pos_only_arg() got some positional-only arguments passed as key
+word arguments: 'arg'
+</code></pre>
+
+<h4 id="default-arguments-or-optional-arguments">Default arguments or Optional arguments</h4>
+<p>Optional arguments or Default arguments are arguments that may not be passed to the function. Because they contains default value.</p>
+<p>Default parameter values are evaluated from left to right when the function definition is executed.</p>
+<p>Example 5:</p>
+<pre><code class="python">def defunc(a=1,b=2,c=3):
+    &quot;&quot;&quot;default arguments demonstration&quot;&quot;&quot;
+    return f'a={a}/t b={b} /t c={c}'
+</code></pre>
+
+<p>You could call this function without passing arguments like this:</p>
+<pre><code class="python">defunc()
+</code></pre>
+
+<p>That will return the output like this:</p>
+<pre><code class="markdown">a=1     b=2     c=3
+</code></pre>
+
+<p>If you want to overwrite default values in the function you could do that by passing argument as a positional or keyword to the function call</p>
+<pre><code class="python">defunc(2) #positional argument
+</code></pre>
+
+<p>The above call will overwrites first argument value, in this case <code>a</code></p>
+<pre><code class="markdown">a=2     b=2     c=3
+</code></pre>
+
+<p>You could also overwrite default value by using keyword argument.</p>
+<pre><code class="python">defunc(c=99)
+</code></pre>
+
+<p>The above function call will return us.</p>
+<pre><code class="markdown">a=1     b=2     c=99
+</code></pre>
+
+<p>Caution: You should not pass positional and keyword arguments for the same parmeter.</p>
+<p>For example if you pass positional argument then try to pass keyword argument to the same parameter it will throw us exception.</p>
+<pre><code class="python">defunc(5,a=555)
+</code></pre>
+
+<p>This call will throw an exception like this:</p>
+<pre><code class="markdown">TypeError: defunc() got multiple values for argument 'a'
+</code></pre>
+
+<p><strong>Note:</strong> You need to pass positional arguments followed by keyword arguments.</p>
+<pre><code class="python">defunc(2,b=3)
+</code></pre>
+
+<p>That will return us the output:</p>
+<pre><code class="markdown">a=2     b=3     c=3
+</code></pre>
+
+<p>But if you try to pass other way you will get exception:</p>
+<pre><code class="python">defunc(a=5,777)
+</code></pre>
+
+<p>The output would be like this:</p>
+<pre><code class="markdown">SyntaxError: positional argument follows keyword argument
+</code></pre>
+
+<h4 id="keyword-only-arguments">Keyword-Only Arguments</h4>
+<p>To mark parameters as keyword-only, indicating the parameters must be passed by keyword argument, place
+an * in the arguments list just before the first keyword-only parameter.</p>
+<pre><code class="python">def kwd_only_arg(*, arg):
+    &quot;&quot;&quot;Demo on Keyword-only arguments&quot;&quot;&quot;
+    print(arg)
+</code></pre>
+
+<p>If you call the above function like this <code>kwd_only_arg(3)</code>. It will throw you exception.</p>
+<pre><code class="markdown">TypeError: kwd_only_arg() takes 0 positional arguments but 1 was given
+</code></pre>
+
+<p><code>kwd_only_arg(arg=3)</code> will print 3.</p>
+<h4 id="special-parameters">Special parameters</h4>
+<ul>
+<li>By default, arguments may be passed to a Python function either by position or explicitly by keyword.</li>
+<li>For readability and performance, it makes sense to restrict the way arguments can be passed so that a
+developer need only look at the function definition to determine if items are passed by position, by
+position or keyword, or by keyword.</li>
+</ul>
+<p>Syntax:</p>
+<pre>
+def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+      -----------    ----------     ----------
+            |            |              |
+            |    Positional or keyword  |
+            |                           - Keyword only
+            -- Positional only
+</pre>
+
+<ul>
+<li>where / and * are optional</li>
+<li>If used, these symbols indicate the kind of parameter by how the arguments may be passed to the function: positional-only, positional-or-keyword, and keyword-only.</li>
+<li>Keyword parameters are also referred to as named parameters.</li>
+</ul>
+<p>In some scenarios arguments size varies for the same function in different scenarios.
+You could pass as many arguments as you want to function with the help of <code>*</code>.</p>
+<p>Example:</p>
+<pre><code class="python">def demo(*arg):
+    &quot;&quot;&quot;Dealing with multipule arguments&quot;&quot;&quot;
+    return arg
+</code></pre>
+
+<p>You could pass as many arguments you can. Above function return all the passed arguments in the form of tuples.</p>
+<pre><code class="python">demo(1,2,'a',True,13.6)
+</code></pre>
+
+<p>Above function call return us this output:</p>
+<pre><code class="markdown">(1,2,'a',True,13.6)
+</code></pre>
+
+<p>But if you try to call the function with keyword arguments. You will get exception.</p>
+<pre><code class="python">demo(a=1,b=2,c=3)
+</code></pre>
+
+<p>The above function call gives you exception.</p>
+<pre><code class="markdown">TypeError: demo() got an unexpected keyword argument 'a'
+</code></pre>
+
+<p>If you want to call the function with keyword arguments . You could do by mentioning <code>**</code>before to the parameter.</p>
+<pre><code class="python">def demofunc(**kwargs):
+    &quot;&quot;&quot;Demo on variable names and their values&quot;&quot;&quot;
+    return kwargs
+</code></pre>
+
+<p>You have to call the function with variable names and their values:</p>
+<pre><code class="python">demofunc(a=1,b=2,c=3)
+</code></pre>
+
+<p>Above called function will return parameter name which is passed during the function call and its value as a form of dictionary.</p>
+<pre><code class="markdown">{'a': 1, 'b': 2, 'c': 3}
+</code></pre>
+
+<p>But if you try calling the function with positional arguments, you will get exception.</p>
+<pre><code class="python">demofunc(1,2,3)
+</code></pre>
+
+<p>Above function call gives you exception.</p>
+<pre><code class="markdown">TypeError: demofunc() takes 0 positional arguments but 3 were given
+</code></pre>
+
+<p>If you want to pass both positional and keyword arguments. First you need to pass positional arguments and then keyword arguments.</p>
+<p>Function definition would looks like this.</p>
+<pre><code class="python">def combo(*arg, **kwargs):
+    return arg, kwargs
+</code></pre>
+
+<p>Above function will return in the form of tuple.</p>
+<pre><code class="python">combo('a','b','c',a=1,b=2,c=3)
+</code></pre>
+
+<p>Above function call returns</p>
+<pre><code class="markdown">(('a','b','c'),{a:1,b:2,c:3})
+</code></pre>
+
+<p>You could decare like this:</p>
+<pre><code class="python">def f(par, *arg, **kwarg)
+    print(par, *arg, **kwarg)
+</code></pre>
+
+<p>Call the above function like this <code>f(1,2,34,5,a='x',b='y',c='z')</code> will print:</p>
+<pre><code class="markdown">1 (2,34,5) {'a':'x','b':'y','c':'z'}
+</code></pre>
+
+<p>But if you try call like this <code>f(par=1,2,34,5,a='x',b='y',c='z')</code> you will get exception like this:</p>
+<pre><code class="markdown">SyntaxError: positional argument follows keyword argument
+</code></pre>
+
+<p>To resolve this exception you have to define like this:</p>
+<pre><code class="python">def f(*arg,par, **kwarg):
+    print(arg, par, kwarg)
+</code></pre>
+
+<p>So you could call the function like this <code>f(1,2,34,par=5,a='x',b='y',c='z')</code></p>
+<p>that will print the result without giving any exception.</p>
+<hr>
+
+<h3 id="anonymus-functions">Anonymus Functions</h3>
+<p>Anonymus function is a function that could be declared without name, anonymus function  can be declared using <code>lambda</code>.</p>
+<ul>
+<li>Lambda functions can be used wherever function objects are required.</li>
+<li>They are syntactically restricted to a single expression.</li>
+<li>Like nested function definitions, lambda functions can reference variables from the containing scope.</li>
+</ul>
+<pre><code class="python">lambda x: x
+</code></pre>
+
+<p>In the above example <code>lambda</code> is keyword, <code>x</code> is a bound variable and the body is <code>x</code>.
+Above lambda expression is equivalent to the following function.</p>
+<pre><code class="python">def f(x):
+    return x
+</code></pre>
+
+<p>You could call the above declared lambda function like this.</p>
+<pre><code class="python">(lambda x: x)(2)
+</code></pre>
+
+<p>That will return 2.</p>
+<p>One more example:</p>
+<pre><code class="python">(lambda x: x+1)(2)
+</code></pre>
+
+<p>That will produce the output 3.</p>
+<p>Another way of calling anonymous function is</p>
+<pre><code class="python">a = lambda x: x
+</code></pre>
+
+<p>Now variable <code>a</code> will be act as a function.</p>
+<pre><code class="python">a(1)
+</code></pre>
+
+<p>Above call will return 1.</p>
+<p>Few more examples on the function is</p>
+<pre><code class="python">full_name = lambda first, last: f'{first.title()} {last.title()}'
+</code></pre>
+
+<p>You could call this function</p>
+<pre><code class="python">full_name('paul','walker')
+</code></pre>
+
+<p>That will give us the output Paul Walker</p>
+<h3 id="legb-rule">LEGB Rule</h3>
+<ul>
+<li>LEGB Rule</li>
+</ul>
+<hr>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../scopes/" class="btn btn-neutral float-right" title="Variable Scopes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../comprehensions/" class="btn btn-neutral" title="Comprehensions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+  Created and crafted with &#x1F496; <br><br>
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../comprehensions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../scopes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
