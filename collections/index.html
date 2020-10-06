@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Collections - Play with python</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Collections";
+    var mkdocs_page_input_path = "collections.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Play with python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installPython/">Python Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../createGithub/">Github account</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../pythonfirststeps/">Python First steps</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../scalartypes/">Scalar Data Types</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Collections</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#strings-str">Strings: str</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bytes">Bytes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lists">Lists</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tuples">Tuples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sets">Sets</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dictionaries">Dictionaries</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../copying/">Shallow Copy and Deep Copy</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../comprehensions/">Comprehensions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../funcs/">Functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../scopes/">Variable Scopes</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Play with python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Collections</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="collections">Collections</h2>
+<h3 id="strings-str">Strings: str</h3>
+<ul>
+<li>Str is the short form of string</li>
+<li>Str data type is immutable i.e once you declare it, you cannot able to modify it.</li>
+</ul>
+<p>Syntax:</p>
+<pre><code class="python">&gt;&gt;&gt;&quot;this is string&quot;
+'this is string'
+&gt;&gt;&gt;'this is also a string'
+'this is also a string'
+&gt;&gt;&gt;&quot;This is not way of declering the string'
+ File &quot;&lt;stdin&gt;&quot;, line 1
+    &quot;This is not way of declering the string'
+                                            ^
+SyntaxError: EOL while scanning string literal
+&gt;&gt;&gt;'This is also not way of declering the string&quot;
+ File &quot;&lt;stdin&gt;&quot;, line 1
+    'This is also not way of declering the string&quot;
+                                                 ^
+SyntaxError: EOL while scanning string literal
+</code></pre>
+
+<p>You can check the data type of the string</p>
+<pre><code class="python">&gt;&gt;&gt;a = &quot;paly with python&quot;
+&gt;&gt;&gt;type(a)
+&lt;class 'str'&gt;
+</code></pre>
+
+<p>String with new lines:</p>
+<ul>
+<li>Multi line strings: spread the literal across multipule lines.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt;&quot;&quot;&quot; This is
+... multi line string
+... this is end&quot;&quot;&quot;
+'This is\nmulti line string\nthis is end'
+&gt;&gt;&gt; poem = &quot;&quot;&quot;Just like moons and like suns,
+... With the certainity of tides,
+... Just like hopes springing high,
+... Still I'll raise.&quot;&quot;&quot;
+&gt;&gt;&gt; poem
+'Just like moons and like suns,\nWith the certainity of tides,\nJust like hopes springing high,\nStill I'll raise.'
+&gt;&gt;&gt; print(poem)
+Just like moons and like suns,
+With the certainity of tides,
+Just like hopes springing high,
+Still I'll raise.
+</code></pre>
+
+<ul>
+<li>Escape sequences : Embed escape sequences in a single-line literal</li>
+</ul>
+<p>Python lets you escape the meaning of some characters with in strings to achieve effects that would otherwise be difficult to express.By preceding a character with a backslash (),
+you give it a special meaning.The most common escape sequence is \n,which means to begin a new line.</p>
+<pre><code class="python">&gt;&gt;&gt; 'This is\nmulti line string\nthis is end'
+'This is\nmulti line string\nthis is end'
+&gt;&gt;&gt; a = 'You are not your parents\nYou are not your class\nYou are not the clothes you wear\nYou are not the size of your friend circle\nYour sum of your words. choices and actions.'
+&gt;&gt;&gt; a
+'You are not your parents\nYou are not your class\nYou are not the clothes you wear\nYou are not the size of your friend circle\nYour sum of your words. choices and actions.'
+&gt;&gt;&gt; print(a)
+You are not your parents
+You are not your class
+You are not the clothes you wear
+You are not the size of your friend circle
+Your sum of your words. choices and actions.
+</code></pre>
+
+<p>More escape sequences:</p>
+<pre><code class="python">&gt;&gt;&gt; palindrome = 'A man,\nA plan,\nA canal:\nPanama.'
+&gt;&gt;&gt; print(palindrome)
+A man,
+A plan,
+A canal:
+Panama.
+&gt;&gt;&gt; print('\tabc')
+    abc
+&gt;&gt;&gt; print('a\tbc')
+a   bc
+&gt;&gt;&gt; print('ab\tc')
+ab    c
+&gt;&gt;&gt; testimony = &quot;\&quot;I did nothing!\&quot; he said. \&quot;Or that other thing.\&quot;&quot;
+&gt;&gt;&gt; print(testimony)
+&quot;I did nothing!&quot; he said. &quot;Or that other thing.&quot;
+&gt;&gt;&gt; fact = &quot;The world's largest rubber duck was 54'2\&quot; by 65'7\&quot; by 105'&quot;
+&gt;&gt;&gt; print(fact)
+The world's largest rubber duck was 54'2&quot; by 65'7&quot; by 105'
+&gt;&gt;&gt; speech = 'The backslash (\\) can be printed using like this.'
+&gt;&gt;&gt; print(speech)
+The backslash (\) can be printed using like this.
+</code></pre>
+
+<p>Combining by using +</p>
+<p>we can combine literal strings or string variables using the + operator.</p>
+<pre><code class="python">&gt;&gt;&gt; &quot;good &quot;+&quot;morning&quot;
+'good morning'
+&gt;&gt;&gt; name = &quot;Joe&quot;
+&gt;&gt;&gt; branch = &quot; computer science and engineering&quot;
+&gt;&gt;&gt; print(name+branch)
+Joe computer science and engineering
+&gt;&gt;&gt; a = 'Duck.'
+&gt;&gt;&gt; b = a
+&gt;&gt;&gt; c = 'Grey Duck!'
+&gt;&gt;&gt; a+b+c
+'Duck.Duck.Grey Duck!'
+</code></pre>
+
+<p>Duplicate with *</p>
+<p>We use the * operator to duplicate a string.</p>
+<pre><code class="python">&gt;&gt;&gt; &quot;hi&quot;*3
+'hihihi'
+&gt;&gt;&gt; &quot;hello &quot;*3
+'hello hello hello'
+&gt;&gt;&gt; a = 'Na ' * 4 + '\n'
+&gt;&gt;&gt; b = 'Hey ' * 3 + '\n'
+&gt;&gt;&gt; end = 'Goodbye.'
+&gt;&gt;&gt; print(start + start + middle + end)
+Na Na Na Na
+Na Na Na Na
+Hey Hey Hey
+Goodbye.
+</code></pre>
+
+<p>Notice that the * has higher precedence than +, so the string is duplicated before the line feed is tacked on.</p>
+<p>Get characters with []</p>
+<ul>
+<li>To get a single character from a string, specify its offset inside square brackets after the string’s name.</li>
+<li>The first (leftmost) offset is 0, the next is 1, and so on.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; letters = 'abcdefghijklmnopqrstuvwxyz'
+&gt;&gt;&gt; letters[0]
+a
+&gt;&gt;&gt; letters[25]
+z
+</code></pre>
+
+<p>Get a substring with a slice</p>
+<p>syntax:</p>
+<pre><code class="python">[start_offset:end_offset:step(optional)]
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; letters[1:11]
+'bcdefghijk'
+&gt;&gt;&gt; letters[1:20:2]
+'bdfhjlnprt'
+&gt;&gt;&gt; letters[::5]
+'afkpuz'
+&gt;&gt;&gt; letters[21]
+'v'
+</code></pre>
+
+<p>Get Length with len()</p>
+<p>The len() function counts characters in a string:</p>
+<p>Syntax:</p>
+<pre><code class="python">len(string)
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; letters = 'abcdefghijklmnopqrstuvwxyz'
+&gt;&gt;&gt; len(letters)
+26
+&gt;&gt;&gt; empty = &quot;&quot;
+&gt;&gt;&gt; len(empty)
+0
+</code></pre>
+
+<p>spilt with split()</p>
+<p>You can use the built-in string split() function to break a string into a list of smaller strings based on some separator.</p>
+<p>syntax:</p>
+<pre><code class="python">string.split('seperator')
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; tasks = 'get gloves,get mask,give cat vitamins,call ambulance'
+&gt;&gt;&gt; tasks.split(',')
+['get gloves', 'get mask', 'give cat vitamins', 'call ambulance']
+&gt;&gt;&gt; tasks.split()
+['get', 'gloves,get', 'mask,give', 'cat', 'vitamins,call', 'ambulance']
+</code></pre>
+
+<p>combine by using join()</p>
+<p>syntax:</p>
+<pre><code class="python">seperator.join(list)
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; crypto_list = ['Yeti', 'Bigfoot', 'Loch Ness Monster']
+&gt;&gt;&gt; crypto_string = ', '.join(crypto_list)
+&gt;&gt;&gt; print(crypto_string)
+Yeti, Bigfoot, Loch Ness Monster
+</code></pre>
+
+<p>Substitute by Using replace()</p>
+<p>You use replace() for simple substring substitution.Give it the old substring, the new one,and how many instances of the old substring to replace.
+It returns the changed string but does notmodify the original string.If you omit this final count argument, it replaces all instances.</p>
+<p>Syntax:</p>
+<pre><code class="python">string.replace(old_substring, new_substring, count(optional))
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; setup = &quot;a duck goes into a bar...&quot;
+&gt;&gt;&gt; setup.replace('duck', 'marmoset')
+&gt;&gt;&gt; setup.replace('duck', 'marmoset')
+'a marmoset goes into a bar...'
+&gt;&gt;&gt; setup
+'a duck goes into a bar...'
+</code></pre>
+
+<p>Strip with strip()
+The strip() functions shown here assume that you want to get rid ofwhitespace characters (' ', '\t', '\n')if you don’t give them an argument.strip() str.
+strip() strips both ends, lstrip() only from the left, and rstrip() only from the right.</p>
+<p>Syntax :</p>
+<pre><code class="python">string.strip()
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; world = &quot;    earth   &quot;
+&gt;&gt;&gt; world.strip()
+'earth'
+&gt;&gt;&gt; world.strip(' ')
+'earth'
+&gt;&gt;&gt; world.lstrip()
+'earth  '
+&gt;&gt;&gt; world.rstrip()
+'   earth'
+</code></pre>
+
+<p>If the character were not there, nothing happens:</p>
+<pre><code class="python">&gt;&gt;&gt; world.strip('!')
+'   earth   '
+</code></pre>
+
+<p>Besides no argument (meaning whitespace characters) or a single character, you can also tell strip() to remove any character in a multicharacter string:</p>
+<pre><code class="python">&gt;&gt;&gt; blurt = &quot;What the...!!?&quot;
+&gt;&gt;&gt; blurt.strip('.?!')
+'What the'
+</code></pre>
+
+<p>Search and Select</p>
+<pre><code class="python">&gt;&gt;&gt; poem = '''All that doth flow we cannot liquid name
+... Or else would fire and water be the same;
+... But that is liquid which is moist and wet
+... Fire that property can never get
+.... Then 'tis not cold that doth the fire put out
+... But 'tis the wet that makes it die, no doubt.'''
+&gt;&gt;&gt; poem[:13]
+'All that doth'
+&gt;&gt;&gt; len(poem)
+254
+&gt;&gt;&gt; poem.startswith('All')
+True
+&gt;&gt;&gt; poem.endswith('That\'s all, folks!')
+False
+</code></pre>
+
+<p>Let’s find the offset of the first occurrenceof the word the in the poem:</p>
+<pre><code class="python">&gt;&gt;&gt; word='the'
+&gt;&gt;&gt; poem.find(word)
+73
+&gt;&gt;&gt; poem.index(word)
+73
+</code></pre>
+
+<p>And the offset of the last the:</p>
+<pre><code class="python">&gt;&gt;&gt; word = 'the'
+&gt;&gt;&gt; poem.rfind(word)
+218
+&gt;&gt;&gt; poem.rindex(word)
+218
+</code></pre>
+
+<p>How many times does the three-letter sequence 'the' occur?</p>
+<pre><code class="python">&gt;&gt;&gt; poem.count(word)
+3
+</code></pre>
+
+<p>Are all of the characters in the poem either letters or numbers?</p>
+<pre><code class="python">&gt;&gt;&gt; poem.isalnum()
+False
+</code></pre>
+
+<p>Cases:</p>
+<pre><code class="python">&gt;&gt;&gt; setup = 'a duck goes into a bar...'
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; setup.strip('.')
+'a duck goes into a bar'
+</code></pre>
+
+<p>Capitalize the first word:</p>
+<pre><code class="python">&gt;&gt;&gt; setup.capitalize()
+'A duck goes into a bar...'
+</code></pre>
+
+<p>Capitalize all the words:</p>
+<pre><code class="python">&gt;&gt;&gt; setup.title()
+'A Duck Goes Into A Bar...'
+</code></pre>
+
+<p>Convert all characters to uppercase:</p>
+<pre><code class="python">&gt;&gt;&gt; setup.upper()
+'A DUCK GOES INTO A BAR...'
+</code></pre>
+
+<p>Convert all characters to lowercase:</p>
+<pre><code class="python">&gt;&gt;&gt; setup.lower()
+'a duck goes into a bar...'
+</code></pre>
+
+<p>Swap uppercase and lowercase:</p>
+<pre><code class="python">&gt;&gt;&gt; setup.swapcase()
+'A DUCK GOES INTO A BAR...'
+&gt;&gt;&gt; setup
+'a duck goes into a bar...'
+</code></pre>
+
+<p>Formatting :</p>
+<table border="1" align='left'>
+<tr><td>%s</td><td>string</td></tr>
+<tr><td>%d</td><td>decimal integer</td></tr>
+<tr><td>%x</td><td>hex integer</td></tr>
+<tr><td>%o</td><td>octal integer</td></tr>
+<tr><td>%f</td><td>decimal float</td></tr>
+<tr><td>%e</td><td>exponential float</td></tr>
+<tr><td>%g</td><td>decimal or exponential float</td></tr>
+</table>
+
+<p><br><br></p>
+<p>You can use a %s for any data type, and Python will format it as a string with no extra spaces.</p>
+<pre><code class="python">&gt;&gt;&gt; '%s' % 42
+'42'
+&gt;&gt;&gt; '%d' % 42
+'42'
+&gt;&gt;&gt; '%x' % 42
+'2a'
+&gt;&gt;&gt; '%o' % 42
+'52'
+</code></pre>
+
+<p>An integer and a literal %:</p>
+<pre><code class="python">&gt;&gt;&gt; '%d%%' % 100
+'100%'
+</code></pre>
+
+<p>Let's try some string and integer interpolation:</p>
+<pre><code class="python">&gt;&gt;&gt; actor = 'Richard Gere'
+&gt;&gt;&gt; cat = 'Chester'
+&gt;&gt;&gt; weight = 28
+&gt;&gt;&gt; &quot;My friend's favorite actor is %s&quot; % actor
+&quot;My friend's favorite actor is Richard Gere&quot;
+&gt;&gt;&gt; &quot;Our cat %s weighs %d pounds&quot; % (cat, weight)
+'Our cat Chester weighs 28 pounds'
+</code></pre>
+
+<p>some more examples</p>
+<pre><code class="python">&gt;&gt;&gt; thing = 'woodchuck'
+&gt;&gt;&gt; '%s' % thing
+'woodchuck'
+&gt;&gt;&gt; '%12s' % thing
+'   woodchuck'
+&gt;&gt;&gt; '%+12s' % thing
+'   woodchuck'
+&gt;&gt;&gt; '%-12s' % thing
+'woodchuck   '
+&gt;&gt;&gt; '%.3s' % thing
+'woo'
+&gt;&gt;&gt; '%12.3s' % thing
+'         woo'
+&gt;&gt;&gt; '%-12.3s' % thing
+'woo         '
+</code></pre>
+
+<p>one more with feeling</p>
+<pre><code class="python">&gt;&gt;&gt; thing = 98.6
+&gt;&gt;&gt; '%f' % thing
+'98.600000'
+&gt;&gt;&gt; '%12f' % thing
+'   98.600000'
+&gt;&gt;&gt; '%6f' % thing
+'98.600000'
+&gt;&gt;&gt; '%+12f' % thing
+'  +98.600000'
+&gt;&gt;&gt; '%-12f' % thing
+'98.600000   '
+&gt;&gt;&gt; '%.3f' % thing
+'98.600'
+&gt;&gt;&gt; '%12.3f' % thing
+'      98.600'
+&gt;&gt;&gt; '%-12.3f' % thing
+'98.600      '
+</code></pre>
+
+<p>New style:{} and format()</p>
+<p>“New style” formatting has the form format_string.format(data).</p>
+<pre><code class="python">&gt;&gt;&gt; thing = 'woodchuck'
+&gt;&gt;&gt; '{}'.format(thing)
+'woodchuck'
+</code></pre>
+
+<p>The arguments to the format() function need to be in the order as the {} placeholders in the format string:</p>
+<pre><code class="python">&gt;&gt;&gt; thing = 'woodchuck'
+&gt;&gt;&gt; place = 'lake'
+&gt;&gt;&gt; 'The {} is in the {}.'.format(thing, place)
+'The woodchuck is in the lake.'
+</code></pre>
+
+<p>With new-style formatting, you can also specify the arguments by position like this:</p>
+<pre><code class="python">&gt;&gt;&gt; 'The {1} is in the {0}.'.format(place, thing)
+'The woodchuck is in the lake.'
+</code></pre>
+
+<p>The value 0 referred to the first argument, place, and 1 referred to thing.</p>
+<p>The arguments to format() can also be named arguments</p>
+<pre><code class="python">&gt;&gt;&gt; 'The {thing} is in the {place}'.format(thing='duck', place='bathtub')
+'The duck is in the bathtub'
+</code></pre>
+
+<p>or a dictionary:</p>
+<pre><code class="python">&gt;&gt;&gt; d = {'thing': 'duck', 'place': 'bathtub'}
+&gt;&gt;&gt; 'The {0[thing]} is in the {0[place]}.'.format(d)
+'The duck is in the bathtub.'
+</code></pre>
+
+<p>More Examples:</p>
+<pre><code class="python">&gt;&gt;&gt; thing = 'wraith'
+&gt;&gt;&gt; place = 'window'
+&gt;&gt;&gt; 'The {} is at the {}'.format(thing, place)
+'The wraith is at the window'
+&gt;&gt;&gt; 'The {:10s} is at the {:10s}'.format(thing.upper(), place)
+'The WRAITH     is at the window    '
+&gt;&gt;&gt; 'The {:&lt;10s} is at the {:&lt;10s}'.format(thing, place)
+'The wraith     is at the window    '
+&gt;&gt;&gt; 'The {:^10s} is at the {:^10s}'.format(thing, place)
+'The   wraith   is at the   window  '
+&gt;&gt;&gt; 'The {:&gt;10s} is at the {:&gt;10s}'.format(thing, place)
+'The     wraith is at the     window'
+&gt;&gt;&gt; 'The {:!^10s} is at the {:!^10s}'.format(thing, place)
+'The !!wraith!! is at the !!window!!'
+</code></pre>
+
+<p>Newest Style: f-strings</p>
+<ul>
+<li>f-strings appeared in Python 3.6, and are now the recommended way of formatting strings.
+To make an f-string:</li>
+<li>Type the letter f or F directly before the initial quote.</li>
+<li>Include variable names or expressions within curly brackets ({}) to get their values into the string.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; thing = 'wereduck'
+&gt;&gt;&gt; place = 'werepond'
+&gt;&gt;&gt; f'The {thing} is in the {place}'
+'The wereduck is in the werepond'
+&gt;&gt;&gt; f'The {thing.capitalize()} is in the {place.rjust(20)}'
+'The Wereduck is in the             werepond'
+&gt;&gt;&gt; f'The {thing:&gt;20} is in the {place:.^20}'
+'The             wereduck is in the ......werepond......'
+</code></pre>
+
+<ul>
+<li>Starting in Python 3.8, f-strings gain a new shortcut that’s helpful when you want to print variable names as well as their values.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; f'{thing =}, {place =}'
+&quot;thing ='wereduck', place ='werepond'&quot;
+&gt;&gt;&gt; f'{thing[-4:] =}, {place.title() =}'
+&quot;thing[-4:] ='duck', place.title() ='Werepond'&quot;
+&gt;&gt;&gt; f'{thing = :&gt;4.4}'
+'thing = were'
+</code></pre>
+
+<ul>
+<li>for more details: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">python documentation</a></li>
+<li>These examples are borrowed from the "Introducing Python" 2nd Edition by Bill Lubanovic, O'Reilly media inc.,2019</li>
+<li>Think Python, Second Edition, Allen B. Downey, 2016, O'Reilly
+<br>
+<br>
+<a href='#index'>Go to top</a>
+<a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNEpTV0lDT0lZUjFDSVBZNDFRUllQRFVZMC4u' class='center'>Learning check</a><a href="./" class='right'>Home</a>
+<hr></li>
+</ul>
+<h3 id="bytes">Bytes</h3>
+<ul>
+<li>Data type for sequence of bytes</li>
+<li>Raw binary data</li>
+<li>Fixed width single byte encoding</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; b'byte data'
+b'byte data'
+&gt;&gt;&gt; d= b'some bytes'
+&gt;&gt;&gt; type(d)
+&lt;class 'bytes'&gt;
+&gt;&gt;&gt; d.split()
+[b'some', b'bytes']
+</code></pre>
+
+<p>Converting between strings and bytes:
+<img alt="" src="../collections1.JPG" /></p>
+<pre><code class="python">&gt;&gt;&gt; a = b'byte data'
+&gt;&gt;&gt; a.decode()
+'byte data'
+&gt;&gt;&gt; b = 'hello python'
+&gt;&gt;&gt; b.encode()
+b'hello python'
+</code></pre>
+
+<p><a href='#index'>Go to Top</a>    <a href="./" class='right'>Home</a>
+<hr></p>
+<h3 id="lists">Lists</h3>
+<ul>
+<li>sequence of objects</li>
+<li>Lists are Mutable</li>
+<li>Lists are declared with [] or list()</li>
+<li>Items are seperated with comma(,)</li>
+</ul>
+<p>Create empty list</p>
+<pre><code class="python">&gt;&gt;&gt; myfirst_list = []   # one way of creating empty list
+&gt;&gt;&gt; type(myfirst_list)
+&lt;class 'list'&gt;
+&gt;&gt;&gt; mysecond_list = list() # another way of creating empty list
+&gt;&gt;&gt; type(mysecond_list)
+&lt;class 'list'&gt;
+</code></pre>
+
+<p>python list() converts string into list</p>
+<pre><code class="python">&gt;&gt;&gt; list('python')
+['p', 'y', 't', 'h', 'o', 'n']
+</code></pre>
+
+<p>Create a list from string split()</p>
+<pre><code class="python">&gt;&gt;&gt; python_day='12/12/2019'
+&gt;&gt;&gt; python_day.split('/')
+['12', '12', '2019']
+</code></pre>
+
+<p>list.reverse() : To reverse the elements in the list</p>
+<pre><code class="python">&gt;&gt;&gt; lang=['c','c++','java','python']
+&gt;&gt;&gt; lang.reverse()
+&gt;&gt;&gt; lang
+['python', 'java', 'c++', 'c']
+</code></pre>
+
+<p>Add an Item to the End with append()</p>
+<pre><code class="python">&gt;&gt;&gt; lang=['c','c++','java','python']
+&gt;&gt;&gt; lang.append('R')
+&gt;&gt;&gt; lang
+['c', 'c++', 'java', 'python', 'R']
+</code></pre>
+
+<p>Add an Item by Offset with insert()</p>
+<p>syntax:</p>
+<pre><code class="python">insert(index, word)
+</code></pre>
+
+<p>Examples:</p>
+<pre><code class="python">&gt;&gt;&gt; lang=['c', 'c++', 'java', 'python', 'R']
+&gt;&gt;&gt; lang.insert(2,'scala')
+&gt;&gt;&gt; lang
+['c', 'c++', 'scala', 'java', 'python', 'R']
+</code></pre>
+
+<p>Duplicate All Items with *</p>
+<p>syntax:</p>
+<pre><code class="python">['string']*value
+</code></pre>
+
+<p>Examples:</p>
+<pre><code class="python">&gt;&gt;&gt; ['python']*3
+['python', 'python', 'python']
+&gt;&gt;&gt; ['python','java']*3
+['python', 'java', 'python', 'java', 'python', 'java']
+</code></pre>
+
+<p>Combine Lists by Using extend() or +</p>
+<pre><code class="python">&gt;&gt;&gt; lang
+['c', 'c++', 'scala', 'java', 'python', 'R']
+&gt;&gt;&gt; markups=['html','xml']
+&gt;&gt;&gt; lang.extend(markups)
+&gt;&gt;&gt; lang
+['c', 'c++', 'scala', 'java', 'python', 'R', 'html', 'xml']
+&gt;&gt;&gt; server_scripting=['PHP','ASP','JSP']
+&gt;&gt;&gt; lang=lang+server_scripting
+&gt;&gt;&gt; lang
+['c',
+ 'c++',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP']
+&gt;&gt;&gt; lang+=server_scripting
+&gt;&gt;&gt; lang
+['c',
+ 'c++',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ 'PHP',
+ 'ASP',
+ 'JSP']
+ &gt;&gt;&gt; client_scripting=['javascript','actionscript']
+ &gt;&gt;&gt; lang.append(client_scripting)
+ &gt;&gt;&gt; lang
+ ['c',
+ 'c++',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ ['javascript', 'actionscript']]
+</code></pre>
+
+<p>Change an Item by [offset]</p>
+<pre><code class="python">&gt;&gt;&gt; lang
+['c',
+ 'c++',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ ['javascript', 'actionscript']]
+ &gt;&gt;&gt; lang[1]='c#'
+ &gt;&gt;&gt; lang
+ ['c',
+ 'c#',
+ 'scala',
+ 'java',
+ 'python',
+ 'R',
+ 'html',
+ 'xml',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ 'PHP',
+ 'ASP',
+ 'JSP',
+ ['javascript', 'actionscript']]
+ ```
+
+ Change an item with slice
+
+```python
+&gt;&gt;&gt; numbers=[1,2,3,4]
+&gt;&gt;&gt; numbers[1:3]=[8,9]
+&gt;&gt;&gt; numbers
+[1, 8, 9, 4]
+</code></pre>
+
+<p>Delete an Item by Offset with del</p>
+<p>syntax:</p>
+<pre><code class="python"> del list[offset]
+</code></pre>
+
+<p>Examples:</p>
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','Java','Python']
+&gt;&gt;&gt; del languages[-1]
+&gt;&gt;&gt; languages
+['C', 'C#', 'Java']
+&gt;&gt;&gt; del languages[0:2]
+&gt;&gt;&gt; languages
+['Java']
+</code></pre>
+
+<p>Delete an Item by Value with remove()</p>
+<p>syntax:</p>
+<pre><code class="python">list.remove('element')
+</code></pre>
+
+<p>Examples:</p>
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','Java','Python']
+&gt;&gt;&gt; languages.remove('C#')
+</code></pre>
+
+<p>Get an Item Offset and Delete It with pop()</p>
+<p>syntax:</p>
+<pre><code class="python">list.pop(offset)
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','Java','Python']
+&gt;&gt;&gt; languages.pop()
+'Python'
+&gt;&gt;&gt; languages.pop(1)
+'C#'
+&gt;&gt;&gt; languages
+['C', 'Java']
+</code></pre>
+
+<p>Delete All Items with clear()
+syntax:</p>
+<pre><code class="python">list.clear()
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','Java','Python']
+&gt;&gt;&gt; languages.clear()
+&gt;&gt;&gt; languages
+[]
+</code></pre>
+
+<p>Find an Item's Offset by Value with index()</p>
+<p>Syntax:</p>
+<pre><code class="python">list.index('element')
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','Java','Python']
+&gt;&gt;&gt; languages.index('C')
+0
+</code></pre>
+
+<p>Test for Value with in
+Syntax:</p>
+<pre><code class="python">'element' in list
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','Java','Python']
+&gt;&gt;&gt; 'Python' in languages
+True
+&gt;&gt;&gt; 'C++' in languages
+False
+</code></pre>
+
+<p>Count Occurrences of Value with count()</p>
+<p>Syntax:</p>
+<pre><code class="python">list.count('element')
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; languages.count('C')
+1
+</code></pre>
+
+<p>How to convert list to string ?</p>
+<p>Syntax:</p>
+<pre><code class="python">'seperator'.join(list)
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','Java','Python']
+&gt;&gt;&gt; ','.join(languages)
+'C,C#,Java,Python'
+</code></pre>
+
+<p>Reorder Items of the list</p>
+<p>Using python function:</p>
+<pre><code class="python">&gt;&gt;&gt; languages=['Python','C#','Java','C']
+&gt;&gt;&gt; sorted(languages)
+['C', 'C#', 'Java', 'Python']
+&gt;&gt;&gt; languages #original order will never changed
+['Python','C#','Java','C']
+</code></pre>
+
+<p>Using list method:</p>
+<pre><code class="python">&gt;&gt;&gt; languages=['Python','C#','Java','C']
+&gt;&gt;&gt; languages.sort()
+&gt;&gt;&gt; languages
+['C', 'C#', 'Java', 'Python']
+&gt;&gt;&gt; languages=['Python','C#','Java','C']
+&gt;&gt;&gt; languages.sort(reverse=True) # sort reverse order
+&gt;&gt;&gt; languages
+['Python', 'Java', 'C#', 'C']
+</code></pre>
+
+<p>Get Length with len()</p>
+<p>Syntax:</p>
+<pre><code class="python">len(list)
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; len(languages)
+4
+</code></pre>
+
+<p>Assign with =</p>
+<p>When you assign one list to more than one variable, changing the list in one place also changes it in the other.</p>
+<pre><code class="python"> &gt;&gt;&gt; a=[1,2,3,4]
+ &gt;&gt;&gt; id(a)
+ 2109612147720
+ &gt;&gt;&gt; b=a
+ &gt;&gt;&gt; id(b)
+ 2109612147720
+ &gt;&gt;&gt; a[0]='hello'
+ &gt;&gt;&gt; a
+ ['hello', 2, 3, 4]
+ &gt;&gt;&gt; b
+ ['hello', 2, 3, 4]
+ &gt;&gt;&gt; b[1]='hi'
+ &gt;&gt;&gt; a
+ ['hello', 'hi', 3, 4]
+</code></pre>
+
+<p>Compare lists:</p>
+<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
+&gt;&gt;&gt; b = [7,8,9]
+&gt;&gt;&gt; a == b
+False
+&gt;&gt;&gt; b&gt;a
+True
+</code></pre>
+
+<p>Iterate with for and in</p>
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','JAVA','PYTHON']
+&gt;&gt;&gt; for i in languages:
+...     print(i)
+c
+c#
+Java
+Python
+</code></pre>
+
+<p>break ends the for loop and continue steps to next iteration</p>
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','JAVA','PYTHON','HTML','GO']
+&gt;&gt;&gt; for i in languages:
+...    if i.lower()=='html':
+...        print('HTML is not a programming language like others')
+...        break
+...    else:
+...        print(i)
+C
+C#
+JAVA
+PYTHON
+HTML is not a programming language like others
+</code></pre>
+
+<p>We can use the optional else if the for Completed without a break</p>
+<pre><code class="python">&gt;&gt;&gt; languages=['C','C#','JAVA','PYTHON','GO']
+&gt;&gt;&gt; for language in languages:
+...    if language.lower()=='html':
+...        print('HTML is not a programming language like others')
+...        break
+...    else:
+...        print(language)
+... else:
+...    print('There are no non-programming languages')
+C
+C#
+JAVA
+PYTHON
+GO
+There are no non-programming languages
+</code></pre>
+
+<p>If the initial for never ran, control goes to the else also:</p>
+<pre><code class="python">&gt;&gt;&gt; cheeses=[]
+... for cheese in cheeses:
+...     print(cheese)
+...     break
+... else:
+...     print('There is no cheese')
+There is no cheese
+</code></pre>
+
+<p>cheeses list was empty in this example, for cheese in cheeses never completed a single loop and its break statement was never executed.</p>
+<pre><code class="python">&gt;&gt;&gt; days=['Monday','Tuesday','Wednesday']
+&gt;&gt;&gt; fruits=['banana','orange','peach']
+&gt;&gt;&gt; drinks=['coffee','tea','ice tea']
+&gt;&gt;&gt; desserts=['double ka meeta','ice cream','jamoon','pudding']
+&gt;&gt;&gt; for day, fruit, drink, dessert in zip(days, fruits, drinks, desserts):
+...     print(day, &quot;: drink&quot;, drink, &quot;- eat&quot;,fruit, &quot;- enjoy&quot;, dessert)
+Monday : drink coffee - eat banana - enjoy double ka meeta
+Tuesday : drink tea - eat orange - enjoy ice cream
+Wednesday : drink ice tea - eat peach - enjoy jamoon
+</code></pre>
+
+<p>zip() stops when the shortest sequence is done.</p>
+<p>List of lists</p>
+<pre><code class="python">&gt;&gt;&gt; small_birds=['hamming_bird','finch']
+&gt;&gt;&gt; extinct_birds=['dodo','passenger pigeon','Norwegian Blue']
+&gt;&gt;&gt; carol_birds=[3,'French hens',2,'turtledoves']
+&gt;&gt;&gt; all_birds=[small_birds,extinct_birds,carol_birds]
+&gt;&gt;&gt; all_birds
+[['hamming_bird', 'finch'],
+ ['dodo', 'passenger pigeon', 'Norwegian Blue'],
+ [3, 'French hens', 2, 'turtledoves']]
+ &gt;&gt;&gt; all_birds[0]
+ ['hamming_bird', 'finch']
+ &gt;&gt;&gt; all_birds[1]
+ ['dodo', 'passenger pigeon', 'Norwegian Blue']
+ &gt;&gt;&gt; all_birds[1][0]
+ 'dodo'
+</code></pre>
+
+<p><a href='#index'>Go to Top</a> <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUNVNMVjVFU1JIUlZZNlZUUVVUTVdCVkJVNy4u' class='center'>Learning Check</a>   <a href="./" class='right'>Home</a>
+<hr></p>
+<h3 id="tuples">Tuples</h3>
+<ul>
+<li>Tuple is non mutable type</li>
+<li>Tuple will be represented with ().</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; empty_tuple = ()
+&gt;&gt;&gt; empty_tuple
+()
+&gt;&gt;&gt; type(empty_tuple)
+tuple
+</code></pre>
+
+<ul>
+<li>To make a tuple with one or more elements, follow each element with a comma. This works for one-element tuples</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; one_color = 'Green',
+&gt;&gt;&gt; one_color
+('Green',)
+&gt;&gt;&gt; one_color=('Green',)
+&gt;&gt;&gt; one_color
+('Green',)
+&gt;&gt;&gt; multi_color='Green','Red','White'
+&gt;&gt;&gt; multi_color
+('Green', 'Red', 'White')
+</code></pre>
+
+<ul>
+<li>Tuple let you assign multiple variables at once:</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; a = list(multi_color)
+&gt;&gt;&gt; tuple(a)
+('Green', 'Red', 'White')
+&gt;&gt;&gt; a,b,c = multi_color
+&gt;&gt;&gt; a
+Green
+&gt;&gt;&gt; b
+Red
+&gt;&gt;&gt; c
+White
+</code></pre>
+
+<ul>
+<li>This is called tuple unpacking</li>
+<li>You can use tuples to exchange values in one statement without using a temporary variables.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; password = 'confidential'
+&gt;&gt;&gt; icecream = 'choclate'
+&gt;&gt;&gt; password, icecream = icecream, password
+&gt;&gt;&gt; password
+choclate
+&gt;&gt;&gt; icecream
+confidential
+&gt;&gt;&gt; a = password,icecream
+&gt;&gt;&gt; a
+('choclate', 'confidential')
+</code></pre>
+
+<ul>
+<li>Create tuple with the tuple()</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; numbers=[1,3,5,7]
+&gt;&gt;&gt; tuple(numbers)
+(1, 3, 5, 7)
+</code></pre>
+
+<p>Combine Tuples by Using +</p>
+<ul>
+<li>This is similar to combining strings</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; ('Groucho',)+('Chico','harpo')
+('Groucho', 'Chico', 'harpo')
+</code></pre>
+
+<p>Duplicate items with *</p>
+<ul>
+<li>This is like repeated use of +:</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; ('yada',)*3
+('yada','yada','yada')
+</code></pre>
+
+<p>Compare tuples</p>
+<ul>
+<li>This works much like list comparisions</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; a=(7,2)
+&gt;&gt;&gt; b=(7,2,9)
+&gt;&gt;&gt; a==b
+False
+&gt;&gt;&gt; a&lt;=b
+True
+</code></pre>
+
+<p>Iterate with for and in</p>
+<pre><code class="python">&gt;&gt;&gt; items = ('good','bad','ugly')
+&gt;&gt;&gt; for word in items:
+...     print(word)
+...
+good
+bad
+ugly
+</code></pre>
+
+<p>Modify tuple</p>
+<pre><code class="python">&gt;&gt;&gt; t1=('Fee','Fie','Foe')
+&gt;&gt;&gt; id(t1)
+2109612850296
+&gt;&gt;&gt; t2='top',
+&gt;&gt;&gt; t1+=t2
+&gt;&gt;&gt; t1
+('Fee', 'Fie', 'Foe', 'top')
+&gt;&gt;&gt; id(t1)
+2109616422168
+&gt;&gt;&gt; id(t2)
+2109612420936
+</code></pre>
+
+<p>count the elements in touple</p>
+<pre><code class="python">&gt;&gt;&gt; t1 = ('Fee', 'Fie', 'Foe', 'top')
+&gt;&gt;&gt; t1.count('Fee')
+1
+&gt;&gt;&gt; t1.count('Free')
+0
+</code></pre>
+
+<p>Get the index of particular value in the tuple.</p>
+<pre><code class="python">&gt;&gt;&gt; t1 = ('Fee', 'Fie', 'Foe', 'top')
+&gt;&gt;&gt; t1.index('top')
+3
+&gt;&gt;&gt; t1.index('Free') # exception will araise
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ValueError: tuple.index(x): x not in tuple
+</code></pre>
+
+<p><a href='#index'>Got to top</a> <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=rN2QXMZBb0WKxovA-s_hhWC5rBHwriVMuV_rHfPTy8ZUQUEwS0lSV0kzN1BQR1VOOVJNVDVNMUZXNS4u' class='center'><a href='./' class='right'>Home</a>
+<hr></p>
+<h3 id="sets">Sets</h3>
+<p><img alt="" src="../Sets1.png" />
+Here is the above picture:</p>
+<p>A = {1,2,3,4,5}</p>
+<p>B = {1,2,6,7,8}</p>
+<p>A &cup; B = {1,2,3,4,5,6,7,8}</p>
+<p>A &cap; B = {1,2}</p>
+<p>A - B = {3,4,5}</p>
+<ul>
+<li>A set is like a dictionarywith its values thrown away,leaving only the keys.As with a dictionary, each key must be unique.</li>
+<li>create with set()</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; empty_set = set()
+&gt;&gt;&gt; empty_set
+set()
+</code></pre>
+
+<p>Convert with set()</p>
+<ul>
+<li>You can create a set from a list, string, tuple, or dictionary, discarding any duplicate values.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; set('letters')
+{'s', 'e', 'l', 't', 'r'}
+&gt;&gt;&gt; set( ['Java', 'C', 'C#', 'Python'] )
+{'C', 'C#', 'Java', 'Python'}
+&gt;&gt;&gt; set(('a','b','c','d'))
+{'a', 'b', 'c', 'd'}
+&gt;&gt;&gt; set( {'apple': 'red', 'orange': 'orange', 'cherry': 'red'} )
+{'apple', 'cherry', 'orange'}
+</code></pre>
+
+<p>Get Length with len()</p>
+<pre><code class="python">&gt;&gt;&gt; lang=set(['c','c++','Java','Python'])
+&gt;&gt;&gt; len(lang)
+4
+</code></pre>
+
+<p>Add an item with add()</p>
+<pre><code class="python">&gt;&gt;&gt; s = set((1,2,3,4))
+&gt;&gt;&gt; s.add(4)
+&gt;&gt;&gt; s
+{1, 2, 3, 4}
+</code></pre>
+
+<p>Delete an item with remove()</p>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; A.remove(1)
+&gt;&gt;&gt; A
+{2,3,4,5}
+&gt;&gt;&gt; A.remove(5)
+&gt;&gt;&gt; A
+{2,3,4}
+&gt;&gt;&gt; A.remove(99)
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+KeyError: 99
+</code></pre>
+
+<p>Iterate with for and in</p>
+<pre><code class="python">&gt;&gt;&gt; furniture = set(('sofa', 'ottoman', 'table'))
+&gt;&gt;&gt; for comp in furniture:
+...     print(comp)
+...
+table
+sofa
+ottoman
+</code></pre>
+
+<p>Combinations and operators</p>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; A.union(B)
+{1, 2, 3, 4, 5, 6, 7, 8}
+&gt;&gt;&gt; A|B
+{1, 2, 3, 4, 5, 6, 7, 8}
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; A.intersection(B)
+{1,2}
+&gt;&gt;&gt; A&amp;B
+{1,2}
+</code></pre>
+
+<p>intersection_update() will update the A with the result</p>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; A.intersection_update(B)
+&gt;&gt;&gt; A
+{1,2}
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; A-B
+{3,4,5}
+&gt;&gt;&gt; A.difference(B)
+{3,4,5}
+</code></pre>
+
+<p>difference_update() will update the set A with the results.</p>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; A.difference_update(B)
+&gt;&gt;&gt; A
+{3,4,5}
+</code></pre>
+
+<p><img alt="" src="../Sets2.png" /></p>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; A.symmetric_difference(B)
+{3, 4, 5, 6, 7, 8}
+&gt;&gt;&gt; A^B
+{3, 4, 5, 6, 7, 8}
+</code></pre>
+
+<ul>
+<li>symmetric_difference_update() will update the set with the result.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; A.symmetric_difference_update(B)
+&gt;&gt;&gt; A
+{3, 4, 5, 6, 7, 8}
+</code></pre>
+
+<p>A &sub; B</p>
+<p><img alt="" src="../Sets3.png" /></p>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,4}
+&gt;&gt;&gt; B = {1,2,3,4,5}
+&gt;&gt;&gt; A.issubset(B)
+True
+&gt;&gt;&gt; A&lt;=B
+True
+</code></pre>
+
+<p>A &sup; B</p>
+<p><img alt="" src="../Sets3.png" /></p>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,4}
+&gt;&gt;&gt; B = {1,2,3,4,5}
+&gt;&gt;&gt; B.issuperset(A)
+True
+&gt;&gt;&gt; B&gt;=A
+True
+</code></pre>
+
+<p>Disjoint set:</p>
+<p><img alt="" src="../Sets4.png" /></p>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; C = {9,10}
+&gt;&gt;&gt; A.isdisjoint(B)
+False
+&gt;&gt;&gt; A.isdisjoint(C)
+True
+</code></pre>
+
+<p>Delete all elements in the set using clear()</p>
+<p>Syntax:</p>
+<pre><code class="python">set.clear()
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; s = {'C'.'C++','JAVA'}
+&gt;&gt;&gt; s.clear()
+&gt;&gt;&gt; s
+set()
+</code></pre>
+
+<p>Copy a set using copy method:</p>
+<p>syntax:</p>
+<pre><code class="python">another_set = set.copy()
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; s= {'C'.'C++','JAVA'}
+&gt;&gt;&gt; ss = s.copy()
+&gt;&gt;&gt; ss
+{'Java', 'C++', 'C'}
+</code></pre>
+
+<p>Remove the member of a set using discard()</p>
+<p>syntax:</p>
+<pre><code class="python">set.discard(member)
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; A.discard(4)
+&gt;&gt;&gt; A
+{1,2,3,5}
+&gt;&gt;&gt; A.discard(99) #remove member which is not in the set
+&gt;&gt;&gt; A # will not get any exception
+{1,3,5}
+</code></pre>
+
+<p>Delete an element using pop()</p>
+<ul>
+<li>pop() by default delete first element in the set.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; A.pop()
+1
+&gt;&gt;&gt; A.pop()
+2
+&gt;&gt;&gt; A
+{3,4,5}
+&gt;&gt;&gt; A.pop(2)
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: pop() takes no arguments (1 given)
+</code></pre>
+
+<p>Update:</p>
+<ul>
+<li>combine two sets into one using update()</li>
+</ul>
+<p>syntax:</p>
+<pre><code class="python">set1.update(set2)
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; A = {1,2,3,4,5}
+&gt;&gt;&gt; B = {1,2,6,7,8}
+&gt;&gt;&gt; A.update(B)
+{1, 2, 3, 4, 5, 6, 7, 8}
+</code></pre>
+
+<p><a href='#index'>Got to top</a> <a href='./' class='right'>Home</a>
+<hr></p>
+<h3 id="dictionaries">Dictionaries</h3>
+<ul>
+<li>A dictionary is similar to a list,but the order of items doesn’t matter, and they aren’t selected by an offset such as 0 or 1. Instead,you specify a unique key to associate with each value.</li>
+<li>This key is often a string,but it can actually be any of Python’s immutable types</li>
+<li>In other languages, dictionaries might be called associative arrays, hashes, or hashmaps.</li>
+<li>Dictionaries are mutable,so you can add, delete, and change their key-value elements.</li>
+</ul>
+<p>Create dictionary:</p>
+<ul>
+<li>To create a dictionary, you place curly brackets({}) around comma-separated key : value pairs.The simplest dictionary is an empty one,containing no keys or values at all:</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; empty_dict = {}
+&gt;&gt;&gt; empty_dict
+{}
+&gt;&gt;&gt; type(empty_dict)
+dict
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; colors={'Black':'#000000',
+         'White':'#FFFFFF',
+         'Red':'#FF0000',
+         'Green':'#00FF00',
+        'Blue':'#0000FF',
+        'Yellow':'#FFFF00',
+        'Magenta':'#FF00FF',
+        'Cyan':'#00FFFF'}
+&gt;&gt;&gt; colors['Yellow']
+'#FFFF00'
+&gt;&gt;&gt; colors['Orange']
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+KeyError: 'Orange'
+&gt;&gt;&gt; colors['Green']
+'#00FF00'
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; days={'MON':'Monday','TUE':'Tuesday','WED':'Wednesday','THU':'Thuresday','FRI':'Friday','SAT':'Saturday','SUN':'Sunday'}
+&gt;&gt;&gt; days
+{'MON': 'Monday', 'TUE': 'Tuesday', 'WED': 'Wednesday', 'THU': 'Thuresday', 'FRI': 'Friday', 'SAT': 'Saturday', 'SUN': 'Sunday'}
+</code></pre>
+
+<ul>
+<li>Create dictionary using dict()</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; details=dict(Department='CSE',Year='IInd',BatchYear=2018)
+&gt;&gt;&gt; details[Department]
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name 'Department' is not defined
+&gt;&gt;&gt; details['Department']
+'CSE'
+&gt;&gt;&gt; type(details)
+&lt;class 'dict'&gt;
+</code></pre>
+
+<ul>
+<li>One limitation of the second way is that the argument namesneed to be legal variable names (no spaces, no reserved words)</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; details=dict(Department='CSE',Year='IInd',BatchYear=2018, def='Computers')
+File &quot;&lt;stdin&gt;&quot;, line 1
+    details=dict(Department='CSE',Year='IInd',BatchYear=2018, def='Computers')
+                                                              ^
+SyntaxError: invalid syntax
+</code></pre>
+
+<p>Converting with dict()</p>
+<ul>
+<li>You can also use the dict() function to convert two-valuesequences into a dictionary.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; lol=[['a','b'],['c','d'],['e','f']]
+&gt;&gt;&gt; dict(lol)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+</code></pre>
+
+<ul>
+<li>A List of two-item tuples:</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; lot = [ ('a', 'b'), ('c', 'd'), ('e', 'f') ]
+&gt;&gt;&gt; dict(lot)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+</code></pre>
+
+<ul>
+<li>A tuple of two-item lists:</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; tol = ( ['a', 'b'], ['c', 'd'], ['e', 'f'] )
+&gt;&gt;&gt; dict(tol)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; los = [ 'ab', 'cd', 'ef' ]
+&gt;&gt;&gt; dict(los)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+&gt;&gt;&gt; tos = ( 'ab', 'cd', 'ef' )
+&gt;&gt;&gt; dict(tos)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+</code></pre>
+
+<ul>
+<li>A tuple of two-character strings:</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; tos = ( 'ab', 'cd', 'ef' )
+&gt;&gt;&gt; dict(tos)
+{'a': 'b', 'c': 'd', 'e': 'f'}
+</code></pre>
+
+<p>Add or Change an Item by [key]:</p>
+<ul>
+<li>Adding an item in the dictionary is by assigning value to the key.</li>
+<li>If the key was already present in the dictionary,the existing value is replaced by the new one.</li>
+<li>If the key is new,it’s added to the dictionary with its value.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; movies={'action':'star wars','comedy':'friends',
+'sci-fi':'The Mandalorian','thriller':'Joker'}
+&gt;&gt;&gt; movies['anim']='frozen-II'
+&gt;&gt;&gt; movies
+{'action': 'star wars',
+ 'comedy': 'friends',
+ 'sci-fi': 'The Mandalorian',
+ 'thriller': 'Joker',
+ 'anim': 'frozen-II'}
+ ```
+- Change value by using key
+
+```python
+&gt;&gt;&gt; movies['anim']='toy story4'
+&gt;&gt;&gt; movies
+{'action': 'star wars',
+ 'comedy': 'friends',
+ 'sci-fi': 'The Mandalorian',
+ 'thriller': 'Joker',
+ 'anim': 'toy story4'}
+ ```
+ Get an item with [key] or get()
+
+```python
+&gt;&gt;&gt; movies['action']
+'star wars'
+</code></pre>
+
+<ul>
+<li>If the key is not present in dictionary. It will throw an exception</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; movies['horror']
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+KeyError: 'horror'
+</code></pre>
+
+<ul>
+<li>Alternative way to check whether key is in the dictionary or not.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; 'horror' in movies
+False
+&gt;&gt;&gt; movies.get('horror')
+&gt;&gt;&gt; movies.get('action')
+'star wars'
+&gt;&gt;&gt; movies.get('horror','not yet added')
+'not yet added'
+</code></pre>
+
+<p>Get all keys with keys()</p>
+<pre><code class="python">&gt;&gt;&gt; movies.keys()
+dict_keys(['action', 'comedy', 'sci-fi', 'thriller', 'anim'])
+</code></pre>
+
+<p>Get all values with values()</p>
+<pre><code class="python">&gt;&gt;&gt; movies.values()
+dict_values(['star wars', 'friends', 'The Mandalorian', 'Joker', 'ricky and morty'])
+</code></pre>
+
+<p>Get all key-value pairs with items()</p>
+<pre><code class="python">&gt;&gt;&gt; movies.items()
+dict_items([('action', 'star wars'), ('comedy', 'friends'), ('sci-fi', 'The Mandalorian'), ('thriller', 'Joker'), ('anim', 'ricky and morty')])
+</code></pre>
+
+<p>Get Length with len()</p>
+<pre><code class="python">&gt;&gt;&gt; len(movies)
+5
+</code></pre>
+
+<p>Combine dictionaries with {<strong>a, </strong>b}</p>
+<pre><code class="python">&gt;&gt;&gt; first = {'a': 'agony', 'b': 'bliss'}
+&gt;&gt;&gt; second = {'b': 'bagels', 'c': 'candy'}
+&gt;&gt;&gt; {**first, **second}
+{'a': 'agony', 'b': 'bagels', 'c': 'candy'}
+&gt;&gt;&gt; third = {'d': 'donuts'}
+&gt;&gt;&gt; {**first, **third, **second}
+{'a': 'agony', 'b': 'bagels', 'd': 'donuts', 'c': 'candy'}
+</code></pre>
+
+<p>Combine Dictionaries with update()</p>
+<ul>
+<li>You can use the update() function tocopy the keys and values of one dictionary into another</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; first = {'a': 'agony', 'b': 'bliss'}
+&gt;&gt;&gt; second = {'b': 'bagels', 'c': 'candy'}
+&gt;&gt;&gt; first.update(second)
+&gt;&gt;&gt; first
+{'a': 'agony', 'b': 'bagels', 'c': 'candy'}
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; first = {'a': 1, 'b': 2,'c':3,'d':4,'e':5}
+&gt;&gt;&gt; second = {'b': 'platypus'}
+&gt;&gt;&gt; first.update(second)
+&gt;&gt;&gt; first
+{'a': 1, 'b': 'platypus', 'c': 3, 'd': 4, 'e': 5}
+</code></pre>
+
+<p>Delete an Item by key with del</p>
+<pre><code class="python">&gt;&gt;&gt; first = {'a': 'agony', 'b': 'bliss'}
+&gt;&gt;&gt; del first['a']
+&gt;&gt;&gt; first
+{'b': 'bliss'}
+&gt;&gt;&gt; del first['a']
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+KeyError: 'a'
+</code></pre>
+
+<p>Get an Item by key and Delete It with pop()</p>
+<ul>
+<li>This combines get() and del.If you give pop() a key and it exists in the dictionary,it returns the matching value and deletes the key-value pair. If it doesn’t exist, it raises an exception</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; first = {'a': 'agony', 'b': 'bliss'}
+&gt;&gt;&gt; first.pop('a')
+'agony'
+&gt;&gt;&gt; first.pop('a')
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+KeyError: 'a'
+&gt;&gt;&gt; first.pop('a','nothing')
+'nothing'
+</code></pre>
+
+<p>Delete All Items with clear()</p>
+<ul>
+<li>To delete all keys and values from a dictionary,use clear() or just reassign an empty dictionary({}) to the name</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; A={'a': 1, 'b': 'platypus', 'c': 3, 'd': 4, 'e': 5}
+&gt;&gt;&gt; A.clear()
+&gt;&gt;&gt; A
+{}
+</code></pre>
+
+<p>Test for a key with in</p>
+<pre><code class="python">&gt;&gt;&gt; first = {'a': 1, 'b': 2,'c':3,'d':4,'e':5}
+&gt;&gt;&gt; 'a' in first
+True
+&gt;&gt;&gt; 'f' in first
+False
+</code></pre>
+
+<p>Compare dictionaries</p>
+<ul>
+<li>Dictionaries can be compared with the simple comparison operators == and !=</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; a = {1:1, 2:2, 3:3}
+&gt;&gt;&gt; b = {3:3, 1:1, 2:2}
+&gt;&gt;&gt; a == b
+True
+&gt;&gt;&gt; a&lt;b
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: '&lt;' not supported between instances of 'dict' and 'dict'
+</code></pre>
+
+<ul>
+<li>Python compares the keys and values one by one. The order in which they were originally created doesn’t matter</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; a = {1: [1, 2], 2: [1], 3:[1]}
+&gt;&gt;&gt; b = {1: [1, 1], 2: [1], 3:[1]}
+&gt;&gt;&gt; a!=b
+True
+</code></pre>
+
+<p>Iterate with for and in</p>
+<pre><code class="python">&gt;&gt;&gt; signals = {'green': 'go',
+           'yellow': 'go faster',
+           'red': 'smile for the camera'}
+&gt;&gt;&gt; for i in signals:
+...     print(i)
+...
+green
+yellow
+red
+&gt;&gt;&gt; for i in signals.keys():
+...     print(i)
+...
+green
+yellow
+red
+&gt;&gt;&gt; for i in signals.values():
+...     print(i)
+...
+go
+go faster
+smile for the camera
+&gt;&gt;&gt; for item in signals.items():
+...     print(item)
+...
+('green', 'go')
+('yellow', 'go faster')
+('red', 'smile for the camera')
+&gt;&gt;&gt; for key, value in signals.items():
+...     print(key,'-',value)
+...
+green - go
+yellow - go faster
+red - smile for the camera
+</code></pre>
+
+<p>Create a dictionary from any iterable data type.</p>
+<pre><code class="python">&gt;&gt;&gt; a = ['one','two','three','four']
+&gt;&gt;&gt; dict.fromkeys(a)
+{'one': None, 'two': None, 'three': None, 'four': None}
+</code></pre>
+
+<p>popitem() :</p>
+<ul>
+<li>Remove and return a (key, value) pair as a 2-touple.</li>
+<li>Pairs are returned in LIFO (last-in, first-out) order.</li>
+<li>Raises KeyError if the dict is empty.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; a = {1: [1, 1], 2: [1], 3: [1]}
+&gt;&gt;&gt; a.popitem()
+(3, [1])
+&gt;&gt;&gt; a.popitem(1)
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: popitem() takes no arguments (1 given)
+</code></pre>
+
+<p>setdefault():</p>
+<ul>
+<li>Insert key with a value of default if key is not in the dictionary.</li>
+<li>Return the value for key if key is in the dictionary, else default.</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; a = {1: [1, 1], 2: [1], 3: [1]}
+&gt;&gt;&gt; a.setdefault(4)
+&gt;&gt;&gt; a
+a = {1: [1, 1], 2: [1], 3: [1], 4: None}
+&gt;&gt;&gt; a.setdefault(1)
+[1,1]
+</code></pre>
+
+<p><a href='#index'>Got to top</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./" class='right'>Home</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../copying/" class="btn btn-neutral float-right" title="Shallow Copy and Deep Copy">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../scalartypes/" class="btn btn-neutral" title="Scalar Data Types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+  Created and crafted with &#x1F496; <br><br>
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../scalartypes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../copying/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
