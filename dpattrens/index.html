@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Design Pattrens - Play with python</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Design Pattrens";
+    var mkdocs_page_input_path = "dpattrens.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Play with python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installPython/">Python Installation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../createGithub/">Github account</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../pythonfirststeps/">Python First steps</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../scalartypes/">Scalar Data Types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../collections/">Collections</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../copying/">Shallow Copy and Deep Copy</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../comprehensions/">Comprehensions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../funcs/">Functions</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../scopes/">Variable Scopes</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Design Pattrens</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#adapter-pattern">Adapter Pattern</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-decorator-pattern">The Decorator pattern</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Play with python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Design Pattrens</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="design-patterns">Design Patterns</h2>
+<h3 id="adapter-pattern">Adapter Pattern</h3>
+<p>Adapter is a structural design pattern, which allows incompatible objects to collaborate. The Adapter acts as a wrapper between two objects. It catches calls for one object and transforms them to format and 
+interface recognizable by the second object.</p>
+<ul>
+<li>Lets assume we have exisiting class called LegacyRectangle. It would look like this:</li>
+</ul>
+<pre><code class="python">class LegacyRectangle:
+    def __init__(self, length, breadth):
+        self.__length = length
+        self.__breadth = breadth
+
+    def area_calculation(self):
+        return self.__length * self.__breadth
+
+    def draw(self):
+        print(&quot;This draws a legacy rectangle to screen&quot;)
+
+</code></pre>
+
+<ul>
+<li>We have one more class called LegacySquare. That would look like this:</li>
+</ul>
+<pre><code class="python">class LegacySquare:
+    def __init__(self, side):
+        self.__side = side
+
+    def area(self):
+        return self.__side * self.__side
+
+    def draw_me(self):
+        print(&quot;This draws a legacy square to screen&quot;)
+</code></pre>
+
+<ul>
+<li>Now lets create objects for LegacyRectangle and LegacySquare classes</li>
+</ul>
+<pre><code>&gt;&gt;&gt; l_rectangle = LegacyRectangle(5,6)
+&gt;&gt;&gt; l_rectangle.area_calculation()
+30
+&gt;&gt;&gt; l_square = LegacySquare(5)
+&gt;&gt;&gt; l_square.area()
+25
+</code></pre>
+
+<p>Now lets say we have requirment that all the shapes i.e rectangle, square etc bring into single interface in such scenario we need to create interface called shape.</p>
+<p>Lets create an interface called shape here</p>
+<pre><code class="python">class shape:
+    def __init__(self,shape_type):
+        self.__shape_type = shape_type
+    def get_area(self):
+        pass
+    def render(self):
+        pass
+</code></pre>
+
+<p>Now If we create a new shape called circle that class would look like this:</p>
+<pre><code class="python">import math
+class Circle(shape):
+    def __init__(self,radius):
+        shape.__init__(self,'circle')
+        self.__radius = radius
+
+    def get_area(self):
+        return math.pi*self.__radius*self.__radius
+
+    def render(self):
+        print(&quot;This draws circle here&quot;)
+
+</code></pre>
+
+<p>Now lets create two functions that can call the methods of shape:</p>
+<pre><code class="python">def render_shape(shape):
+    shape.render()
+
+def calculate_area(shape):
+    return shape.get_area()
+</code></pre>
+
+<p>Now lets create an object for circle and call the methods render_shape and calculate_area on the circle:</p>
+<pre><code>&gt;&gt;&gt; circle = Circle(10)
+&gt;&gt;&gt; render_shape(circle)
+This draws a circle to screen(
+&gt;&gt;&gt; calculate_area(circle)
+314.1592653589293
+</code></pre>
+
+<p>You can see that we can call render_shape or calculate_area it on circle they gave result successfully.
+But if you try to call those functions on LegacySquare or LegacyRectangle what happens let us see.</p>
+<pre><code>&gt;&gt;&gt; render_shape(l_rectangle)
+AttributeError: 'LegacyRectangle' object has no attribute 'render'
+&gt;&gt;&gt; render_shape(l_square)
+AttributeError: 'LegacySquare' object has no attribute 'render'
+</code></pre>
+
+<p>So we will encounter the errors. To overcome this we need to create adapter classes for both LegacyRectangle and LegacySquare. Lets create adapter classes for both the classes here:</p>
+<pre><code class="python">class LegacyRectangleAdapter(Shape):
+    def __init__(self,legacy_rectangle):
+        Shape.__init__(self,'Rectangle')
+        self.__legacy_rectangle = legacy_rectangle
+
+    def get_area(self):
+        return self.__legacy_rectangle.area_calculation()
+
+    def render(self):
+        self.__legacy_square.draw()
+</code></pre>
+
+<p>so the LegacySquare class:</p>
+<pre><code class="python">class LegacySquareAdapter(Shape):
+    def __init__(self, legacy_square):
+        Shape.__init__(self,'Square')
+        self.__legacy_square = legacy_square
+
+    def get_area(self):
+        return self.__legacy_square.area()
+
+    def render(self):
+        self.__legacy_square.draw_me()
+</code></pre>
+
+<p>Now we can able to call calculate_area() and render() methods for both LegacyRectangle and LegacySquare() with the help of newly created classes LegacyRectangleAdapter and LegacySquareAdapter.
+Let's see that</p>
+<pre><code>&gt;&gt;&gt; l_rectangleadapter = LegacyRectangleAdapter(l_rectangle)
+&gt;&gt;&gt; l_squareadapter = LegacySquareAdapter(l_square)
+&gt;&gt;&gt; calculate_area(l_rectangleadaptor)
+30
+&gt;&gt;&gt; calculate_area(l_squareadaptor)
+25
+&gt;&gt;&gt; render_shape(l_rectangleadaptor)
+ This draws a legacy rectangle to screen
+&gt;&gt;&gt; render_shape(l_squareadaptor)
+ This draws a legacy square to screen
+</code></pre>
+
+<p>The above example demonstrated you about adapter pattren</p>
+<h3 id="the-decorator-pattern">The Decorator pattern</h3>
+<ul>
+<li>Use this pattren to exploit chained relationships.</li>
+<li>It adds responsibilites to objects dynamically </li>
+<li>Behaviour needs to be added at runime.</li>
+<li>Inheritance will not work since it is static.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../scopes/" class="btn btn-neutral" title="Variable Scopes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+  Created and crafted with &#x1F496; <br><br>
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../scopes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
